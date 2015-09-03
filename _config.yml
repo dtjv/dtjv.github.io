@@ -1,0 +1,47 @@
+# Site
+title                   : David Valles
+email                   : davidtjvalles@gmail.com
+author                  : David valles
+description             :
+baseurl                 : "/dtjv.github.io"
+url                     :
+# url                     : "http://www.davidvalles.com"
+date_format             : "%b %-d, %Y"
+
+# Google
+google_analytics        :
+google_verification     :
+
+# Animation
+animated                : true
+animated_style          : fadeInDown
+
+# Disqus
+disqus_shortname        : davidvalles
+
+# Social
+show_social_icons       : true
+github_id               : dtjv
+facebook_id             :
+twitter_id              :
+linkedin_id             :
+medium_id               :
+stackoverflow_id        :
+
+# Share
+show_sharing_icons      : false
+share_facebook          : false
+share_twitter           : false
+share_googleplus        : false
+share_reddit            : false
+share_hackernews        : false
+
+# Build
+highlighter             : pygments
+markdown                : redcarpet
+redcarpet               :
+  extensions            : ['smart', 'tables', 'with_toc_data', 'footnotes']
+permalink               : /:title
+paginate                : 6
+sass                    :
+  compressed            : true
