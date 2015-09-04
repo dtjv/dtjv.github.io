@@ -3,9 +3,8 @@ title                   : David Valles
 email                   : davidtjvalles@gmail.com
 author                  : David valles
 description             :
-baseurl                 : "/dtjv.github.io"
-url                     :
-# url                     : "http://www.davidvalles.com"
+baseurl                 : ""
+url                     : "dtjv.github.io"
 date_format             : "%b %-d, %Y"
 
 # Google
