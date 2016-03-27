@@ -1,46 +1,69 @@
 # Site
 title                   : David Valles
 email                   : davidtjvalles@gmail.com
-author                  : David valles
+author                  : David Valles
 description             :
-baseurl                 : ""
-url                     : "dtjv.github.io"
-date_format             : "%b %-d, %Y"
+baseurl                 : ''
+url                     : 'http://dtjv.github.io'
+date_format             : '%b %-d, %Y'
+
+# Sections
+animated                : true
+show_related_posts      : false
+show_social_icons       : true
+enable_mathjax          : true
+enable_anchorjs         : true
+ajaxify_contact_form    : true
 
 # Google
 google_analytics        :
-google_verification     :
 
-# Animation
-animated                : true
-animated_style          : fadeInDown
+# Bing
+bing_verification       :
 
 # Disqus
 disqus_shortname        : davidvalles
 
-# Social
-show_social_icons       : true
-github_id               : dtjv
-facebook_id             :
-twitter_id              :
-linkedin_id             :
-medium_id               :
+# Social Icons
+github_username         : dtjv
+bitbucket_username      :
 stackoverflow_id        :
+twitter_username        :
+skype_username          :
+steam_nickname          :
+google_plus_id          :
+linkedin_username       :
+angellist_username      :
+medium_id               :
+bitcoin_url             :
+paypal_url              :
+flattr_button           :
 
-# Share
-show_sharing_icons      : false
-share_facebook          : false
-share_twitter           : false
-share_googleplus        : false
-share_reddit            : false
-share_hackernews        : false
+# Share Icons
+show_sharing_icons      : true
+share_facebook          : true
+share_twitter           : true
+
+# UI
+text                    :
+  pagination            :
+    newer               : 'Newer'
+    older               : 'Older'
+  post                  :
+    updated             : 'Updated'
+    minute_read         : 'minute read'
+    related_posts       : 'Related Posts'
+  index                 :
+    coming_soon         : 'Coming soon...'
 
 # Build
-highlighter             : pygments
-markdown                : redcarpet
+markdown                : kramdown
 redcarpet               :
   extensions            : ['smart', 'tables', 'with_toc_data', 'footnotes']
-permalink               : /:title
-paginate                : 6
+permalink               : /:year/:month/:title/
+paginate                : 3
 sass                    :
   compressed            : true
+gems                    : ['jekyll-paginate', 'jekyll-sitemap']
+# https://github.com/jekyll/jekyll/issues/2938
+exclude                 : [vendor]

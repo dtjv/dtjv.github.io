@@ -1,2 +1,5 @@
-<a href="{{ site.baseurl }}/about/">About</a>
-<a href="{{ site.baseurl }}/projects/">Projects</a>
+{% for page in site.pages %}
+    {% if page.tags contains "about" %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
+{% endfor %}
