@@ -54,16 +54,14 @@ text                    :
     minute_read         : 'minute read'
     related_posts       : 'Related Posts'
   index                 :
-    coming_soon         : 'Coming soon...'
+    coming_soon         : 'Coming soon!!'
 
 # Build
 markdown                : kramdown
-redcarpet               :
-  extensions            : ['smart', 'tables', 'with_toc_data', 'footnotes']
 permalink               : /:year/:month/:title/
 paginate                : 3
 sass                    :
   compressed            : true
-gems                    : ['jekyll-paginate', 'jekyll-sitemap']
+plugins                 : ['jekyll-paginate', 'jekyll-sitemap']
 # https://github.com/jekyll/jekyll/issues/2938
 exclude                 : [vendor]

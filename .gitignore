@@ -1,9 +1,4 @@
 .DS_Store
 .sass-cache
-.editorconfig
 _site
 _drafts
-build
-Rakefile
-Gemfile
-Gemfile.lock
