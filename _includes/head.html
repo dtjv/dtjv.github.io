@@ -12,6 +12,8 @@
 
   <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
 
@@ -19,7 +21,7 @@
   <link rel="stylesheet" href="{{ "/css/pixyll.css" | prepend: site.baseurl }}?{{ site.time | date: "%Y%m%d%H%M" }}" type="text/css">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Open+Sans:400,400i,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Lato:400,900|Open+Sans:400,400i,700" rel="stylesheet">
 
   {% if site.show_social_icons or site.show_sharing_icons %}
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
@@ -41,11 +43,13 @@
   {% endif %}
 
   <!-- Facebook Open Graph -->
+  {% if site.facebook_username %}
   <meta property="og:type" content="article">
   <meta property="og:title" content="{% if page.title %}{{ page.title | xml_escape }}{% else %}{{ site.title | xml_escape }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.title | xml_escape }}">
+  {% endif %}
 
   <!-- Twitter Card -->
   {% if site.twitter_username %}
@@ -54,7 +58,6 @@
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta name="twitter:description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
-  {% endif %}
 
   <!-- Twitter's widget.js -->
   <script>
@@ -73,4 +76,5 @@
       return t;
     }(document, "script", "twitter-wjs"));
   </script>
+  {% endif %}
 </head>

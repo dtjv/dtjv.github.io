@@ -2,7 +2,7 @@
 title                   : David Valles
 email                   : davidtjvalles@gmail.com
 author                  : David Valles
-description             :
+description             : 'Personal website for David Valles'
 baseurl                 : ''
 url                     : 'http://dtjv.github.io'
 date_format             : '%b %-d, %Y'
@@ -29,6 +29,7 @@ github_username         : dtjv
 bitbucket_username      :
 stackoverflow_id        :
 twitter_username        :
+facebook_username       :
 skype_username          :
 steam_nickname          :
 google_plus_id          :
@@ -40,9 +41,9 @@ paypal_url              :
 flattr_button           :
 
 # Share Icons
-show_sharing_icons      : true
-share_facebook          : true
-share_twitter           : true
+show_sharing_icons      : false
+share_facebook          : false
+share_twitter           : false
 
 # UI
 text                    :
@@ -63,5 +64,4 @@ paginate                : 3
 sass                    :
   compressed            : true
 plugins                 : ['jekyll-paginate', 'jekyll-sitemap']
-# https://github.com/jekyll/jekyll/issues/2938
-exclude                 : [vendor]
+exclude                 : ['Gemfile', 'Gemfile.lock', 'node_modules', 'README.md', 'LICENSE.md', 'Rakefile', 'build']
