@@ -12,11 +12,14 @@ code {
 
 code {
   color: #7a7a7a;
+
+  pre {
+    padding-bottom: 0px;
+  }
 }
 
 pre {
   padding: 1.125em;
-  line-height: 1.11;
   overflow-x: scroll;
   margin-bottom: 0.88em;
   background-color: $pre-background-color;
@@ -45,6 +48,7 @@ pre {
   &.lineno {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
   }
 }
 
