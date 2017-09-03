@@ -47,8 +47,8 @@ share_twitter           : true
 # UI
 text                    :
   pagination            :
-    newer               : 'Newer'
-    older               : 'Older'
+    newer               : 'Next'
+    older               : 'Previous'
   post                  :
     updated             : 'Updated'
     minute_read         : 'minute read'
