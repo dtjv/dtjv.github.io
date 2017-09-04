@@ -59,6 +59,7 @@ text                    :
     coming_soon         : 'Coming soon!!'
 
 # Build
+header_pages            : ['about.md']
 markdown                : kramdown
 permalink               : /:year/:month/:title/
 paginate                : 3
