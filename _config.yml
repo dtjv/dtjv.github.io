@@ -1,5 +1,5 @@
 # Site
-title                   : David Valles
+title                   : Home
 email                   : davidtjvalles@gmail.com
 author                  : David Valles
 description             : 'Personal website for David Valles'
@@ -25,7 +25,8 @@ bing_verification       :
 disqus_shortname        : davidvalles
 
 # Social Icons
-github_username         : dtjv
+rss                     :
+github_username         :
 bitbucket_username      :
 stackoverflow_id        :
 twitter_username        :

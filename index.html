@@ -1,28 +1,15 @@
 ---
-layout: default
+layout: center
 ---
-{% assign posts_count = paginator.posts | size %}
 
 <div class="home">
-  {% if posts_count > 0 %}
-    <div class="posts">
-      {% for post in paginator.posts %}
-        <div class="post py3">
-          <p class="post-meta">{{ post.date | date: site.date_format }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <p class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </p>
-        </div>
-      {% endfor %}
-    </div>
-
-    {% include pagination.html %}
-  {% else %}
-    <h1 class='center'>{{ site.text.index.coming_soon }}</h3>
-  {% endif %}
+  <h1>David Valles</h1>
+  <h3>Personal Trainer</h3>
+  <br>
+  <p style="margin-bottom: 5px">ACE CPT</p>
+  <p style="margin-bottom: 5px">NASM PES</p>
+  <p style="margin-bottom: 5px">FMS</p>
+  <p style="margin-bottom: 5px">Precision Nutrition Level 1</p>
+  <p style="margin-bottom: 5px">CrossFit Level 1 Trainer</p>
+  <p style="margin-bottom: 15px">USAW Level 1 Sports Performance Coach</p>
 </div>
