@@ -21,18 +21,34 @@ I worked at a desk job for about 7 years out of college. When the dot-com crash 
 
 I began my training career at Club One, Almaden Valley. Over the years, I would move up from Personal Trainer, to Specialized, then Master Trainer and finally to Fitness Director. Along the way, I've met with hundreds of people - performing orientations, private training, semi-private and small group training and occasionally leading large classes. Today, I train at two facilities - Forma Gym, Almaden Valley and BMI Fitness in Santa Clara. I do a bit of in-home training as well.
 
+## Education
+
+* ACE CPT
+* FMS1
+* Precision Nutrition Certified 
+* CrossFit Level 1 Trainer
+* USAW Level 1 Sports Performance Coach
+* NASM Performance Enhancement Specialist 
+
+## Specialties
+
+* Weight Loss/Gain
+* Nutrition Coaching
+* Strength & Conditioning
+* Kettlebell Training
+* TRX Training
+* High Intensity Training
+
+## Interests
+
+* Weightlifting
+* Gymnastics
+* CrossFit
+* Kettlebell Training
+
 ## Philosophy
 
 *Be active everyday. Learn to move your body well. Enjoy a fitness foundation that supports your daily activities, sport endeavors and any physicaly challenge your heart desires. Be happy!*
 
 I aim to encourage, motivate, support and guide my clients to reach *their* health and fitness goals through safe, progessive and - of course - **fun** training sessions.
-
-## Education
-
-* ACE CPT
-* NASM PES
-* FMS
-* Precision Nutrition Level 1
-* CrossFit Level 1 Trainer
-* USAW Level 1 Sports Performance Coach
 
