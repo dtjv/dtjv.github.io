@@ -1,0 +1,31 @@
+nav {
+  background-color: $dark-smoke;
+
+  @media #{$medium-and-up} {
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+}
+
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+blockquote {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  border-left: 8px solid $accent-color;
+  text-align: justify;
+  letter-spacing: .5px;
+  line-height: 1.25;
+}
+
+ul {
+  font-size: 1.5rem;
+}

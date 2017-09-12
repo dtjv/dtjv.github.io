@@ -1,69 +1,36 @@
-# Site
-title                   : Home
-email                   : davidtjvalles@gmail.com
-author                  : David Valles
-description             : 'Personal website for David Valles'
-baseurl                 : ''
-url                     : 'http://dtjv.github.io'
-date_format             : '%b %-d, %Y'
+# 1. mkdir _config
+# 1. touch _config/index.js
+# 1. touch _config/config.js
+#
+# index.js will require config.js, write the site config to _config.yml using
+# js-yaml.
+#
+# config.js will also hold build paths. gulpfile.js will read in config.js paths
+title         : 'David Valles - Personal Trainer'
+email         : davidtjvalles@gmail.com
+author        : 'David Valles'
+description   : 'David Valles - Personal Trainer'
 
-# Sections
-animated                : true
-show_related_posts      : false
-show_social_icons       : true
-enable_mathjax          : true
-enable_anchorjs         : true
-ajaxify_contact_form    : true
+baseurl       : ''
+url           : 'http://dtjv.io'
 
-# Google
-google_analytics        :
+date_format   : '%b %-d, %Y'
+permalink     : /:year/:month/:title/
 
-# Bing
-bing_verification       :
+paginate      : 5
+paginate_path : '/blog/page-:num/'
 
-# Disqus
-disqus_shortname        : davidvalles
+include       : ['_pages']
+exclude       : ['vendor',
+                 '_assets',
+                 'Gemfile',
+                 'Gemfile.lock',
+                 'node_modules',
+                 'package.json',
+                 'package-lock.json',
+                 'gulpfile.js',
+                 'README.md',
+                 'LICENSE.md']
 
-# Social Icons
-rss                     :
-github_username         :
-bitbucket_username      :
-stackoverflow_id        :
-twitter_username        :
-facebook_username       :
-skype_username          :
-steam_nickname          :
-google_plus_id          :
-linkedin_username       :
-angellist_username      :
-medium_id               :
-bitcoin_url             :
-paypal_url              :
-flattr_button           :
-
-# Share Icons
-show_sharing_icons      : false
-share_facebook          : false
-share_twitter           : false
-
-# UI
-text                    :
-  pagination            :
-    newer               : 'Next'
-    older               : 'Previous'
-  post                  :
-    updated             : 'Updated'
-    minute_read         : 'minute read'
-    related_posts       : 'Related Posts'
-  index                 :
-    coming_soon         : 'Coming soon!!'
-
-# Build
-header_pages            : ['about.md']
-markdown                : kramdown
-permalink               : /:year/:month/:title/
-paginate                : 3
-sass                    :
-  compressed            : true
-plugins                 : ['jekyll-paginate', 'jekyll-sitemap']
-exclude                 : ['Gemfile', 'Gemfile.lock', 'node_modules', 'README.md', 'LICENSE.md', 'Rakefile', 'build']
+plugins       : ['jekyll-paginate',
+                 'jekyll-sitemap']

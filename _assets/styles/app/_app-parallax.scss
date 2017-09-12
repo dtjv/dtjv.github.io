@@ -1,0 +1,13 @@
+.parallax-container {
+  height: auto;
+  min-height: 380px;
+  margin-bottom: 2.5rem;
+
+  &.parallax-hero {
+    min-height: 100vh;
+  }
+
+  .parallax-content {
+    padding-top: 5.5em;
+  }
+}
