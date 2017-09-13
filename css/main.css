@@ -7060,4 +7060,7 @@ p {
   .page-footer .footer-copyright {
     background-color: rgba(0, 0, 0, 0.2); }
 
+.modal .modal-footer {
+  padding: 0 20px 0 0; }
+
 /*# sourceMappingURL=main.css.map */
