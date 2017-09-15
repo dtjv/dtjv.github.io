@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -8,7 +9,7 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet", type="text/css" media="screen" />
   <link href="https://fonts.googleapis.com/css?family=Raleway:500i" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
 
@@ -16,18 +17,6 @@
     <nav role="navigation">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo accent-color-text">dtjv.io</a>
-        <!--
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">About</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">About</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse">
-          <i class="material-icons">menu</i>
-        </a>
-        -->
       </div>
     </nav>
   </header>
@@ -48,7 +37,7 @@
       </div>
     </div>
     <div class="parallax">
-      <img src="imgs/bg1.jpg" alt="">
+      <img src="assets/imgs/bg1.jpg" alt="">
     </div>
   </div>
 
@@ -87,7 +76,7 @@
           I worked at a desk job for about 7 years out of college. When the dot-com crash left me high and dry, I took the opportunity to try something new - personal training. It was my chance to share what I’d learned in my athletic career, a way to meet and interact with more people, as well as make a positive contribution to someone’s life. Almost 12 years later, I’m still at it!
         </p>
         <p class="light">
-          In 2005, I began my training career at Club One, Almaden Valley. Over the years, I would move up from Personal Trainer, to Specialized, then Master Trainer and finally to Fitness Director. Along the way, I’ve met with hundreds of people - performing orientations, private training, semi-private and small group training and occasionally leading large classes. Today, I train at two facilities - Forma Gym, Almaden Valley and BMI Fitness in Santa Clara. I do a bit of in-home training as well.
+          I began my training career at Club One, Almaden Valley. Over the years, I would move up from Personal Trainer, to Specialized, then Master Trainer and finally to Fitness Director. Along the way, I’ve met with hundreds of people - performing orientations, private training, semi-private and small group training and occasionally leading large classes. Today, I train at two facilities - Forma Gym, Almaden Valley and BMI Fitness in Santa Clara. I do a bit of in-home training as well.
         </p>
       </section>
     </div>
@@ -101,7 +90,7 @@
         </div>
       </div>
       <div class="parallax">
-        <img src="imgs/bg2.jpg" alt="">
+        <img src="assets/imgs/bg2.jpg" alt="">
       </div>
     </div>
 
@@ -255,7 +244,7 @@
         </div>
       </div>
       <div class="parallax">
-        <img src="imgs/bg3.jpg" alt="">
+        <img src="assets/imgs/bg3.jpg" alt="">
       </div>
     </div>
   </main>
@@ -306,8 +295,16 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/materialize.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="assets/js/materialize.min.js"></script>
+  <script>
+    (($) => {
+      $('.button-collapse').sideNav();
+      $('.parallax').parallax();
+      $('.modal').modal();
+    })(jQuery);
+  </script>
 
-  </body>
+</body>
+
+
 </html>
