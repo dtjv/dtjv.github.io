@@ -37,22 +37,18 @@ gulp.task('copy:vendor:fonts', () =>
 
 gulp.task('copy:vendor:js', () =>
   gulp.src(config.vendor.js.src)
+    .pipe(dos2unix())
     .pipe(gulp.dest(config.vendor.js.dest)));
 
-gulp.task('copy:asset:styles', () =>
-  gulp.src(config.assets.styles.src)
-    .pipe(gulp.dest(config.assets.styles.dest)));
-
-gulp.task('copy:asset:images', () =>
-  gulp.src(config.assets.images.src)
-    .pipe(gulp.dest(config.assets.images.dest)));
+gulp.task('copy:assets', () =>
+  gulp.src(config.assets.src)
+    .pipe(gulp.dest(config.assets.dest)));
 
 gulp.task('copy', [
   'copy:vendor:styles',
   'copy:vendor:fonts',
   'copy:vendor:js',
-  'copy:asset:styles',
-  'copy:asset:images'
+  'copy:assets'
 ]);
 
 gulp.task('build:styles', () => {

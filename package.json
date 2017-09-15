@@ -9,7 +9,7 @@
     "dev": "gulp dev",
     "start": "live-server --open='_site'",
     "build": "gulp",
-    "deploy": "gulp deploy"
+    "deploy": "./_scripts/deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
     "url": "https://github.com/dtjv/dtjv.github.io/issues"
   },
   "homepage": "https://github.com/dtjv/dtjv.github.io#readme",
-  "private": true,
   "dependencies": {
     "materialize-css": "0.100.2"
   },
@@ -40,5 +39,6 @@
     "postcss-uncss": "0.15.0",
     "run-sequence": "2.1.0",
     "uncss": "0.15.0"
-  }
+  },
+  "private": true
 }

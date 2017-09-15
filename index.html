@@ -28,7 +28,12 @@ layout: default
         <h1 class="hero-heading center white-text">David Valles</h1>
         <h3 class="hero-subheading center white-text">Personal Trainer</h3>
         <div class="center">
-          <button class="waves-effect waves-light btn-large accent-color">Get Started</button>
+          <a
+            class="waves-effect waves-light btn-large accent-color"
+            href="mailto:davidtjvalles@gmail.com?subject=Get%20Started%20with%20Personal%20Training"
+          >
+            Get Started
+          </a>
         </div>
       </div>
     </div>
@@ -62,7 +67,7 @@ layout: default
           I grew up in Santa Cruz and lived a typical childhood - school and play. However, back then, <span style="font-style:italic;">“play”</span> was not computer based - it was <span style="font-style:italic;">“go outside and entertain yourself”</span>. So, it was my brother, my sister and I - riding our bikes, playing kickball with the dog, tending to our garden, raking leaves to jump in and really anything else to stay outside.
         </p>
         <p class="light">
-          I was quite competitive at an early age, so my parents channled that energy into youth soccer. By middle school I’d moved on to track and field where I excelled at the 800m and mile.
+          I was quite competitive at an early age, so my parents channeled that energy into youth soccer. By middle school I’d moved on to track and field where I excelled at the 800m and mile.
         </p>
         <p class="light">
           In college I stayed active as a recreational runner and started lifting weights. A couple years into college I joined the cycling team and ended my first competitive season as Omnium Champion.
@@ -121,7 +126,7 @@ layout: default
                 <li class="collection-item">Customized program</li>
                 <li class="collection-item">Adjustments for limitations</li>
                 <li class="collection-footer">
-                  <button class="waves-effect waves-light btn-large accent-color">Learn More</button>
+                  <button data-target="modal" class="modal-trigger waves-effect waves-light btn-large accent-color">Learn More</button>
                 </li>
               </ul>
             </div>
@@ -138,7 +143,7 @@ layout: default
                 <li class="collection-item">Individually programmed</li>
                 <li class="collection-item">Supportive & fun environment</li>
                 <li class="collection-footer">
-                  <button class="waves-effect waves-light btn-large accent-color">Learn More</button>
+                  <button data-target="modal" class="modal-trigger waves-effect waves-light btn-large accent-color">Learn More</button>
                   <div class="left-align posa b0 pl1">
                     <span class="tiny"><span class="accent-color-text">*</span> Price listed is per person per session</span>
                   </div>
@@ -158,7 +163,7 @@ layout: default
                 <li class="collection-item">Safe, dynamic & FUN!</li>
                 <li class="collection-item">Cost effective & efficient</li>
                 <li class="collection-footer">
-                  <button class="waves-effect waves-light btn-large accent-color">Learn More</button>
+                  <button data-target="modal" class="modal-trigger waves-effect waves-light btn-large accent-color">Learn More</button>
                   <div class="left-align posa b0 pl1">
                     <span class="tiny"><span class="accent-color-text">*</span> Price listed is per person per session</span>
                   </div>
@@ -179,7 +184,9 @@ layout: default
                   <div class="service-title"> Private Training </div>
                   <div class="service-price"> $55 </div>
                 </li>
-                <li class="collection-footer"><button class="waves-effect waves-light btn-large accent-color">Learn More</button></li>
+                <li class="collection-footer">
+                  <button data-target="modal" class="modal-trigger waves-effect waves-light btn-large accent-color">Learn More</button>
+                </li>
               </ul>
             </div>
           </div>
@@ -191,7 +198,7 @@ layout: default
                   <div class="service-price"> $40<span class="accent-color-text">*</span></div>
                 </li>
                 <li class="collection-footer">
-                  <button class="waves-effect waves-light btn-large accent-color">Learn More</button>
+                  <button data-target="modal" class="modal-trigger waves-effect waves-light btn-large accent-color">Learn More</button>
                   <div class="left-align posa b0 pl1">
                     <span class="tiny"><span class="accent-color-text">*</span> Price listed is per person per session</span>
                   </div>
@@ -206,7 +213,9 @@ layout: default
                   <div class="service-title"> Nutritional Coaching </div>
                   <div class="service-price"> $55 </div>
                 </li>
-                <li class="collection-footer"><button class="waves-effect waves-light btn-large accent-color">Learn More</button></li>
+                <li class="collection-footer">
+                  <button data-target="modal" class="modal-trigger waves-effect waves-light btn-large accent-color">Learn More</button>
+                </li>
               </ul>
             </div>
           </div>
@@ -258,7 +267,12 @@ layout: default
       <div class="row pt3 pb3">
         <h2 class="center">Strength. Movement. Fitness.</h2>
         <div class="center">
-          <button class="waves-effect waves-light btn-large accent-color">Get Started</button>
+          <a
+            class="waves-effect waves-light btn-large accent-color"
+            href="mailto:davidtjvalles@gmail.com?subject=Get%20Started%20with%20Personal%20Training"
+          >
+            Get Started
+          </a>
         </div>
       </div>
     </div>
@@ -268,6 +282,18 @@ layout: default
       </div>
     </div>
   </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h4>Personal Training Details</h4>
+      <p>
+        Details are coming soon!  For an immediate response, please <a href="mailto:davidtjvalles@gmail.com?subject=Get%20Started%20with%20Personal%20Training">email me</a>. Thank you for your patience.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect accent-color btn-flat white-text">Close</a>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/js/materialize.min.js"></script>

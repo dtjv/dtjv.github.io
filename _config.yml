@@ -38,12 +38,8 @@ config:
       src: '_site/assets/styles/main.css'
       dest: '_site/assets/styles'
   assets:
-    images:
-      src: '_assets/imgs/**/*'
-      dest: 'assets/imgs'
-    styles:
-      src: '_assets/styles/main.scss'
-      dest: 'assets/styles'
+    src: '_assets/**/*'
+    dest: 'assets/'
   vendor:
     styles:
       src: 'node_modules/materialize-css/sass/**/*'
