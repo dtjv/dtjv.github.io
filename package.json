@@ -5,11 +5,11 @@
   "author": "David J. Valles <davidtjvalles@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "gulp copy:vendor",
-    "build": "gulp build:sass",
-    "dos2unix": "find _assets/styles/materialize/ -type f -print0 | xargs -0 dos2unix",
-    "make": "gulp",
-    "david": "gulp david"
+    "clean": "gulp clean",
+    "dev": "gulp dev",
+    "start": "live-server --open='_site'",
+    "build": "gulp",
+    "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",
@@ -25,16 +25,18 @@
   },
   "devDependencies": {
     "autoprefixer": "7.1.4",
-    "browser-sync": "2.18.13",
     "cssnano": "3.10.0",
     "del": "3.0.0",
     "gulp": "3.9.1",
+    "gulp-dos2unix": "1.0.1",
     "gulp-postcss": "7.0.0",
     "gulp-ruby-sass": "2.1.1",
     "gulp-run": "1.7.1",
     "gulp-size": "2.1.0",
     "gulp-util": "3.0.8",
     "immutable-css": "1.1.2",
+    "js-yaml": "3.10.0",
+    "live-server": "1.2.0",
     "postcss-uncss": "0.15.0",
     "run-sequence": "2.1.0",
     "uncss": "0.15.0"

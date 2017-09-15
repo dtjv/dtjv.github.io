@@ -33,7 +33,7 @@ layout: default
       </div>
     </div>
     <div class="parallax">
-      <img src="imgs/bg1.jpg" alt="">
+      <img src="assets/imgs/bg1.jpg" alt="">
     </div>
   </div>
 
@@ -56,10 +56,10 @@ layout: default
     <div class="container">
       <section>
         <h2>Bio</h2>
-        <p class="light">Hello! My name is David Valles and I’m a personal trainer living in San Jose, Ca.</p>
+        <p class="light">Hello! My name is David Valles and I’m a personal trainer living in San Jose, California.</p>
         <h5><strong>Background</strong></h5>
         <p class="light">
-          I grew up in Santa Cruz and lived a typical childhood - school and play. However, back then, <span style="font-style:italic;">“play”</span> was not computer based - it was <span style="font-style:italic;">“go outside an entertain yourself”</span>. So, it was my brother, my sister and I - riding our bikes, playing kickball with the dog, tending to our garden, raking leaves to jump in and really anything else to stay outside.
+          I grew up in Santa Cruz and lived a typical childhood - school and play. However, back then, <span style="font-style:italic;">“play”</span> was not computer based - it was <span style="font-style:italic;">“go outside and entertain yourself”</span>. So, it was my brother, my sister and I - riding our bikes, playing kickball with the dog, tending to our garden, raking leaves to jump in and really anything else to stay outside.
         </p>
         <p class="light">
           I was quite competitive at an early age, so my parents channled that energy into youth soccer. By middle school I’d moved on to track and field where I excelled at the 800m and mile.
@@ -86,7 +86,7 @@ layout: default
         </div>
       </div>
       <div class="parallax">
-        <img src="imgs/bg2.jpg" alt="">
+        <img src="assets/imgs/bg2.jpg" alt="">
       </div>
     </div>
 
@@ -236,7 +236,7 @@ layout: default
         </div>
       </div>
       <div class="parallax">
-        <img src="imgs/bg3.jpg" alt="">
+        <img src="assets/imgs/bg3.jpg" alt="">
       </div>
     </div>
   </main>
@@ -245,7 +245,7 @@ layout: default
     <section>
       <h2>Philosophy</h2>
       <blockquote>
-        Be active everyday. Learn to move your body well. Enjoy a fitness foundation that supports your daily activities, sport endeavors and any physicaly challenge your heart desires. Be happy!
+        Be active everyday. Learn to move your body well. Enjoy a fitness foundation that supports your daily activities, sport endeavors and any physical challenge your heart desires. Be happy!
       </blockquote>
       <p class="light">
         I aim to encourage, motivate, support and guide my clients to reach their health and fitness goals through safe, progessive and - of course - <strong>fun</strong> training sessions.
@@ -270,7 +270,13 @@ layout: default
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script src="assets/js/materialize.min.js"></script> -->
-  <!-- <script src="assets/js/main.js"></script> -->
+  <script src="assets/js/materialize.min.js"></script>
+  <script>
+    (($) => {
+      $('.button-collapse').sideNav();
+      $('.parallax').parallax();
+      $('.modal').modal();
+    })(jQuery);
+  </script>
 
 </body>

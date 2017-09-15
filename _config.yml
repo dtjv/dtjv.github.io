@@ -1,11 +1,3 @@
-# 1. mkdir _config
-# 1. touch _config/index.js
-# 1. touch _config/config.js
-#
-# index.js will require config.js, write the site config to _config.yml using
-# js-yaml.
-#
-# config.js will also hold build paths. gulpfile.js will read in config.js paths
 title         : 'David Valles - Personal Trainer'
 email         : davidtjvalles@gmail.com
 author        : 'David Valles'
@@ -20,17 +12,46 @@ permalink     : /:year/:month/:title/
 paginate      : 5
 paginate_path : '/blog/page-:num/'
 
-include       : ['_pages']
-exclude       : ['vendor',
-                 '_assets',
-                 'Gemfile',
-                 'Gemfile.lock',
-                 'node_modules',
-                 'package.json',
-                 'package-lock.json',
-                 'gulpfile.js',
-                 'README.md',
-                 'LICENSE.md']
+include:
+  - '_pages'
 
-plugins       : ['jekyll-paginate',
-                 'jekyll-sitemap']
+exclude:
+  - 'vendor'
+  - '_assets'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'node_modules'
+  - 'package.json'
+  - 'package-lock.json'
+  - 'gulpfile.js'
+  - 'NOTES.md'
+  - 'README.md'
+  - 'LICENSE.md'
+
+plugins:
+  - 'jekyll-paginate'
+  - 'jekyll-sitemap'
+
+config:
+  site:
+    styles:
+      src: '_site/assets/styles/main.css'
+      dest: '_site/assets/styles'
+  assets:
+    images:
+      src: '_assets/imgs/**/*'
+      dest: 'assets/imgs'
+    styles:
+      src: '_assets/styles/main.scss'
+      dest: 'assets/styles'
+  vendor:
+    styles:
+      src: 'node_modules/materialize-css/sass/**/*'
+      dest: '_sass/materialize'
+    fonts:
+      src: 'node_modules/materialize-css/dist/fonts/**/*'
+      dest: 'assets/fonts'
+    js:
+      src: 'node_modules/materialize-css/dist/js/materialize.min.js'
+      dest: 'assets/js'
+

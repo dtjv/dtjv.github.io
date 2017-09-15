@@ -2,6 +2,11 @@
 
 [dtjv.github.io](http://dtjv.github.io).
 
+## Todo
+
+* [ ] "price listed is per person per session" - wraps on tablet and gets hidden under "Learn More" button
+
+
 ## Development
 
 * Install/Update [Homebrew](https://brew.sh/)

@@ -1,6 +1,6 @@
 .DS_Store
+NOTES.md
 .sass-cache
 _site
-_drafts
 assets
 node_modules
