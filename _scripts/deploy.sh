@@ -31,7 +31,7 @@ git status
 git add -A .
 git status
 git commit -a -m "Auto deployed"
-git push --quiet origin master > dev/null 2>$1
+git push origin master
 
 # cleanup
 rm -rf $tmp

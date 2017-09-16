@@ -23,7 +23,10 @@ blockquote {
   border-left: 8px solid $accent-color;
   text-align: justify;
   letter-spacing: .5px;
-  line-height: 1.25;
+
+  p {
+    line-height: 1.4;
+  }
 }
 
 ul {

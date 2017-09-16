@@ -18,15 +18,12 @@ include:
 exclude:
   - 'vendor'
   - '_assets'
+  - 'gulpfile.js'
   - 'Gemfile'
   - 'Gemfile.lock'
   - 'node_modules'
   - 'package.json'
   - 'package-lock.json'
-  - 'gulpfile.js'
-  - 'NOTES.md'
-  - 'README.md'
-  - 'LICENSE.md'
 
 plugins:
   - 'jekyll-paginate'
