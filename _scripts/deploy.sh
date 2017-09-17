@@ -22,10 +22,6 @@ rm -rf *
 # copy generated HTML from 'source' branch to 'master' branch of clone
 cp -R $src/* .
 
-#
-rm .editorconfig
-rm .gitignore
-
 # commit and push generated content to 'master' branch
 git status
 git add -A .
