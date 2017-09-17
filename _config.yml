@@ -48,6 +48,6 @@ config:
       src: 'node_modules/materialize-css/dist/fonts/**/*'
       dest: 'assets/fonts'
     js:
-      src: 'node_modules/materialize-css/dist/js/**/*'
+      src: 'node_modules/materialize-css/dist/js/materialize.min.js'
       dest: 'assets/js'
 

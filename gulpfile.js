@@ -38,7 +38,7 @@ gulp.task('copy:vendor:fonts', () =>
 
 gulp.task('copy:vendor:js', () =>
   gulp.src(config.vendor.js.src)
-    .pipe(dos2unix())
+    .pipe(dos2unix({ feedback: true }))
     .pipe(gulp.dest(config.vendor.js.dest)));
 
 gulp.task('copy:assets:imgs', () =>
