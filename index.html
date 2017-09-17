@@ -15,12 +15,7 @@ layout: default
     loadCSS('https://fonts.googleapis.com/css?family=Raleway:500i');
   </script>
 
-  <!-- Inline critical CSS -->
-  {% if jekyll.environment == "production" %}
-     <style>{% include css/main.css %}</style>
-  {% else %}
-    <link href="assets/styles/main.css" rel="stylesheet" type="text/css" media="screen" />
-  {% endif %}
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
 

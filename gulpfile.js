@@ -59,7 +59,8 @@ gulp.task('build:styles', () => {
     .pipe(size())
     .pipe(postcss(plugins))
     .pipe(size())
-    .pipe(gulp.dest(config.assets.styles.dest.production));
+//    .pipe(gulp.dest(config.assets.styles.dest.production));
+    .pipe(gulp.dest(config.assets.styles.dest.development));
 });
 
 gulp.task('build:styles:dev', () => {
@@ -82,8 +83,8 @@ gulp.task('clean', () =>
   del([
     'assets',
     '_site',
-    config.vendor.styles.dest,
-    config.assets.styles.dest.production
+    config.vendor.styles.dest
+//    config.assets.styles.dest.production
   ]));
 
 gulp.task('copy', ['clean'], callback => {
