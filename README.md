@@ -67,28 +67,28 @@ Removes all generated html and copied assets.
 $ npm run clean
 ```
 
-#### dev
+### build
 
-Builds the site and watches for *all* file changes.
+Builds the site with Sass/CSS optimizations.
 
 ```sh
-$ npm run dev
+$ npm run build
+```
+
+#### watch
+
+Builds the site and watches for file changes. Rebuilds when files change. 
+
+```sh
+$ npm run watch
 ```
 
 #### start
 
-Starts `live-server` and opens browser to generated site.
+Starts `live-server` and opens browser to generated site. Reloads when files change.
 
 ```sh
 $ npm start
-```
-
-#### build
-
-Builds the site with Sass optimizations.
-
-```sh
-$ npm run build
 ```
 
 #### deploy 
@@ -162,6 +162,7 @@ For introducing me to the excess CSS I send to clients:
 ## Todo
 
 * [ ] "price listed is per person per session" - wraps on tablet and gets hidden under "Learn More" button
+* [ ] swap out live-server for browser-sync to test on mobile
 
 ## License
 

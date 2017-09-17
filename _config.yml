@@ -21,6 +21,7 @@ exclude:
   - 'gulpfile.js'
   - 'Gemfile'
   - 'Gemfile.lock'
+  - 'NOTES.md'
   - 'node_modules'
   - 'package.json'
   - 'package-lock.json'
@@ -30,21 +31,23 @@ plugins:
   - 'jekyll-sitemap'
 
 config:
-  site:
-    styles:
-      src: '_site/assets/styles/main.css'
-      dest: '_site/assets/styles'
   assets:
-    src: '_assets/**/*'
-    dest: 'assets/'
+    imgs:
+      src: '_assets/imgs/**/*'
+      dest: 'assets/imgs'
+    styles:
+      src: '_assets/styles/main.scss'
+      dest:
+        production: '_includes/css'
+        development: 'assets/styles'
   vendor:
     styles:
       src: 'node_modules/materialize-css/sass/**/*'
-      dest: '_sass/materialize'
+      dest: '_assets/styles/materialize'
     fonts:
       src: 'node_modules/materialize-css/dist/fonts/**/*'
       dest: 'assets/fonts'
     js:
-      src: 'node_modules/materialize-css/dist/js/materialize.min.js'
+      src: 'node_modules/materialize-css/dist/js/**/*'
       dest: 'assets/js'
 

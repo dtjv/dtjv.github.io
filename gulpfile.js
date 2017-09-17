@@ -9,6 +9,7 @@ const cssnano = require('cssnano');
 const uncss = require('postcss-uncss');
 const run = require('gulp-run');
 const gutil = require('gulp-util');
+const sass = require('gulp-ruby-sass');
 const dos2unix = require('gulp-dos2unix');
 const runSequence = require('run-sequence');
 const autoprefixer = require('autoprefixer');
@@ -40,16 +41,9 @@ gulp.task('copy:vendor:js', () =>
     .pipe(dos2unix())
     .pipe(gulp.dest(config.vendor.js.dest)));
 
-gulp.task('copy:assets', () =>
-  gulp.src(config.assets.src)
-    .pipe(gulp.dest(config.assets.dest)));
-
-gulp.task('copy', [
-  'copy:vendor:styles',
-  'copy:vendor:fonts',
-  'copy:vendor:js',
-  'copy:assets'
-]);
+gulp.task('copy:assets:imgs', () =>
+  gulp.src(config.assets.imgs.src)
+    .pipe(gulp.dest(config.assets.imgs.dest)));
 
 gulp.task('build:styles', () => {
   const plugins = [
@@ -61,47 +55,76 @@ gulp.task('build:styles', () => {
     cssnano(),
   ];
 
-  return gulp.src(config.site.styles.src)
+  return sass(config.assets.styles.src)
     .pipe(size())
     .pipe(postcss(plugins))
     .pipe(size())
-    .pipe(gulp.dest(config.site.styles.dest));
+    .pipe(gulp.dest(config.assets.styles.dest.production));
+});
+
+gulp.task('build:styles:dev', () => {
+  return sass(config.assets.styles.src)
+    .pipe(gulp.dest(config.assets.styles.dest.development));
 });
 
 gulp.task('build:jekyll', () =>
   gulp.src('')
-    .pipe(run('bundle exec jekyll build'))
+    .pipe(run('JEKYLL_ENV=production bundle exec jekyll build'))
     .on('error', gutil.log));
 
-gulp.task('watch:jekyll', () =>
+gulp.task('build:jekyll:dev', () =>
   gulp.src('')
-    .pipe(run('bundle exec jekyll build --watch --drafts --profile'))
+    .pipe(run('bundle exec jekyll build --drafts --profile'))
     .on('error', gutil.log));
+
 
 gulp.task('clean', () =>
   del([
     'assets',
     '_site',
-    config.vendor.styles.dest
+    config.vendor.styles.dest,
+    config.assets.styles.dest.production
   ]));
 
-gulp.task('build', callback => {
+gulp.task('copy', ['clean'], callback => {
   runSequence(
-    'clean',
-    'copy',
-    'build:jekyll',
-    'build:styles',
+    'copy:vendor:styles',
+    'copy:vendor:fonts',
+    'copy:vendor:js',
+    'copy:assets:imgs',
     callback
   );
 });
 
-gulp.task('dev', callback => {
+gulp.task('build', callback => {
   runSequence(
-    'clean',
     'copy',
-    'watch:jekyll',
+    'build:styles',
+    'build:jekyll',
     callback
   );
+});
+
+gulp.task('build:dev', callback => {
+  runSequence(
+    'copy',
+    'build:styles:dev',
+    'build:jekyll:dev',
+    callback
+  );
+});
+
+gulp.task('watch', ['build:dev'], cb => {
+  gulp.watch([
+    '_assets/styles/**/*',
+    '**/*.+(html|md|markdown|MD)', '!_site/**/*', '!node_modules/**/*'
+  ], () => {
+    runSequence(
+      'build:styles:dev',
+      'build:jekyll:dev',
+     cb
+    );
+  });
 });
 
 gulp.task('default', ['build']);

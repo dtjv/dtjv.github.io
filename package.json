@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "gulp clean",
-    "dev": "gulp dev",
-    "start": "live-server --open='_site'",
     "build": "gulp",
+    "watch": "gulp watch",
+    "start": "live-server --open='_site'",
     "deploy": "./_scripts/deploy.sh"
   },
   "repository": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/dtjv/dtjv.github.io#readme",
   "dependencies": {
+    "gulp-ruby-sass": "2.1.1",
     "materialize-css": "0.100.2"
   },
   "devDependencies": {
