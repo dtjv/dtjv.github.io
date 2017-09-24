@@ -4,13 +4,19 @@ author        : 'David Valles'
 description   : 'David Valles - Personal Trainer'
 
 baseurl       : ''
-url           : 'http://dtjv.io'
+url           : 'http://davidvalles.net'
 
 date_format   : '%b %-d, %Y'
 permalink     : /:year/:month/:title/
 
 paginate      : 5
 paginate_path : '/blog/page-:num/'
+
+markdown      : kramdown
+highligher    : rouge
+kramdown      :
+  input       : GFM
+  hard_wrap   : false
 
 include:
   - '_pages'
