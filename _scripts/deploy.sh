@@ -3,9 +3,22 @@
 # enable error reporting to the console
 set -e
 
-# set variables
-src=~/sw/sites/dtjv.github.io/_site
-tmp=~/tmp/dtjv.github.io.master
+function usage
+{
+  echo ""
+  echo "Usage: REPO=<repo name> deploy"
+  echo ""
+}
+
+# ensure REPO environment variable is set
+if [ "$REPO" = "" ]; then
+  usage
+  exit 1
+fi
+
+# set local variables
+src=~/sw/sites/$REPO/_site
+tmp=~/tmp/$REPO.master
 
 # prep target dir
 rm -rf $tmp
@@ -14,7 +27,7 @@ rm -rf $tmp
 npm run build
 
 # checkout master and remove everthing
-git clone https://github.com/dtjv/dtjv.github.io.git $tmp
+git clone https://github.com/dtjv/$REPO.git $tmp
 cd $tmp
 git checkout master
 rm -rf *
@@ -32,4 +45,5 @@ git push origin master
 # cleanup
 rm -rf $tmp
 
+echo ""
 echo "Site deployed!"
