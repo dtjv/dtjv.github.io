@@ -7,7 +7,7 @@
   "scripts": {
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve --watch --drafts --profile",
-    "deploy": "REPO=dtjv.io ./_scripts/deploy.sh",
+    "deploy": "REPO=dtjv.github.io ./_scripts/deploy.sh",
     "postinstall": "bundle install"
   },
   "repository": {
