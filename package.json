@@ -5,10 +5,8 @@
   "author": "David J. Valles <davidtjvalles@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "clean": "gulp clean",
-    "build": "gulp",
-    "watch": "gulp watch",
-    "start": "cd _site && live-server",
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --watch --drafts --profile",
     "deploy": "./_scripts/deploy.sh"
   },
   "repository": {
@@ -19,26 +17,5 @@
     "url": "https://github.com/dtjv/dtjv.github.io/issues"
   },
   "homepage": "https://github.com/dtjv/dtjv.github.io#readme",
-  "dependencies": {
-    "gulp-ruby-sass": "2.1.1",
-    "materialize-css": "0.100.2"
-  },
-  "devDependencies": {
-    "autoprefixer": "7.1.4",
-    "cssnano": "3.10.0",
-    "del": "3.0.0",
-    "gulp": "3.9.1",
-    "gulp-dos2unix": "1.0.1",
-    "gulp-postcss": "7.0.0",
-    "gulp-run": "1.7.1",
-    "gulp-size": "2.1.0",
-    "gulp-util": "3.0.8",
-    "immutable-css": "1.1.2",
-    "js-yaml": "3.10.0",
-    "live-server": "1.2.0",
-    "postcss-uncss": "0.15.0",
-    "run-sequence": "2.1.0",
-    "uncss": "0.15.0"
-  },
   "private": true
 }

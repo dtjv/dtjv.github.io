@@ -1,30 +1,79 @@
-title         : 'David Valles - Personal Trainer'
-email         : davidtjvalles@gmail.com
-author        : 'David Valles'
-description   : 'David Valles - Personal Trainer'
+title                : 'David Valles'
+email                : davidtjvalles@gmail.com
+author               : 'David Valles'
+description          : 'David Valles'
 
-baseurl       : ''
-url           : 'http://davidvalles.net'
+baseurl              : ''
+url                  : 'http://davidvalles.net'
 
-date_format   : '%b %-d, %Y'
-permalink     : /:year/:month/:title/
+date_format          : '%b %-d, %Y'
+permalink            : /:year/:month/:title/
 
-paginate      : 5
-paginate_path : '/blog/page-:num/'
+paginate             : 5
+paginate_path        : '/blog/page-:num/'
 
-markdown      : kramdown
-highligher    : rouge
-kramdown      :
-  input       : GFM
-  hard_wrap   : false
+markdown             : kramdown
+highligher           : rouge
+kramdown             :
+  input              : GFM
+  hard_wrap          : false
+
+# Sections
+animated             : true
+show_related_posts   : false
+show_social_icons    : true
+enable_mathjax       : true
+enable_anchorjs      : true
+ajaxify_contact_form : true
+
+# Google
+google_analytics     :
+
+# Bing
+bing_verification    :
+
+# Disqus
+disqus_shortname     : davidvalles
+
+# Social Icons
+github_username      : dtjv
+bitbucket_username   :
+stackoverflow_id     :
+xmlfeed              :
+twitter_username     :
+facebook_username    :
+skype_username       :
+steam_nickname       :
+google_plus_id       :
+linkedin_username    :
+angellist_username   :
+medium_id            :
+bitcoin_url          :
+paypal_url           :
+flattr_button        :
+
+# Share Icons
+show_sharing_icons   : false
+share_facebook       : false
+share_twitter        : false
+
+# UI
+text                 :
+  pagination         :
+    newer            : 'Next'
+    older            : 'Previous'
+  post               :
+    updated          : 'Updated'
+    minute_read      : 'minute read'
+    related_posts    : 'Related Posts'
+  index              :
+    coming_soon      : 'Coming soon!!'
 
 include:
   - '_pages'
 
 exclude:
   - 'vendor'
-  - '_assets'
-  - 'gulpfile.js'
   - 'Gemfile'
   - 'Gemfile.lock'
   - 'NOTES.md'
@@ -35,25 +84,3 @@ exclude:
 plugins:
   - 'jekyll-paginate'
   - 'jekyll-sitemap'
-
-config:
-  assets:
-    imgs:
-      src: '_assets/imgs/**/*'
-      dest: 'assets/imgs'
-    styles:
-      src: '_assets/styles/main.scss'
-      dest:
-        production: '_includes/css'
-        development: 'assets/styles'
-  vendor:
-    styles:
-      src: 'node_modules/materialize-css/sass/**/*'
-      dest: '_assets/styles/materialize'
-    fonts:
-      src: 'node_modules/materialize-css/dist/fonts/**/*'
-      dest: 'assets/fonts'
-    js:
-      src: 'node_modules/materialize-css/dist/js/materialize.min.js'
-      dest: 'assets/js'
-
