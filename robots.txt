@@ -1,1 +1,1 @@
-Sitemap: http://dtjv.io/sitemap.xml
+Sitemap: http://davidvalles.net/sitemap.xml
