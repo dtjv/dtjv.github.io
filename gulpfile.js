@@ -7,7 +7,6 @@ const size = require('gulp-size');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const uncss = require('postcss-uncss');
-const sass = require('gulp-ruby-sass');
 const rename = require('gulp-rename');
 const autoprefixer = require('autoprefixer');
 const runSequence = require('run-sequence');
