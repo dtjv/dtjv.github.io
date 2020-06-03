@@ -1,3 +1,5 @@
-html {
-  background-color: lightblue;
-}
+/*! purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/*! purgecss end ignore */
+@tailwind utilities;

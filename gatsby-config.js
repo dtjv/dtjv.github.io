@@ -27,6 +27,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`tailwindcss`), require(`autoprefixer`)],
+      },
+    },
     // `gatsby-plugin-offline`,
   ],
 }
