@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
+
 import { Layout } from '../layout'
+import { SEO } from '../components/seo'
 
 const PostTemplate = ({ data }) => {
   const { markdownRemark: post } = data
@@ -9,14 +10,11 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet titleTemplate="IDK">
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Helmet>
+      <SEO title={title} description={description} />
       <div className="px-3">
         <section className="mt-8 pt-4 pb-4">
           <header>
-            <h1 className="text-5xl font-extrabold">{title}</h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">{title}</h1>
             <p className="text-sm text-gray-600 uppercase">{date}</p>
           </header>
         </section>

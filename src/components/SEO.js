@@ -17,19 +17,19 @@ const SEO = ({ description, lang, meta = [], title }) => {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const pageDescription = description || site.siteMetadata.description
+  const pageTitle = title || site.siteMetadata.title
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={pageTitle}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: pageDescription,
         },
         {
           property: `og:title`,
@@ -37,7 +37,7 @@ const SEO = ({ description, lang, meta = [], title }) => {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: pageDescription,
         },
         {
           property: `og:url`,
@@ -61,7 +61,7 @@ const SEO = ({ description, lang, meta = [], title }) => {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: pageDescription,
         },
       ].concat(meta)}
     >

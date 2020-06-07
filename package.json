@@ -42,13 +42,11 @@
     "gatsby-transformer-remark": "2.8.14",
     "gatsby-transformer-sharp": "^2.5.4",
     "prismjs": "1.20.0",
-    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/custom-forms": "0.2.1",
     "autoprefixer": "9.8.0",
     "gh-pages": "3.0.0",
     "prettier": "2.0.5",
