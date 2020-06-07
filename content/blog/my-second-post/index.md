@@ -1,7 +1,7 @@
 ---
 title: My Second Post!
 date: '2015-05-06T23:46:37.121Z'
-description: Another post...
+description: Another post, and another short description.
 template: post
 ---
 

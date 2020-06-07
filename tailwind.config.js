@@ -7,8 +7,16 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+        sm: '800px',
+        md: '800px',
+        lg: '800px',
+        xl: '800px',
+      },
     },
   },
-  variants: {},
+  variants: {
+    margin: ['responsive', 'first'],
+  },
   plugins: [require('@tailwindcss/custom-forms')],
 }

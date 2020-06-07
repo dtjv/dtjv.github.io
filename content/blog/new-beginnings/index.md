@@ -1,7 +1,7 @@
 ---
 title: New Beginnings
 date: '2015-05-28T22:40:32.169Z'
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: Just a short description that says a few words.
 template: post
 ---
 
@@ -17,10 +17,44 @@ Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
 didn’t listen. She packed her seven versalia, put her initial into the belt and
 made herself on the way.
 
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
+```no-highlight
+1. First ordered list item
+2. Another item
+⋅⋅⋅⋅* Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+⋅⋅⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+```
+
+1.  First ordered list item
+2.  Another item
+    - Unordered sub-list.
+3.  Actual numbers don't matter, just that it's a number
+    1.  Ordered sub-list
+4.  And another item.
+
+You can have properly indented paragraphs within list items. Notice the blank
+line above, and the leading spaces (at least one, but we'll use three here to
+also align the raw Markdown).
+
+To have a line break without a paragraph, you will need to use two trailing
+spaces.\
+ Note that this line is separate, but within the same paragraph.
+
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 
 When she reached the first hills of the **Italic Mountains**, she had a last
 view back on the skyline of her hometown _Bookmarksgrove_, the headline of

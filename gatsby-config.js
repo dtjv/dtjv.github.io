@@ -40,6 +40,9 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        gfm: true,
+        commonmark: true,
+        footnotes: true,
         plugins: [
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,

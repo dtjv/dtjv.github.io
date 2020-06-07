@@ -1,38 +1,34 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import Layout from '../layout'
+import { Helmet } from 'react-helmet'
+import { Layout } from '../layout'
 
 const PostTemplate = ({ data }) => {
   const { markdownRemark: post } = data
+  const { title, date, description } = post.frontmatter
 
   return (
     <Layout>
-      <section>
-        <Helmet titleTemplate="IDK">
-          <title>{`${post.frontmatter.title}`}</title>
-          <meta
-            name="description"
-            content={`${post.frontmatter.description}`}
+      <Helmet titleTemplate="IDK">
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
+      <div className="px-3">
+        <section className="mt-8 pt-4 pb-4">
+          <header>
+            <h1 className="text-5xl font-extrabold">{title}</h1>
+            <p className="text-sm text-gray-600 uppercase">{date}</p>
+          </header>
+        </section>
+        <section className="mt-8">
+          <article
+            className="markdown mt-2"
+            dangerouslySetInnerHTML={{ __html: post.html }}
           />
-        </Helmet>
-        <div>
-          <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.description}</p>
-          <br />
-          <br />
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   )
-}
-
-PostTemplate.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
 }
 
 export default PostTemplate

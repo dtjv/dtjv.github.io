@@ -1,5 +1,74 @@
 /*! purgecss start ignore */
 @tailwind base;
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+h4 {
+  @apply text-lg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-black font-semibold;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ul,
+ol {
+  @apply list-inside;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  @apply mt-6;
+}
+
+.markdown ul,
+.markdown ol,
+.markdown p {
+  @apply mt-3;
+}
+
+.markdown p:first-child {
+  @apply mt-0;
+}
+
+.markdown a {
+  @apply text-blue-600;
+}
+.markdown a:hover {
+  @apply cursor-pointer underline;
+}
+
+.markdown blockquote {
+  @apply mt-6 pl-6 pt-3 pr-6 pb-3 bg-gray-200 border-l-4 border-gray-800;
+}
+
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
