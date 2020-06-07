@@ -3,6 +3,7 @@ module.exports = {
     title: `David Valles`,
     description: `My personal website`,
     author: `David`,
+    siteUrl: `https://dtjv.io`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
