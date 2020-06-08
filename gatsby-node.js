@@ -1,18 +1,13 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+const { get } = require('./src/utils/get')
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode })
-    const date = new Date(node.frontmatter.date)
-
-    createNodeField({
-      name: 'date',
-      node,
-      value: date.toISOString(),
-    })
 
     createNodeField({
       name: `slug`,
@@ -22,43 +17,39 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  return graphql(`
-    {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              template
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(limit: 1000) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
-  `).then(result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
-    }
+    `
+  )
 
-    const posts = result.data.allMarkdownRemark.edges
+  if (result.errors) {
+    throw result.errors
+  }
 
-    posts.forEach(edge => {
-      createPage({
-        path: edge.node.fields.slug,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.template)}.js`
-        ),
-        context: {
-          id: edge.node.id,
-        },
-      })
+  const posts = get(result, ['data', 'allMarkdownRemark', 'edges']) || []
+
+  posts.forEach(post => {
+    createPage({
+      path: post.node.fields.slug,
+      component: path.resolve('src/templates/post.js'),
+      context: {
+        id: post.node.id,
+      },
     })
   })
 }

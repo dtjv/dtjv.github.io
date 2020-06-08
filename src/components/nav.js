@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nav = () => (
   <nav className="flex items-center justify-between px-3 py-6">
-    <a href="/" className="text-xl font-semibold">
+    <a href="/" className="text-xl font-semibold hover:text-gray-600">
       David Valles
     </a>
     <div className="flex items-center justify-between">
@@ -10,7 +10,7 @@ const Nav = () => (
         <svg
           viewBox="0 0 16 16"
           fill="currentColor"
-          className="ml-3 w-6 h-6 text-gray-800"
+          className="ml-3 w-6 h-6 text-gray-800 hover:text-gray-600"
         >
           <path
             fillRule="evenodd"

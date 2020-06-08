@@ -1,0 +1,30 @@
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown ul,
+.markdown ol,
+.markdown p,
+.markdown pre,
+.markdown code,
+.markdown blockquote {
+  @apply mt-5;
+}
+
+.markdown p:first-child {
+  @apply mt-0;
+}
+
+.markdown a {
+  @apply text-blue-600;
+}
+.markdown a:hover {
+  @apply text-blue-300;
+}
+
+.markdown blockquote {
+  @apply pl-6 pt-3 pr-6 pb-3 bg-gray-200 border-l-4 border-gray-800;
+}
+
+.markdown code {
+  @apply text-sm font-mono;
+}

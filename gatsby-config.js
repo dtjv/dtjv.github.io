@@ -1,9 +1,11 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   siteMetadata: {
     title: `David Valles`,
     description: `My personal website`,
     author: `David`,
-    siteUrl: `https://dtjv.io`
+    siteUrl: `https://dtjv.io`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `tomato`,
+        color: defaultTheme.colors.blue[600],
       },
     },
     `gatsby-transformer-sharp`,
@@ -49,13 +51,6 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-responsive-iframe`,
           `gatsby-remark-smartypants`,
-          {
-            resolve: `gatsby-remark-external-links`,
-            options: {
-              target: `_blank`,
-              rel: `noopener noreferrer`,
-            },
-          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -76,7 +71,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        postCssPlugins: [require(`tailwindcss`), require(`autoprefixer`)],
+        postCssPlugins: [
+          require(`postcss-import`),
+          require(`tailwindcss`),
+          require(`autoprefixer`),
+        ],
       },
     },
     {
@@ -85,8 +84,8 @@ module.exports = {
         name: `dtjv.github.io`,
         short_name: `dtjv.io`,
         start_url: `/`,
-        background_color: `#3182CE`,
-        theme_color: `#3182CE`,
+        background_color: defaultTheme.colors.blue[600],
+        theme_color: defaultTheme.colors.blue[600],
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
       },
