@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Coming soon…","fields":{"slug":"/blog/intro/"},"frontmatter":{"date":"June 07, 2020","title":"Intro","description":"In the beginning..."}}}]}},"pageContext":{}}}
+{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"fields":{"slug":"/blog/intro/"},"frontmatter":{"title":"Intro","date":"June 07, 2020","description":"In the beginning..."}}}]}},"pageContext":{}}}
