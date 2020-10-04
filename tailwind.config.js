@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -5,7 +7,11 @@ module.exports = {
   },
   purge: ['./src/**/*.js'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   variants: {},
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/ui')],
