@@ -6,7 +6,7 @@ import { SEO } from '../components/seo'
 const PageNotFound = () => (
   <Layout>
     <SEO title="Page Not Found" />
-    <section className="px-3 pt-4 pb-4 mt-10">
+    <section className="px-6 py-6 mt-10">
       <h2> Sorry! </h2>
       <p>
         That page is missing. Go to{' '}

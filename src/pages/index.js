@@ -8,17 +8,19 @@ const renderPost = (post) => {
   const { title, date, description } = post.node.frontmatter
 
   return (
-    <Link
-      key={slug}
-      to={slug}
-      className="block px-3 py-4 rounded hover:bg-blue-100"
-    >
-      <article>
-        <h2 className="text-blue-600">{title}</h2>
-        <p className="text-xs text-gray-700 uppercase">{date}</p>
-        <p dangerouslySetInnerHTML={{ __html: description }} />
-      </article>
-    </Link>
+    <div key={slug} className="mt-8 first:mt-0 last:mb-28">
+      <Link
+        to={slug}
+        className="text-lg font-bold text-blue-500 no-underline hover:text-blue-400"
+      >
+        {title}
+      </Link>
+      <p className="text-xs text-gray-700 uppercase">{date}</p>
+      <p
+        className="mt-1 text-gray-800"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+    </div>
   )
 }
 
@@ -29,11 +31,20 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <section className="px-3 pt-4 pb-4 mt-10">
-        <h1 className="text-3xl font-extrabold md:text-5xl">Hi, I'm David</h1>
-        <p className="text-xl">This is my personal website. Enjoy.</p>
+      <section className="px-6 py-6">
+        <div>
+          <h1 className="text-2xl font-extrabold">Hi, I'm David</h1>
+          <p className="text-lg text-gray-800">
+            My plan for this site is to share - my thoughts, my projects, and my
+            life. Let's see how it goes. I hope you find some value.
+          </p>
+        </div>
+
+        <div className="mt-10">
+          <h1 className="text-2xl font-extrabold">Articles</h1>
+          <div className="mt-4">{renderPosts()}</div>
+        </div>
       </section>
-      <section className="mt-10">{renderPosts()}</section>
     </Layout>
   )
 }
