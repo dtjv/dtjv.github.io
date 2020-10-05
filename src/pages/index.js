@@ -8,7 +8,7 @@ const renderPost = (post) => {
   const { title, date, description } = post.node.frontmatter
 
   return (
-    <div key={slug} className="mt-8 first:mt-0 last:mb-28">
+    <div key={slug} className="mt-8 first:mt-0">
       <Link
         to={slug}
         className="text-lg font-bold text-blue-500 no-underline hover:text-blue-400"
