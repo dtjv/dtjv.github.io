@@ -1,6 +1,5 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const { getNestedProperty } = require('./src/utils/get')
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -39,22 +38,14 @@ exports.createPages = async ({ actions, graphql }) => {
     throw result.errors
   }
 
-  const posts =
-    getNestedProperty(result, ['data', 'allMarkdownRemark', 'edges']) || []
+  const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach((post) => {
-    const id = getNestedProperty(post, ['node', 'id'])
-    const slug = getNestedProperty(post, ['node', 'fields', 'slug'])
-
-    if (!id || !slug) {
-      throw new Error('Error creating page for post')
-    }
-
     createPage({
-      path: slug,
+      path: post.node.fields.slug,
       component: path.resolve('src/templates/post.js'),
       context: {
-        id,
+        id: post.node.id,
       },
     })
   })

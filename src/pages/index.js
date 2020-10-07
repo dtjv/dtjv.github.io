@@ -33,7 +33,9 @@ const IndexPage = ({ data }) => {
       <SEO />
       <section className="px-6 py-6">
         <div>
-          <h1 className="text-2xl font-extrabold">Hi, I'm David</h1>
+          <h1 className="text-4xl font-extrabold leading-tight">
+            Hi, I'm David
+          </h1>
           <p className="text-lg text-gray-800">
             My plan for this site is to share - my thoughts, my projects, and my
             life. Let's see how it goes. I hope you find some value.
