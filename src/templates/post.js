@@ -10,13 +10,17 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <section className="px-6 py-6">
+      <section className="px-6 py-6 space-y-10">
         <div>
-          <h1 className="text-4xl font-extrabold leading-tight">{title}</h1>
-          <p className="text-sm text-gray-700 uppercase">{date}</p>
+          <p className="text-xs font-semibold text-gray-500 uppercase">
+            {date}
+          </p>
+          <h1 className="mt-1 text-2xl font-extrabold leading-tight">
+            {title}
+          </h1>
         </div>
 
-        <div className="mt-10">
+        <div>
           <article
             className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl"
             dangerouslySetInnerHTML={{ __html: post.html }}

@@ -8,7 +8,7 @@ const renderPost = (post) => {
   const { title, date, description } = post.node.frontmatter
 
   return (
-    <div key={slug} className="mt-8 first:mt-0">
+    <div key={slug} className="first:mt-0">
       <Link
         to={slug}
         className="text-lg font-bold text-blue-500 no-underline hover:text-blue-400"
@@ -31,20 +31,18 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <section className="px-6 py-6">
+      <section className="px-6 py-6 space-y-10">
         <div>
-          <h1 className="text-4xl font-extrabold leading-tight">
-            Hi, I'm David
-          </h1>
-          <p className="text-lg text-gray-800">
+          <h1 className="text-2xl font-extrabold">Hi, I'm David</h1>
+          <p className="text-gray-800">
             My plan for this site is to share - my thoughts, my projects, and my
             life. Let's see how it goes. I hope you find some value.
           </p>
         </div>
 
-        <div className="mt-10">
+        <div className="space-y-4">
           <h1 className="text-2xl font-extrabold">Articles</h1>
-          <div className="mt-4">{renderPosts()}</div>
+          <div className="space-y-8">{renderPosts()}</div>
         </div>
       </section>
     </Layout>
