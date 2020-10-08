@@ -1,12 +1,19 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   siteMetadata: {
     title: `David Valles`,
-    description: `My personal website`,
-    author: `David`,
+    author: `David Valles`,
+    description: `A personal site by David Valles.`,
     siteUrl: `https://dtjv.io`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,7 +47,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 850,
+              maxWidth: 768,
             },
           },
         ],
@@ -49,20 +56,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `dtjv.io`,
-        short_name: `dtjv.io`,
+        name: `David Valles`,
+        short_name: `David Valles`,
+        description: `A personal site by David Valles.`,
         start_url: `/`,
-        background_color: defaultTheme.colors.blue[600],
-        theme_color: defaultTheme.colors.blue[600],
+        background_color: defaultTheme.colors.white,
+        theme_color: defaultTheme.colors.blue[500],
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-catch-links`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-postcss`,
   ],
 }

@@ -1,15 +1,17 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import { Layout } from '../layout'
-import { SEO } from '../components/seo'
+import { Layout } from '../components/Layout'
+import { SEO } from '../components/SEO'
 
 const PostTemplate = ({ data }) => {
-  const { markdownRemark: post } = data
-  const { title, date, description } = post.frontmatter
+  const post = data.markdownRemark
+  const { title, date } = post.frontmatter
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <Helmet title={title} />
+      <SEO post={post} />
       <section className="px-6 py-6 space-y-10">
         <div>
           <p className="text-xs font-semibold text-gray-500 uppercase">
@@ -36,12 +38,14 @@ export default PostTemplate
 export const pageQuery = graphql`
   query PostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      id
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

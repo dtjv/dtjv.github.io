@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const SEO = ({ title, description, meta = [] }) => {
+const SEO = ({ post }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -11,60 +11,37 @@ const SEO = ({ title, description, meta = [] }) => {
             title
             description
             author
+            siteUrl
           }
         }
       }
     `
   )
 
-  const pageDescription = description || site.siteMetadata.description
-  const pageTitle = title || site.siteMetadata.title
+  let {
+    siteMetadata: { title, siteUrl: url, description },
+  } = site
+
+  if (post) {
+    title = post.frontmatter.title
+    url = `${site.siteMetadata.siteUrl}${post.fields.slug}`
+    description = post.frontmatter.description
+  }
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang: 'en',
-      }}
-      title={pageTitle}
-      meta={[
-        {
-          name: `description`,
-          content: pageDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: pageDescription,
-        },
-        {
-          property: `og:url`,
-          content: site.siteMetadata.siteUrl,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: pageDescription,
-        },
-      ].concat(meta)}
-    >
+    <Helmet>
+      <meta name="lang" content="en" />
+      <meta name="description" content={description} />
+
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={post ? 'article' : 'website'} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Helmet>
   )

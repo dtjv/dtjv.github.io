@@ -1,7 +1,8 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import { Layout } from '../layout'
-import { SEO } from '../components/seo'
+import { Layout } from '../components/Layout'
+import { SEO } from '../components/SEO'
 
 const renderPost = (post) => {
   const { slug } = post.node.fields
@@ -30,6 +31,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet title={data.site.siteMetadata.title} />
       <SEO />
       <section className="px-6 py-6 space-y-10">
         <div>
@@ -65,6 +67,11 @@ export const pageQuery = graphql`
             description
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Nav } from '../components/nav'
-import { Footer } from '../components/footer'
+import { Nav } from './Nav'
+import { Footer } from './Footer'
 
 const Layout = ({ children }) => {
   return (

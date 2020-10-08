@@ -1,20 +1,15 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { Layout } from '../layout'
-import { SEO } from '../components/seo'
+import { Helmet } from 'react-helmet'
+import { Layout } from '../components/Layout'
+import { SEO } from '../components/SEO'
 
 const PageNotFound = () => (
   <Layout>
-    <SEO title="Page Not Found" />
-    <section className="px-6 py-6 mt-10">
-      <h2> Sorry! </h2>
-      <p>
-        That page is missing. Go to{' '}
-        <Link to="/" className="text-blue-600 hover:text-blue-300">
-          Home Page
-        </Link>
-        .
-      </p>
+    <Helmet title="404" />
+    <SEO />
+    <section className="px-6 py-6 space-y-10">
+      <h1 className="text-2xl font-extrabold">404</h1>
+      <p className="text-gray-800"> That page is missing. Apologies. </p>
     </section>
   </Layout>
 )
