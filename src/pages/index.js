@@ -6,7 +6,7 @@ import { SEO } from '../components/SEO'
 
 const renderPost = (post) => {
   const { slug } = post.node.fields
-  const { title, date, description } = post.node.frontmatter
+  const { title, date } = post.node.frontmatter
 
   return (
     <div key={slug} className="first:mt-0">
@@ -16,11 +16,7 @@ const renderPost = (post) => {
       >
         {title}
       </Link>
-      <p className="text-xs text-gray-700 uppercase">{date}</p>
-      <p
-        className="mt-1 text-gray-800"
-        dangerouslySetInnerHTML={{ __html: description }}
-      />
+      <p className="text-xs font-semibold text-gray-500 uppercase">{date}</p>
     </div>
   )
 }
@@ -34,11 +30,12 @@ const IndexPage = ({ data }) => {
       <Helmet title={data.site.siteMetadata.title} />
       <SEO />
       <section className="px-6 py-6 space-y-10">
-        <div>
-          <h1 className="text-2xl font-extrabold">Hi, I'm David</h1>
-          <p className="text-gray-800">
-            My plan for this site is to share - my thoughts, my projects, and my
-            life. Let's see how it goes. I hope you find some value.
+        <div className="space-y-4">
+          <p className="text-2xl font-extrabold">Hi! I'm David.</p>
+          <p className="text-lg text-gray-800">
+            I'm an independent software developer. I've learned a lot from
+            others' who share their knowledge. This is my attempt to give back.
+            I hope you find some value.
           </p>
         </div>
 
@@ -64,7 +61,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
-            description
           }
         }
       }
