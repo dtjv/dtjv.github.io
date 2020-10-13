@@ -15,11 +15,10 @@ const IndexPage = ({ data }) => {
       <SEO />
       <section className="px-6 py-6 space-y-10">
         <div className="space-y-4">
-          <p className="text-2xl font-extrabold">Hello!</p>
+          <p className="text-2xl font-extrabold">Hi, I'm David.</p>
           <p className="text-lg text-gray-800">
-            I'm David. I'm an independent software developer. I've learned a lot
-            from others who share their knowledge. This is my attempt to give
-            back. I hope you find some value.
+            This website is my "show-and-tell" for articles I write and projects
+            I build. I hope you find some value.
           </p>
         </div>
 
