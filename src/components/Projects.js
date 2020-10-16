@@ -2,19 +2,22 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const renderProjects = (project) => {
-  const { id, name, description, repositoryUrl, deploymentUrl } = project
+  const { id, name, icon, description, repositoryUrl, deploymentUrl } = project
 
   return (
     <div key={id}>
       <div className="flex flex-row items-center justify-between">
         <div className="pr-8">
-          <Link
-            to={deploymentUrl}
-            className="text-xl font-bold text-blue-500 no-underline hover:text-blue-400"
-          >
-            {name}
-          </Link>
-          <p className="font-medium text-gray-700">{description}</p>
+          <div className="flex flex-row items-center">
+            <div className="mr-3 text-3xl">{icon}</div>
+            <Link
+              to={deploymentUrl}
+              className="text-xl font-bold text-blue-500 no-underline hover:text-blue-400"
+            >
+              {name}
+            </Link>
+          </div>
+          <p className="pt-2 font-medium text-gray-700">{description}</p>
         </div>
         <div>
           <a

@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
       <section className="px-6 py-6 space-y-10">
         <div className="space-y-4">
           <p className="text-2xl font-extrabold">Hi, I'm David.</p>
-          <p className="text-lg text-gray-800">
+          <p className="text-lg">
             This website is my "show-and-tell" for articles I write and projects
             I build. I hope you find some value.
           </p>
