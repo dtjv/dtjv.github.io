@@ -9,11 +9,11 @@ const renderPost = (post) => {
     <div key={slug} className="first:mt-0">
       <Link
         to={slug}
-        className="text-lg font-bold text-blue-500 no-underline hover:text-blue-400"
+        className="text-xl font-bold text-blue-500 no-underline hover:text-blue-400"
       >
         {title}
       </Link>
-      <p className="text-xs font-semibold text-gray-500 uppercase">{date}</p>
+      <p className="text-sm font-medium text-gray-500">{date}</p>
     </div>
   )
 }
