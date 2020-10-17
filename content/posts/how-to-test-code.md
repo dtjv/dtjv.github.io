@@ -1,7 +1,7 @@
 ---
 title: A Markdown Example
 date: 2020-10-06
-description: Just a demo. Thanks!
+template: post
 ---
 
 <p class="lead">Once upon a time, in a land far, far away...</p>

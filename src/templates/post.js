@@ -6,11 +6,12 @@ import { SEO } from '../components/SEO'
 
 const PostTemplate = ({ data }) => {
   const post = data.markdownRemark
+  const site = data.site
   const { title, date } = post.frontmatter
 
   return (
     <Layout>
-      <Helmet title={title} />
+      <Helmet title={`${title} | ${site.siteMetadata.title}`} />
       <SEO post={post} />
       <section className="px-6 py-6 space-y-10">
         <div>
@@ -24,7 +25,7 @@ const PostTemplate = ({ data }) => {
 
         <div>
           <article
-            className="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl"
+            className="prose max-w-none"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
@@ -36,7 +37,7 @@ const PostTemplate = ({ data }) => {
 export default PostTemplate
 
 export const pageQuery = graphql`
-  query PostByID($id: String!) {
+  query PostTemplateQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       fields {
@@ -44,8 +45,12 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        description
         date(formatString: "MMMM DD, YYYY")
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

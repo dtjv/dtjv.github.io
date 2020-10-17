@@ -22,16 +22,6 @@ module.exports = {
             color: defaultTheme.colors.blue[500],
             textDecoration: 'none',
           },
-          code: {
-            color: defaultTheme.colors.gray[300],
-            fontWeight: defaultTheme.fontWeight.normal,
-          },
-          'code::before': {
-            content: '""',
-          },
-          'code::after': {
-            content: '""',
-          },
         },
       },
     },

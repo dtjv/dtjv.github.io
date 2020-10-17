@@ -4,7 +4,13 @@
 
 @layer components {
   .prose :not(pre) > code[class*='language-'] {
-    @apply bg-gray-800;
-    padding: 0.1rem 0.3rem;
+    @apply bg-transparent;
+    padding-top: 0.05rem;
+  }
+
+  .prose code[class*='language-'],
+  pre[class*='language-'] {
+    font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+      monospace;
   }
 }

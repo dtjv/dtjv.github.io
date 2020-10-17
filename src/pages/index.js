@@ -15,8 +15,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Helmet title={data.site.siteMetadata.title} />
       <SEO />
-      <section className="px-6 space-y-16">
-        <div className="mt-12 space-y-4">
+      <section className="px-6 mt-12 space-y-16">
+        <div className="space-y-4">
           <p className="text-2xl font-extrabold">Hi, I'm David.</p>
           <p className="text-lg">
             Welcome to my personal website - where I share my thoughts on
@@ -33,8 +33,11 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query IndexPageQuery {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { template: { eq: "post" } } }
+    ) {
       edges {
         node {
           fields {
