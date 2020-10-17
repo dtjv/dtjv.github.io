@@ -16,22 +16,15 @@ const IndexPage = ({ data }) => {
       <Helmet title={data.site.siteMetadata.title} />
       <SEO />
       <section className="px-6 space-y-16">
-        {/*
-        <div className="space-y-4">
+        <div className="mt-12 space-y-4">
           <p className="text-2xl font-extrabold">Hi, I'm David.</p>
           <p className="text-lg">
-            This website is my "show-and-tell" for articles I write and projects
-            I build. I hope you find some value.
+            Welcome to my personal website - where I share my thoughts on
+            programming and projects I build.
           </p>
         </div>
-        */}
-
-        <div className="mt-12">
-          <Posts posts={posts} />
-        </div>
-        <div>
-          <Projects projects={projects} />
-        </div>
+        <Posts posts={posts} />
+        <Projects projects={projects} />
       </section>
     </Layout>
   )

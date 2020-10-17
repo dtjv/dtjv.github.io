@@ -13,7 +13,9 @@ const renderPost = (post) => {
       >
         {title}
       </Link>
-      <p className="text-sm font-medium text-gray-500">{date}</p>
+      <p className="text-sm font-medium text-gray-700">
+        <time>{date}</time>
+      </p>
     </div>
   )
 }

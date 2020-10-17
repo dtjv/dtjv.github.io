@@ -15,7 +15,7 @@ const Nav = () => {
           <Link
             to="/"
             aria-label="link to home page"
-            className="ml-5 text-xl font-extrabold tracking-wide"
+            className="ml-3 text-xl font-extrabold"
           >
             David Valles
           </Link>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 const renderProjects = (project) => {
   const { id, name, icon, description, repositoryUrl, deploymentUrl } = project
@@ -9,13 +8,13 @@ const renderProjects = (project) => {
       <div className="flex flex-row items-center justify-between">
         <div className="pr-8">
           <div className="flex flex-row items-center">
-            <div className="mr-3 text-3xl">{icon}</div>
-            <Link
-              to={deploymentUrl}
+            <div className="mr-4 text-3xl">{icon}</div>
+            <a
+              href={deploymentUrl}
               className="text-xl font-bold text-blue-500 no-underline hover:text-blue-400"
             >
               {name}
-            </Link>
+            </a>
           </div>
           <p className="pt-2 font-medium text-gray-700">{description}</p>
         </div>

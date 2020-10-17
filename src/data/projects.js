@@ -4,7 +4,7 @@ export const projects = [
     name: 'Maximus',
     icon: '🦾',
     description:
-      'Tracking my workouts in a notebook quickly turned into an impossible task to see any trends in my performance. So, I built Maximus, an ultra minimal workout app with a chart to visualize past workouts.',
+      'Tracking my workouts in a notebook quickly turned into a mess. So, I built Maximus, an ultra minimal workout app to easily track and visualize past workouts.',
     repositoryUrl: 'https://github.com/dtjv/maximus',
     deploymentUrl: 'https://maximus-dtjv.netlify.app/',
   },
@@ -13,7 +13,7 @@ export const projects = [
     name: 'Website: Artist',
     icon: '👨🏻‍🎨',
     description:
-      'A friend needed an updated website for his artwork. I chose to use Gatsby for its static page builds, lazy loaded images and future extensibility.',
+      'A friend needed an updated website for his artwork. I used Gatsby for its static page builds and lazy loaded images.',
     repositoryUrl: 'https://github.com/dtjv/rg-ui',
     deploymentUrl: 'https://rich-gullion.netlify.app/',
   },
@@ -22,7 +22,7 @@ export const projects = [
     name: 'Website: Writer',
     icon: '✏️',
     description:
-      "A simple redesign my sister's website. The focus was a pared-down navigation, a simplified font and color stack, a responsive layout and a quick load time.",
+      "A simple redesign of my sister's website with a focus on design consistency and responsiveness - all in vanilla CSS.",
     repositoryUrl: 'https://github.com/dtjv/cv-ui',
     deploymentUrl: 'https://dtjv.io/cv-ui/',
   },
