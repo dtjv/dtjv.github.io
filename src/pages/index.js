@@ -15,7 +15,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Helmet title={data.site.siteMetadata.title} />
       <SEO />
-      <section className="px-6 py-6 space-y-10">
+      <section className="px-6 space-y-16">
+        {/*
         <div className="space-y-4">
           <p className="text-2xl font-extrabold">Hi, I'm David.</p>
           <p className="text-lg">
@@ -23,9 +24,14 @@ const IndexPage = ({ data }) => {
             I build. I hope you find some value.
           </p>
         </div>
+        */}
 
-        <Posts posts={posts} />
-        <Projects projects={projects} />
+        <div className="mt-12">
+          <Posts posts={posts} />
+        </div>
+        <div>
+          <Projects projects={projects} />
+        </div>
       </section>
     </Layout>
   )

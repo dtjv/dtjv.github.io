@@ -24,7 +24,7 @@ const renderProjects = (project) => {
             href={repositoryUrl}
             className="flex flex-no-wrap items-center justify-center px-4 py-2 bg-gray-900 focus:outline-none focus:shadow-outline-gray hover:bg-gray-700 rounded-md"
           >
-            <span className="text-sm font-medium text-white leading-5">
+            <span className="text-sm font-medium text-gray-200 leading-5">
               Source
             </span>
           </a>

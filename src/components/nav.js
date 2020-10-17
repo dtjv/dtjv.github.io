@@ -15,11 +15,18 @@ const Nav = () => {
           <Link
             to="/"
             aria-label="link to home page"
-            className="ml-5 text-xl font-extrabold"
+            className="ml-5 text-xl font-extrabold tracking-wide"
           >
             David Valles
           </Link>
         </div>
+        <Link
+          to="/about"
+          className="font-bold text-normal hover:text-blue-400"
+          activeClassName="text-blue-500"
+        >
+          About
+        </Link>
       </div>
     </nav>
   )
