@@ -16,9 +16,15 @@ const renderPost = (post) => {
         </dl>
         <div className="space-y-5">
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold tracking-tight leading-8">
-              {title}
-            </h2>
+            <Link
+              to={slug}
+              className="text-base font-bold no-underline"
+              aria-label={`Read "${title}"`}
+            >
+              <h2 className="text-2xl font-bold tracking-tight leading-8">
+                {title}
+              </h2>
+            </Link>
             {description && (
               <p className="text-gray-500 prose max-w-none">{description}</p>
             )}
@@ -30,7 +36,7 @@ const renderPost = (post) => {
               aria-label={`Read "${title}"`}
             >
               <div className="flex flex-row items-center justify-items-start">
-                <span className="mr-2">Read article</span>
+                <span className="mr-1">Read article</span>
                 <svg
                   className="w-6 h-6"
                   fill="none"

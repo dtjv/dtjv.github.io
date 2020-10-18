@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const SEO = ({ post }) => {
+const SEO = ({ article }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -10,7 +10,6 @@ const SEO = ({ post }) => {
           siteMetadata {
             title
             description
-            author
             siteUrl
           }
         }
@@ -22,10 +21,10 @@ const SEO = ({ post }) => {
     siteMetadata: { title, siteUrl: url, description },
   } = site
 
-  if (post) {
-    title = post.frontmatter.title
-    url = `${site.siteMetadata.siteUrl}${post.fields.slug}`
-    description = post.frontmatter.description
+  if (article) {
+    title = article.frontmatter.title
+    url = `${site.siteMetadata.siteUrl}${article.fields.slug}`
+    description = article.frontmatter.description
   }
 
   return (
@@ -34,7 +33,7 @@ const SEO = ({ post }) => {
       <meta name="description" content={description} />
 
       <meta property="og:url" content={url} />
-      <meta property="og:type" content={post ? 'article' : 'website'} />
+      <meta property="og:type" content={article ? 'article' : 'website'} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
 

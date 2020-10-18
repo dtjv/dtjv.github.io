@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 
 import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
+import { Container } from '../components/Container'
+import { H1 } from '../components/Headings'
 
 const PostTemplate = ({ data }) => {
   const post = data.markdownRemark
@@ -13,23 +15,26 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <Helmet title={`${title} | ${site.siteMetadata.title}`} />
-      <SEO post={post} />
-      <section className="px-6 py-6 space-y-10">
-        <div>
-          <p className="text-xs font-semibold text-gray-500 uppercase">
-            {date}
-          </p>
-          <h1 className="mt-1 text-2xl font-extrabold leading-tight">
-            {title}
-          </h1>
-        </div>
-        <div>
-          <article
-            className="prose max-w-none"
+      <SEO article={post} />
+      <Container>
+        <article>
+          <header className="space-y-2">
+            <dl>
+              <dt className="sr-only">Published on</dt>
+              <dd className="text-base font-medium text-gray-500 leading-6">
+                <time dateTime={Date(date)}>{date}</time>
+              </dd>
+            </dl>
+            <div>
+              <H1>{title}</H1>
+            </div>
+          </header>
+          <div
+            className="py-12 prose max-w-none"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-        </div>
-      </section>
+        </article>
+      </Container>
     </Layout>
   )
 }

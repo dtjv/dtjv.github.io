@@ -18,10 +18,6 @@ module.exports = {
       default: {
         css: {
           color: defaultTheme.colors.gray[800],
-          a: {
-            color: defaultTheme.colors.blue[500],
-            textDecoration: 'none',
-          },
         },
       },
     },
