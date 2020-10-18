@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+
 import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 
@@ -22,7 +23,6 @@ const PostTemplate = ({ data }) => {
             {title}
           </h1>
         </div>
-
         <div>
           <article
             className="prose max-w-none"

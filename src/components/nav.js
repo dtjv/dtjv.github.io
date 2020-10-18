@@ -4,31 +4,27 @@ import MeImg from '../images/me.jpg'
 
 const Nav = () => {
   return (
-    <nav className="px-6 py-8 space-y-4">
-      <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between py-8 text-gray-900">
+      <Link to="/" aria-label="link to home page">
         <div className="flex flex-row items-center">
           <img
             className="w-10 h-10 rounded-full"
             src={MeImg}
             alt="pic of david"
           />
-          <Link
-            to="/"
-            aria-label="link to home page"
-            className="ml-3 text-xl font-extrabold"
-          >
+          <span className="ml-3 text-lg font-extrabold sm:text-xl">
             David Valles
-          </Link>
+          </span>
         </div>
-        <Link
-          to="/about"
-          className="font-bold text-normal hover:text-blue-400"
-          activeClassName="text-blue-500"
-        >
-          About
-        </Link>
-      </div>
-    </nav>
+      </Link>
+      <Link
+        to="/about"
+        className="font-bold text-normal hover:text-gray-700"
+        activeClassName="underline"
+      >
+        About
+      </Link>
+    </div>
   )
 }
 export { Nav }

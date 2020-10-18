@@ -5,10 +5,10 @@ import { Footer } from './Footer'
 
 const Layout = ({ children }) => {
   return (
-    <div className="mx-auto antialiased text-gray-800 max-w-screen-md">
-      <header>
+    <div className="max-w-3xl px-4 mx-auto antialiased sm:px-6 lg:px-0">
+      <nav>
         <Nav />
-      </header>
+      </nav>
       <main>{children}</main>
       <footer>
         <Footer />
