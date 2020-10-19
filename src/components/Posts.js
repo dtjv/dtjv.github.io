@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { Container } from './Container'
+import { H1, H2 } from './Headings'
+
 const renderPost = (post) => {
   const { slug } = post.node.fields
   const { title, date, description } = post.node.frontmatter
@@ -21,9 +24,7 @@ const renderPost = (post) => {
               className="text-base font-bold no-underline"
               aria-label={`Read "${title}"`}
             >
-              <h2 className="text-2xl font-bold tracking-tight leading-8">
-                {title}
-              </h2>
+              <H2 classes="inline-block">{title}</H2>
             </Link>
             {description && (
               <p className="text-gray-500 prose max-w-none">{description}</p>
@@ -35,10 +36,10 @@ const renderPost = (post) => {
               className="text-base font-bold text-blue-400 no-underline hover:text-blue-300"
               aria-label={`Read "${title}"`}
             >
-              <div className="flex flex-row items-center justify-items-start">
-                <span className="mr-1">Read article</span>
+              <span className="mr-1">Read article</span>
+              <span>
                 <svg
-                  className="w-6 h-6"
+                  className="inline-block w-6 h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -51,7 +52,7 @@ const renderPost = (post) => {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   ></path>
                 </svg>
-              </div>
+              </span>
             </Link>
           </div>
         </div>
@@ -62,26 +63,13 @@ const renderPost = (post) => {
 
 const Posts = ({ posts }) => {
   return (
-    <>
+    <Container>
+      <H1>Articles</H1>
       {posts.length > 0 ? (
         <ul className="divide-y divide-gray-200">{posts.map(renderPost)}</ul>
       ) : null}
-    </>
+    </Container>
   )
 }
-/*
-const Posts = ({ posts }) => {
-  return (
-    <>
-      {posts.length > 0 ? (
-        <div className="space-y-4">
-          <h1 className="text-3xl font-extrabold sm:text-4xl">Articles</h1>
-          <div className="space-y-8">{posts.map(renderPost)}</div>
-        </div>
-      ) : null}
-    </>
-  )
-}
-*/
 
 export { Posts }

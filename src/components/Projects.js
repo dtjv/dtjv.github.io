@@ -1,49 +1,91 @@
 import React from 'react'
 
-const renderProjects = (project) => {
-  const { id, name, icon, description, repositoryUrl, deploymentUrl } = project
+import { Container } from './Container'
+import { H1, H2 } from './Headings'
+
+const renderProject = (project) => {
+  const { id, name, description, repoUrl, liveUrl } = project
 
   return (
-    <div key={id}>
-      <div className="flex flex-row items-center justify-between">
-        <div className="pr-8">
+    <li key={id} className="py-12">
+      <div className="space-y-5">
+        <div className="space-y-6">
           <div className="flex flex-row items-center">
-            <div className="mr-4 text-3xl">{icon}</div>
             <a
-              href={deploymentUrl}
-              className="text-xl font-bold text-blue-500 no-underline hover:text-blue-400"
+              href={liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="font-bold no-underline "
+              aria-label={`Go to ${liveUrl}`}
             >
-              {name}
+              <H2>{name}</H2>
+            </a>
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Follow external link to ${liveUrl}`}
+            >
+              <svg
+                className="w-5 h-5 ml-1 text-gray-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                ></path>
+              </svg>
             </a>
           </div>
-          <p className="pt-2 font-medium text-gray-700">{description}</p>
+          {description && (
+            <p className="text-gray-500 prose max-w-none">{description}</p>
+          )}
         </div>
         <div>
           <a
-            href={repositoryUrl}
-            className="flex flex-no-wrap items-center justify-center px-4 py-2 bg-gray-900 focus:outline-none focus:shadow-outline-gray hover:bg-gray-700 rounded-md"
+            href={repoUrl}
+            className="text-base font-bold text-blue-400 no-underline hover:text-blue-300"
+            aria-label={`Go to ${repoUrl}`}
           >
-            <span className="text-sm font-medium text-gray-200 leading-5">
-              Source
+            <span className="mr-1">View source</span>
+            <span>
+              <svg
+                className="inline-block w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
             </span>
           </a>
         </div>
       </div>
-      <hr className="my-8 border-gray-400" />
-    </div>
+    </li>
   )
 }
 
 const Projects = ({ projects }) => {
   return (
-    <>
+    <Container>
+      <H1>Projects</H1>
       {projects.length > 0 ? (
-        <div className="space-y-4">
-          <h1 className="text-2xl font-extrabold">Projects</h1>
-          <div> {projects.map(renderProjects)} </div>
-        </div>
+        <ul className="divide-y divide-gray-200">
+          {projects.map(renderProject)}
+        </ul>
       ) : null}
-    </>
+    </Container>
   )
 }
 

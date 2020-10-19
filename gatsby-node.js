@@ -44,9 +44,9 @@ exports.createPages = async ({ actions, graphql }) => {
   const posts = result.data.allMarkdownRemark.edges.filter(
     ({ node }) => node.frontmatter.template === 'post'
   )
-  const pages = result.data.allMarkdownRemark.edges.filter(
-    ({ node }) => node.frontmatter.template === 'page'
-  )
+  //  const pages = result.data.allMarkdownRemark.edges.filter(
+  //    ({ node }) => node.frontmatter.template === 'page'
+  //  )
 
   posts.forEach((post) => {
     createPage({
@@ -58,6 +58,7 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
+  /*
   pages.forEach((page) => {
     createPage({
       path: page.node.fields.slug,
@@ -67,4 +68,5 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     })
   })
+  */
 }

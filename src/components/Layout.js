@@ -5,7 +5,7 @@ import { Footer } from './Footer'
 
 const Layout = ({ children }) => {
   return (
-    <div className="max-w-3xl px-4 mx-auto antialiased sm:px-6 lg:px-0">
+    <div className="max-w-3xl px-5 mx-auto antialiased sm:px-8 md:px-12 lg:px-0">
       <nav>
         <Nav />
       </nav>

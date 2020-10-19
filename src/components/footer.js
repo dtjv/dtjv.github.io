@@ -1,8 +1,10 @@
 import React from 'react'
 
+import { Container } from './Container'
+
 const Footer = () => {
   return (
-    <div className="px-6 py-6">
+    <Container>
       <div className="flex items-center justify-center">
         <a href="https://github.com/dtjv">
           <svg
@@ -10,7 +12,7 @@ const Footer = () => {
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
-            className="w-6 h-6 ml-3 hover:text-blue-400"
+            className="w-6 h-6 ml-3 text-color-800"
           >
             <path
               fillRule="evenodd"
@@ -19,7 +21,7 @@ const Footer = () => {
           </svg>
         </a>
       </div>
-    </div>
+    </Container>
   )
 }
 export { Footer }

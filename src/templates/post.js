@@ -10,12 +10,18 @@ import { H1 } from '../components/Headings'
 const PostTemplate = ({ data }) => {
   const post = data.markdownRemark
   const site = data.site
-  const { title, date } = post.frontmatter
+  const { title, date, description } = post.frontmatter
 
   return (
     <Layout>
       <Helmet title={`${title} | ${site.siteMetadata.title}`} />
-      <SEO article={post} />
+      <SEO
+        page={{
+          title,
+          description,
+          url: `${site.siteMetadata.siteUrl}${post.fields.slug}`,
+        }}
+      />
       <Container>
         <article>
           <header className="space-y-2">
@@ -50,6 +56,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        description
         date(formatString: "MMMM DD, YYYY")
       }
     }
