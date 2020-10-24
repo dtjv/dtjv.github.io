@@ -1,4 +1,3 @@
-/*
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
@@ -11,17 +10,22 @@ import { H1 } from '../components/Headings'
 const PageTemplate = ({ data }) => {
   const page = data.markdownRemark
   const site = data.site
+  const { title, description } = page.frontmatter
 
   return (
     <Layout>
-      <Helmet
-        title={`${page.frontmatter.title} | ${site.siteMetadata.title}`}
+      <Helmet title={`${title} | ${site.siteMetadata.title}`} />
+      <SEO
+        page={{
+          title,
+          description,
+          url: `${site.siteMetadata.siteUrl}${page.fields.slug}`,
+        }}
       />
-      <SEO article={page} />
       <Container>
         <article>
           <header>
-            <H1>{page.frontmatter.title}</H1>
+            <H1>{title}</H1>
           </header>
           <div
             className="py-12 prose max-w-none"
@@ -44,14 +48,14 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        description
       }
     }
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
   }
 `
-*/

@@ -17,7 +17,7 @@ const PostTemplate = ({ data }) => {
       <Helmet title={`${title} | ${site.siteMetadata.title}`} />
       <SEO
         page={{
-          title,
+          title: `${title} | ${site.siteMetadata.title}`,
           description,
           url: `${site.siteMetadata.siteUrl}${post.fields.slug}`,
         }}
@@ -63,6 +63,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
   }
