@@ -6,7 +6,8 @@ import { H1, H2 } from './Headings'
 
 const renderPost = (post) => {
   const { slug } = post.node.fields
-  const { title, date, description } = post.node.frontmatter
+  const { excerpt } = post.node
+  const { title, date } = post.node.frontmatter
 
   return (
     <li key={slug} className="py-12">
@@ -26,9 +27,10 @@ const renderPost = (post) => {
             >
               <H2 classes="inline-block">{title}</H2>
             </Link>
-            {description && (
-              <p className="text-gray-500 prose max-w-none">{description}</p>
-            )}
+            <div
+              className="text-gray-500 prose max-w-none"
+              dangerouslySetInnerHTML={{ __html: excerpt }}
+            />
           </div>
           <div>
             <Link
@@ -61,13 +63,13 @@ const renderPost = (post) => {
   )
 }
 
-const Posts = ({ posts }) => {
+const Posts = ({ posts = [] }) => {
+  if (!posts.length) return null
+
   return (
     <Container>
       <H1>Articles</H1>
-      {posts.length > 0 ? (
-        <ul className="divide-y divide-gray-200">{posts.map(renderPost)}</ul>
-      ) : null}
+      <ul className="divide-y divide-gray-200">{posts.map(renderPost)}</ul>
     </Container>
   )
 }

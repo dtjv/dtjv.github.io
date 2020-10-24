@@ -41,6 +41,7 @@ module.exports = {
         gfm: true,
         commonmark: true,
         footnotes: true,
+        excerpt_separator: `<!-- more -->`,
         plugins: [
           `gatsby-remark-prismjs`,
           `gatsby-remark-responsive-iframe`,
