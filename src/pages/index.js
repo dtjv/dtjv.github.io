@@ -32,13 +32,14 @@ export const pageQuery = graphql`
   query IndexPageQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { template: { eq: "post" } } }
+      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
     ) {
       edges {
         node {
           fields {
             slug
           }
+          excerpt(format: HTML)
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")

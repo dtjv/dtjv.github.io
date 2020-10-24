@@ -20,7 +20,10 @@ exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(limit: 1000) {
+        allMarkdownRemark(
+          filter: { frontmatter: { draft: { ne: true } } }
+          limit: 1000
+        ) {
           edges {
             node {
               id
@@ -44,9 +47,6 @@ exports.createPages = async ({ actions, graphql }) => {
   const posts = result.data.allMarkdownRemark.edges.filter(
     ({ node }) => node.frontmatter.template === 'post'
   )
-  //  const pages = result.data.allMarkdownRemark.edges.filter(
-  //    ({ node }) => node.frontmatter.template === 'page'
-  //  )
 
   posts.forEach((post) => {
     createPage({
@@ -59,6 +59,10 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   /*
+  const pages = result.data.allMarkdownRemark.edges.filter(
+    ({ node }) => node.frontmatter.template === 'page'
+  )
+
   pages.forEach((page) => {
     createPage({
       path: page.node.fields.slug,
