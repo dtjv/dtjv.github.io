@@ -7,12 +7,11 @@ liveUrl: https://kemper-ui-concept.vercel.app/
 template: project
 ---
 
-In a [Tailwind Labs](https://github.com/tailwindlabs) blog post, the owner
-mentioned an [interview
-project](https://github.com/adamwathan/tailwind-take-home-project) given to
-candidates. Well, it seemed like a fun challenge, so I gave it a shot - and it
-turned out pretty cool.
+[Tailwind Labs](https://github.com/tailwindlabs) had a [take-home
+project](https://github.com/adamwathan/tailwind-take-home-project) for hiring
+candidates. Although I wasn't a candidate, it seemed like a fun challenge - so I
+gave it a shot. I think it turned out pretty cool. 😎
 
-_The solution code is in a private repo per project instructions._
+_The source code is in a private repo per project instructions._
 
 <!-- more -->

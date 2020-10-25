@@ -46,8 +46,8 @@ const IndexPage = () => {
       <SEO />
       <Container>
         <p className="text-xl text-gray-500 sm:text-2xl prose max-w-none">
-          Hello! I'm David, a software developer based in Oregon. This website
-          is where I share my thoughts on programming and a few{' '}
+          Hello! I'm David, a software developer based in Oregon. On this
+          website I share my thoughts about programming and a few side
           <Link to="/projects">projects</Link> I've built.
         </p>
       </Container>
