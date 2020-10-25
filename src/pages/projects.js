@@ -11,6 +11,7 @@ const ProjectsPage = () => {
     graphql`
       query {
         allMarkdownRemark(
+          sort: { fields: [frontmatter___id], order: ASC }
           filter: { frontmatter: { template: { eq: "project" } } }
         ) {
           edges {
