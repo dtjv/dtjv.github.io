@@ -6,12 +6,25 @@ import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 import { Projects } from '../components/Projects'
 
-import { projects } from '../data/projects'
-
 const ProjectsPage = () => {
-  const { site } = useStaticQuery(
+  const { site, allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
+        allMarkdownRemark(
+          filter: { frontmatter: { template: { eq: "project" } } }
+        ) {
+          edges {
+            node {
+              excerpt(format: HTML)
+              frontmatter {
+                name
+                id
+                repoUrl
+                liveUrl
+              }
+            }
+          }
+        }
         site {
           siteMetadata {
             title
@@ -20,6 +33,7 @@ const ProjectsPage = () => {
       }
     `
   )
+  const projects = allMarkdownRemark.edges
 
   return (
     <Layout>
