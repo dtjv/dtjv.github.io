@@ -34,7 +34,13 @@ const ProjectsPage = () => {
       }
     `
   )
-  const projects = allMarkdownRemark.edges
+  const projects = allMarkdownRemark.edges.map(({ node }) => ({
+    id: node.frontmatter.id,
+    name: node.frontmatter.name,
+    repoUrl: node.frontmatter.repoUrl,
+    liveUrl: node.frontmatter.liveUrl,
+    excerpt: node.excerpt,
+  }))
 
   return (
     <Layout>

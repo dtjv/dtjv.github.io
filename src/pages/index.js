@@ -26,7 +26,6 @@ const IndexPage = () => {
               frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
-                description
               }
             }
           }
@@ -39,6 +38,12 @@ const IndexPage = () => {
       }
     `
   )
+  const posts = allMarkdownRemark.edges.map(({ node }) => ({
+    title: node.frontmatter.title,
+    date: node.frontmatter.date,
+    excerpt: node.excerpt,
+    slug: node.fields.slug,
+  }))
 
   return (
     <Layout>
@@ -47,11 +52,11 @@ const IndexPage = () => {
       <Container>
         <p className="text-xl text-gray-500 sm:text-2xl prose max-w-none">
           Hello! I'm David, a software developer based in Oregon. On this
-          website I share my thoughts about programming and a few side
+          website I share my thoughts about programming and a few side{' '}
           <Link to="/projects">projects</Link> I've built.
         </p>
       </Container>
-      <Posts posts={allMarkdownRemark.edges} />
+      <Posts posts={posts} />
     </Layout>
   )
 }

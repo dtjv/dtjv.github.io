@@ -4,8 +4,7 @@ import { Container } from './Container'
 import { H1, H2 } from './Headings'
 
 const renderProject = (project) => {
-  const { excerpt } = project.node
-  const { name, id, repoUrl, liveUrl } = project.node.frontmatter
+  const { name, id, repoUrl, liveUrl, excerpt } = project
 
   return (
     <li key={id} className="py-12">

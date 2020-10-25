@@ -5,9 +5,7 @@ import { Container } from './Container'
 import { H1, H2 } from './Headings'
 
 const renderPost = (post) => {
-  const { slug } = post.node.fields
-  const { excerpt } = post.node
-  const { title, date } = post.node.frontmatter
+  const { title, date, slug, excerpt } = post
 
   return (
     <li key={slug} className="py-12">
