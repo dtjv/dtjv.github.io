@@ -20,10 +20,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          filter: { frontmatter: { draft: { ne: true } } }
-          limit: 1000
-        ) {
+        allMarkdownRemark(limit: 1000) {
           edges {
             node {
               id

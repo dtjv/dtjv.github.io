@@ -13,9 +13,7 @@ const IndexPage = () => {
       query {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: {
-            frontmatter: { template: { eq: "post" }, draft: { ne: true } }
-          }
+          filter: { frontmatter: { template: { eq: "post" } } }
         ) {
           edges {
             node {
@@ -26,6 +24,7 @@ const IndexPage = () => {
               frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
+                draft
               }
             }
           }
@@ -38,12 +37,14 @@ const IndexPage = () => {
       }
     `
   )
-  const posts = allMarkdownRemark.edges.map(({ node }) => ({
-    title: node.frontmatter.title,
-    date: node.frontmatter.date,
-    excerpt: node.excerpt,
-    slug: node.fields.slug,
-  }))
+  const posts = allMarkdownRemark.edges
+    .filter(({ node }) => !node.frontmatter.draft)
+    .map(({ node }) => ({
+      title: node.frontmatter.title,
+      date: node.frontmatter.date,
+      excerpt: node.excerpt,
+      slug: node.fields.slug,
+    }))
 
   return (
     <Layout>
