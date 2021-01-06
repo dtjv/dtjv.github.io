@@ -1,16 +1,12 @@
 # dtjv.io
 
-My personal website.
+Source for my personal website at [djtv.io](https://dtjv.io).
 
 ## Stack
 
 - [Gatsby](https://gatsbyjs.com)
 - [Tailwind CSS](https://tailwindcss.com)
 
-## Author
-
-- [David Valles](https://dtjv.io)
-
 ## License
 
-[0BSD License](LICENSE).
+[MIT License](LICENSE).
