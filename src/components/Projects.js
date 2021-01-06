@@ -57,26 +57,10 @@ const renderProject = (project) => {
           <div>
             <a
               href={repoUrl}
-              className="text-base font-bold text-blue-400 no-underline hover:text-blue-300"
+              className="text-base font-bold text-blue-600 no-underline hover:text-blue-400"
               aria-label={`Go to ${repoUrl}`}
             >
-              <span className="mr-1">View source</span>
-              <span>
-                <svg
-                  className="inline-block w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  ></path>
-                </svg>
-              </span>
+              <span className="mr-1">View source --{'>'}</span>
             </a>
           </div>
         )}
