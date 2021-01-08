@@ -1,7 +1,7 @@
 ---
 name: Maximus
 description: An ultra minimal workout tracker.
-id: 1
+id: 2
 repoUrl: https://github.com/dtjv/maximus
 liveUrl: https://maximus-dtjv.netlify.app/
 template: project
