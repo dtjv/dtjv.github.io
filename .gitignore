@@ -1,10 +1,6 @@
 node_modules
-
 .cache
 public
-
-NOTES.md
-
 yarn-debug.log*
 yarn-error.log*
 .yarn-integrity
