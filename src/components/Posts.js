@@ -36,7 +36,7 @@ const renderPost = (post) => {
               className="text-base font-bold text-blue-600 no-underline hover:text-blue-400"
               aria-label={`Read "${title}"`}
             >
-              <span className="mr-1">Read article --{'>'}</span>
+              <span className="mr-1">Read article -&gt;</span>
             </Link>
           </div>
         </div>
