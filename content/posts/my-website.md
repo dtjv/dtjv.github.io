@@ -18,10 +18,10 @@ it's the first site I'll actually use. Here's why.
 ## Contribution
 
 I've relied on community resources such as forum posts, comments, YouTube
-videos, and blog posts, to help me solve all things software. I find these free
-resources indespensible. Of course, not everything on the internet is a gold
-nugget, and there's a fair amount of sifting needed to find what one is looking
-for.
+videos, and blog posts, to help me solve all my programming challenges. I find
+these free resources indespensible. Of course, not everything on the internet is
+a gold nugget, and there's a fair amount of sifting needed to find what one is
+looking for.
 
 Having benefited from the community's generosity, I want to give back.
 
