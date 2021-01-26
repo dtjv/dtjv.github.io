@@ -24,7 +24,7 @@ const SEO = ({ page }) => {
   if (page) {
     title = page.title
     url = page.url
-    description = page.description
+    description = page.description ?? description
   }
 
   return (
