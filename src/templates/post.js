@@ -33,10 +33,17 @@ const PostTemplate = ({ data }) => {
             </dl>
             <div>
               <H1>{title}</H1>
+              {description && (
+                <p className="text-2xl tracking-tight text-gray-500 pt-14">
+                  {description}
+                </p>
+              )}
             </div>
           </header>
           <div
-            className="py-12 prose max-w-none"
+            className={`${
+              description ? 'pt-8 pb-12' : 'py-12'
+            } prose max-w-none`}
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>
