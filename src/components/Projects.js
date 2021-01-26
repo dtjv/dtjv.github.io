@@ -9,7 +9,7 @@ const renderProject = (project) => {
 
   return (
     <li key={id} className="flex py-12 space-x-6">
-      <div className={`${image && 'sm:w-2/3'} w-full space-y-5`}>
+      <div className={`${image && 'sm:w-1/2'} w-full space-y-5`}>
         <div className="space-y-6">
           <div className="flex items-center">
             {liveUrl ? (
@@ -67,7 +67,7 @@ const renderProject = (project) => {
         )}
       </div>
       {!image ? null : (
-        <div className="hidden sm:block sm:w-1/3">
+        <div className="hidden sm:block sm:w-1/2">
           <Img
             fluid={image.node.childImageSharp.fluid}
             alt={`screen shot of ${name}`}
