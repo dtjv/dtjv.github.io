@@ -9,12 +9,14 @@ template: project
 ---
 
 I found [travelsalem.com](https://travelsalem.com) through a job posting that
-wanted to improve the site's SEO and usage. The site scores low marks using
-Google Lighthouse, offers a convoluted navigation experience and has bugs
-([bug screenshots](https://github.com/dtjv/travelsalem.com/tree/main/screenshots)).
+wanted to improve the site's SEO and usage. I found the site error prone and
+cumbersome to use and thought it could use a new design.
 
-This project is my redesign concept - simplifying the presentation and
-navigation. I chose to build the site using [Next.js](https://nextjs.org) for
-it's static site generation and image optimization features.
+This project is my redesign concept. It simplifies the navigation, prioritizes
+data presentation, and loads fast. I built this project using
+[Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
+
+You can read about my design choices in my article,
+_[A Redesign of travelsalem.com](http://localhost:8000/a-redesign-of-travelsalem/)_.
 
 <!-- more -->
