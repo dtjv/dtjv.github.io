@@ -4,6 +4,7 @@ description: A modern flashcard app
 id: 1
 repoUrl: https://github.com/dtjv/memowise
 liveUrl: https://memowise.vercel.app
+screenshot: memowise-screenshot.png
 template: project
 ---
 

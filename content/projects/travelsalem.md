@@ -4,6 +4,7 @@ description:
 id: 3
 repoUrl: https://github.com/dtjv/travelsalem.com
 liveUrl: https://travelsalem.vercel.app/
+screenshot: travelsalem-screenshot.png
 template: project
 ---
 

@@ -1,16 +1,17 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 import { Container } from './Container'
 import { H1, H2 } from './Headings'
 
 const renderProject = (project) => {
-  const { name, id, repoUrl, liveUrl, excerpt } = project
+  const { name, id, repoUrl, liveUrl, excerpt, image } = project
 
   return (
-    <li key={id} className="py-12">
-      <div className="space-y-5">
+    <li key={id} className="flex py-12 space-x-6">
+      <div className={`${image && 'sm:w-2/3'} w-full space-y-5`}>
         <div className="space-y-6">
-          <div className="flex flex-row items-center">
+          <div className="flex items-center">
             {liveUrl ? (
               <a
                 href={liveUrl}
@@ -65,6 +66,14 @@ const renderProject = (project) => {
           </div>
         )}
       </div>
+      {!image ? null : (
+        <div className="hidden sm:block sm:w-1/3">
+          <Img
+            fluid={image.node.childImageSharp.fluid}
+            alt={`screen shot of ${name}`}
+          />
+        </div>
+      )}
     </li>
   )
 }

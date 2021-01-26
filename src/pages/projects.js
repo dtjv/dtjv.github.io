@@ -7,7 +7,11 @@ import { SEO } from '../components/SEO'
 import { Projects } from '../components/Projects'
 
 const ProjectsPage = () => {
-  const { site, allMarkdownRemark } = useStaticQuery(
+  const {
+    site,
+    allMarkdownRemark,
+    allFile: { edges: images },
+  } = useStaticQuery(
     graphql`
       query {
         allMarkdownRemark(
@@ -22,6 +26,7 @@ const ProjectsPage = () => {
                 id
                 repoUrl
                 liveUrl
+                screenshot
               }
             }
           }
@@ -29,6 +34,18 @@ const ProjectsPage = () => {
         site {
           siteMetadata {
             title
+          }
+        }
+        allFile(filter: { extension: { regex: "/(jpg)|(png)|(jpeg)/" } }) {
+          edges {
+            node {
+              base
+              childImageSharp {
+                fluid(quality: 75) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
@@ -40,6 +57,9 @@ const ProjectsPage = () => {
     repoUrl: node.frontmatter.repoUrl,
     liveUrl: node.frontmatter.liveUrl,
     excerpt: node.excerpt,
+    image: images.find(
+      (image) => image.node.base === node.frontmatter.screenshot
+    ),
   }))
 
   return (

@@ -1,8 +1,10 @@
 ---
 name: 'Colleen Valles'
+id: 6
 description: A website UI concept, running Pug and PostCSS.
 repoUrl: https://github.com/dtjv/cv-ui
 liveUrl: https://dtjv.io/cv-ui
+screenshot: colleenvalles-screenshot.png
 template: project
 ---
 
