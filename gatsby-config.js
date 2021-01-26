@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `David Valles`,
     author: `David Valles`,
-    description: `A personal site by David Valles.`,
+    description: `A personal website by David Valles.`,
     siteUrl: `https://dtjv.io`,
   },
   plugins: [
