@@ -17,6 +17,6 @@ data presentation, and loads fast. I built this project using
 [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
 
 You can read about my design choices in my article,
-_[A Redesign of travelsalem.com](http://localhost:8000/a-redesign-of-travelsalem/)_.
+_[A Redesign of travelsalem.com](https://dtjv.io/a-redesign-of-travelsalem/)_.
 
 <!-- more -->
