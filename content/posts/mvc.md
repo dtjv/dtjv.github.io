@@ -24,22 +24,27 @@ key points of my implementation.
 
 The MVC pattern describes a way to split an application into areas of concern
 and how these areas relate to each other. The areas of concern include the data
-model, the view and the controller.
+Model, the View and the Controller.
 
 ### Model
 
 The Model represents the application data and the functionality to manage that
 data. It maintains data integrity by ensuring data creation and modification
-abide by the application rules.
+abide by the application rules. The Model is unaware of any other component in
+the system.
 
 ### View
 
-The View provides a visual representation of the application data.
+The View provides a visual representation of the application data. To a degree,
+the View must know about the Model. To what degree this knowledge exists depends
+on the flavor of the MVC pattern used.
 
 ### Controller
 
-The Controller encapsulates all business logic and orchestrates communication
-between the Model, the View and any other components added to the mix.
+In the _traditional_ version, the Controller encapsulates all business logic and
+orchestrates communication between the Model, the View and any other components
+added to the mix. Altnernative implementations of the MVC pattern diminish the
+Controller's role and off-loading functionality to other components.
 
 ## Questions
 
@@ -63,30 +68,34 @@ answers. I realized I needed to choose a direction and build.
 ## Version 1
 
 In this first version of my todo app, I pass instances of the View, Model and
-Store components into the Controller. The Controller manages data retrieval,
-data persistence, and communication between components.
+Store _(yes, a new component - disccussed below)_ components into the
+Controller. The Controller manages data retrieval, data persistence, and
+communication between components.
 
 Below shows the application construction.
 
 ```typescript
 // index.ts
-const view = new View(window.document, '#app')
-const todos = new Todos()
-const store = new Store('todos1', localStorage)
-const app = new App(todos, view, store)
+const view = new View(window.document, '#app') // View
+const todos = new Todos() // Model
+const store = new Store('todos1', localStorage) // Store
+const app = new App(todos, view, store) // Controller
+
+app.show()
 ```
 
 ### Model
 
-The Todos class is the application Model and is dead simple, focusing on
-creating and managing the in-memory storage of all Todo instances.
+In this version, a Todo is a type definition - not a class. The Todos _(note the
+plural 's')_ class is the application Model and is dead simple, focusing on
+creating and managing the in-memory storage of all Todo objects.
 
 ### View
 
-The View renders all Todos that are in-memory. The View knows about the Model
-structure - that is, it knows the Todo properties to render, but it doesn't
-communicate to or change the Model. When a user performs an action, the View
-executes registered event handlers associated with that user action. Those
+The View renders all Todo objects that are in memory. The View knows about the
+Model structure - that is, it knows the Todo properties to render, but it
+doesn't communicate to or change the Model. When a user performs an action, the
+View executes registered event handlers associated with that user action. Those
 handlers are Controller methods.
 
 ### Controller
@@ -115,8 +124,8 @@ export class App {
 }
 ```
 
-To keep the View decoupled from the Controller, registered handlers for View
-events must have the same function signature. (See below).
+To keep the View decoupled from the Controller, all registered handlers for View
+events must have the same generalized function signature. (See below).
 
 ```typescript
 export type Handler = (props: Partial<Todo>, event?: Event) => void
@@ -124,9 +133,10 @@ export type Handler = (props: Partial<Todo>, event?: Event) => void
 
 ### Store
 
-I also decided to separate out the persistence mechanism into its own component.
-The code snippet below shows the Store class implemented to accept a
-LocalStorage object.
+I also introduce a separate component responsible for data persistence. This
+design isolates the implementational details of a specific storage system. The
+code snippet below shows the Store class implemented for
+[`Window.localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 
 ```typescript
 export class Store {
@@ -151,11 +161,13 @@ One solution could be to use pagination and store the data across key indices
 (assuming the storage limit was per key and not the whole database).
 
 In the event the app exceeded the whole storage limit, I'd need to write a new
-Store class that used a different database and change the Controller based on
-how I built the Store. The need to swap data stores is not out of the ordinary.
-To ease this transition, the Store and the Controller should communicate by a
-well defined interface. As it stands right now, the Controller and the Store are
-too tightly coupled - a limitation I'll need to fix at another time.
+Store class that used a different database **and** change the Controller based
+on how I built the Store. The need to swap data stores is not out of the
+ordinary, but requiring other code to change to make the swap is not a great
+design. To ease this transition, the Store and the Controller should communicate
+by a contract defined by an interface. As it stands right now, the Controller
+and the Store are too tightly coupled - a limitation I'll need to fix at another
+time.
 
 ## Version 2
 
@@ -165,11 +177,11 @@ changes next.
 
 ### Emitter
 
-First, I introduce an Emitter class that gives a subclass the ability to fire
+First, I introduce an Emitter class that gives a subclass the ability to call
 functions listening to any event that subclass emits.
 
 ```typescript
-export class Emitter {
+export abstract class Emitter {
   private readonly listeners: Map<string, Listener[]> = new Map()
 
   addListener(event: string, listener: Listener): void {
@@ -190,20 +202,21 @@ export class Emitter {
 ### Models
 
 The Models are more robust in this version. A Todo is now a class implementation
-that encapsulates Todo construction and modifications. The Todos class manages
-the collection of all Todos. Both classes subclass Emitter and emit a `CHANGE`
-event when their internal data change.
+that encapsulates Todo construction and modifications. The Todos _(note the
+plural 's')_, class manages the collection of all Todo instances. Both classes,
+collectively called the Model, subclass Emitter and emit a `CHANGE` event when
+their internal data change.
 
 The snippet below illustrates the Model event system. Here, the Todo exposes a
 `toggle()` method to change the internal state of a Todo. Once changed, the Todo
-will execute listeners listening on the `CHANGE` event.
+will execute all functions listening on the `CHANGE` event.
 
 ```typescript
 export class Todo extends Emitter {
   private _done: boolean
 
   // 1. flip the `_done` property
-  // 2. call listeners function registered to the change event
+  // 2. call listeners function registered to the `CHANGE` event
   public toggle() {
     this._done = !this._done
     this.emit(TodoEvents.CHANGE)
@@ -215,7 +228,8 @@ export class Todo extends Emitter {
 
 The View is now injected with the Model at application start-up. User
 interaction captured by the View triggers the View to update the Model. With the
-Model event system in place, any Model change will trigger listeners to run.
+Model event system in place, any Model change will trigger listener functions to
+run.
 
 ### Controller
 
@@ -266,4 +280,4 @@ export class App {
 The high-level concept of MVC is easy to grasp and can indeed be trivially
 implemented. Although the Todo MVC app is now a cliché, this project was a great
 exercise in exploring the nuances of the MVC pattern, in making design decisions
-in the face of uncertainty and dealing with TypeScript and the DOM.
+in the face of uncertainty and building with TypeScript and the DOM.
