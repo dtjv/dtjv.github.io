@@ -6,15 +6,14 @@ draft: false
 template: post
 ---
 
-The core concept of the MVC pattern is not terribly complex - keep data,
-presentation and business logic separate. And resources abound that discuss the
-details and varieties of the pattern.
-
-Today, modern web applications use some flavor of the MVC pattern with the aid
-of a frontend framework. Having missed the pre-frontend framework era, I asked
-myself if I _really_ understood this foundational pattern? To answer this
-question, I decided to build an app that adhered to the basic premise of MVC.
-This article discusses key points of my implementation.
+Today, modern web applications use some flavor of the
+[MVC pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+with the aid of a
+[client-side framework](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction).
+Having missed the pre-frontend framework era, I asked myself if I _really_
+understood this foundational pattern? To answer this question, I decided to
+build an app that adhered to the basic premise of MVC. This article discusses
+key points of my implementation.
 
 <!-- more -->
 
