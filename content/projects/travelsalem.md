@@ -1,6 +1,6 @@
 ---
-name: 'Travel Salem'
-description:
+name: Travel Salem
+description: A design concept for travelsalem website
 id: 3
 repoUrl: https://github.com/dtjv/travelsalem.com
 liveUrl: https://travelsalem.vercel.app/
