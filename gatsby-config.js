@@ -44,6 +44,7 @@ module.exports = {
         footnotes: true,
         excerpt_separator: `<!-- more -->`,
         plugins: [
+          `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-responsive-iframe`,
           {
