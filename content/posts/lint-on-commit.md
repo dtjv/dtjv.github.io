@@ -18,7 +18,7 @@ I made my changes and stumbled down yet another hole of tooling pain.
 
 To begin, I installed `lint-staged` and setup my `package.json` .
 
-```json
+```json:title=package.json
 {
   "scripts": {
     "format": "prettier -w .",
@@ -52,7 +52,7 @@ to `tsc` via the command line, which means `tsc` ignores `tsconfig.json`.
 My first fix moved the call to `type-check` to a different git hook and removed
 it from the `lint-staged` call list.
 
-```json
+```json:title=package.json
 {
   "husky": {
     "hooks": {
@@ -82,7 +82,7 @@ An alternative approach follow this
 I removed the `lint-staged` block from `package.json` and created a
 `lint-staged-config.js` file as follows:
 
-```javascript
+```javascript:title=lint-staged-config.js
 module.exports = {
   '**/*.ts?(x)': () => 'yarn type-check',
 
@@ -104,7 +104,7 @@ While my setup above was technically complete, I saw
 I installed husky v5, removed `lint-staged.config.js` and setup my
 `package.json`.
 
-```json
+```json:title=package.json
 {
   "scripts": {
     "format": "prettier -w .",
@@ -127,7 +127,7 @@ $ npx husky add .husky/pre-commit "yarn lint-staged"
 Lastly, I modified `.husky/pre-commit` - created in the last step - to run the
 `type-check` script. Here's my final `pre-commit` script.
 
-```bash
+```bash:title=pre-commit
 #!/bin/sh
 
 [ -n "$CI" ] && exit 0
