@@ -8,3 +8,12 @@
   white-space: normal;
   background: none;
 }
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply font-mono;
+}
+
+.gatsby-code-title {
+  @apply px-4 pt-4 pb-5 font-mono text-sm text-gray-200 bg-gray-900 rounded-t-md -mb-7;
+}
