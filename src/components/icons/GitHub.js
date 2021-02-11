@@ -1,8 +1,9 @@
 import React from 'react'
 
-export const GitHubIcon = (props) => (
+export const GitHubIcon = ({ className, ...props }) => (
   <svg
     {...props}
+    className={`text-github ${className}`}
     role="img"
     fill="currentColor"
     viewBox="0 0 24 24"
