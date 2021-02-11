@@ -1,10 +1,10 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import { Layout } from '../components/Layout'
 import { SEO } from '../components/SEO'
 import { Projects } from '../components/Projects'
+import { Section } from '../components/Section'
 
 const ProjectsPage = () => {
   const {
@@ -64,9 +64,10 @@ const ProjectsPage = () => {
 
   return (
     <Layout>
-      <Helmet title={`Projects | ${site.siteMetadata.title}`} />
-      <SEO />
-      <Projects projects={projects} />
+      <SEO title={`Projects | ${site.siteMetadata.title}`} />
+      <Section title="Projects">
+        <Projects projects={projects} />
+      </Section>
     </Layout>
   )
 }

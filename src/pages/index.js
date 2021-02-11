@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 
 import { Layout } from '../components/Layout'
@@ -87,8 +86,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Helmet title={site.siteMetadata.title} />
-      <SEO />
+      <SEO title={site.siteMetadata.title} />
       <Container>
         <p className="text-xl text-gray-500 sm:text-2xl prose max-w-none">
           Hello! I'm David, a software developer based in Oregon. On this

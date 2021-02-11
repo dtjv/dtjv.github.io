@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import { Layout } from '../components/Layout'
@@ -14,13 +13,11 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title={`${title} | ${site.siteMetadata.title}`} />
       <SEO
-        page={{
-          title: `${title} | ${site.siteMetadata.title}`,
-          description,
-          url: `${site.siteMetadata.siteUrl}${post.fields.slug}`,
-        }}
+        title={`${title} | ${site.siteMetadata.title}`}
+        description={description}
+        url={`${site.siteMetadata.siteUrl}${post.fields.slug}`}
+        isPost
       />
       <Container>
         <article>

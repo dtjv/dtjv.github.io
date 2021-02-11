@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import { Layout } from '../components/Layout'
@@ -45,8 +44,7 @@ const ArticlesPage = () => {
 
   return (
     <Layout>
-      <Helmet title={`Articles | ${site.siteMetadata.title}`} />
-      <SEO />
+      <SEO title={`Articles | ${site.siteMetadata.title}`} />
       <Section title="Articles">
         <Posts posts={posts} />
       </Section>
