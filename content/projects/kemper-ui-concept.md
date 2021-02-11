@@ -4,6 +4,10 @@ description: A sample product page built using Tailwind CSS'
 id: 4
 repoUrl:
 liveUrl: https://kemper-ui-concept.vercel.app/
+tech:
+  - nextjs
+  - tailwind
+  - vercel
 screenshot: kemper-ui-concept-screenshot.png
 template: project
 ---

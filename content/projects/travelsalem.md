@@ -4,6 +4,10 @@ description: A design concept for travelsalem website
 id: 3
 repoUrl: https://github.com/dtjv/travelsalem.com
 liveUrl: https://travelsalem.vercel.app/
+tech:
+  - nextjs
+  - tailwind
+  - vercel
 screenshot: travelsalem-screenshot.png
 template: project
 ---

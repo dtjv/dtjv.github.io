@@ -4,6 +4,9 @@ description: A simple Todo MVC app in vanilla TypeScript
 id: 8
 repoUrl: https://github.com/dtjv/mvc.ts
 liveUrl: https://dtjv.io/mvc.ts
+tech:
+  - ts
+  - tailwind
 screenshot: mvc-screenshot.png
 template: project
 ---

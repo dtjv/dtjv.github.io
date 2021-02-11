@@ -4,6 +4,9 @@ description: An ultra minimal workout tracker.
 id: 2
 repoUrl: https://github.com/dtjv/maximus
 liveUrl: https://maximus-dtjv.netlify.app/
+tech:
+  - react
+  - reactrouter
 screenshot: maximus-screenshot.png
 template: project
 ---

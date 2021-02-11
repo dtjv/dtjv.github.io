@@ -4,6 +4,10 @@ description: An artist's website running Gatsby, React and Tailwind CSS.
 id: 5
 repoUrl: https://github.com/dtjv/gullionart.com
 liveUrl: https://gullionart.com
+tech:
+  - gatsby
+  - tailwind
+  - netlify
 screenshot: gullionart.com-screenshot.png
 template: project
 ---
