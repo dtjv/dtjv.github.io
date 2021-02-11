@@ -15,12 +15,26 @@ const Nav = () => {
           <span className="text-xl font-extrabold">David Valles</span>
         </div>
       </Link>
-      <Link
-        to="/projects"
-        className="font-bold text-gray-500 text-normal hover:underline"
-      >
-        Projects
-      </Link>
+      <div className="space-x-4">
+        <Link
+          to="/articles"
+          className="font-bold text-gray-500 text-normal hover:underline"
+        >
+          Articles
+        </Link>
+        <Link
+          to="/projects"
+          className="font-bold text-gray-500 text-normal hover:underline"
+        >
+          Projects
+        </Link>
+        <Link
+          to="/about"
+          className="font-bold text-gray-500 text-normal hover:underline"
+        >
+          About
+        </Link>
+      </div>
     </div>
   )
 }
