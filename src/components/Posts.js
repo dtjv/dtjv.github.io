@@ -1,15 +1,19 @@
 import React from 'react'
 
-import { Post } from './Post'
+import { Post, ShortPost } from './Post'
 
-const Posts = ({ posts = [] }) => {
+const Posts = ({ posts = [], short }) => {
   if (!posts.length) return null
 
   return (
     <ul className="divide-y divide-gray-200">
-      {posts.map((post) => (
-        <Post key={post.slug} post={post} />
-      ))}
+      {posts.map((post) =>
+        short ? (
+          <ShortPost key={post.slug} post={post} />
+        ) : (
+          <Post key={post.slug} post={post} />
+        )
+      )}
     </ul>
   )
 }

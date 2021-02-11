@@ -3,6 +3,30 @@ import { Link } from 'gatsby'
 
 import { H2 } from './Headings'
 
+const ShortPost = ({ post }) => {
+  const { title, date, slug } = post
+
+  return (
+    <li key={slug} className="py-6">
+      <article className="space-y-2">
+        <Link
+          to={slug}
+          className="text-base font-bold no-underline"
+          aria-label={`Read "${title}"`}
+        >
+          <dl>
+            <dt className="sr-only">Published on</dt>
+            <dd className="text-sm font-medium text-gray-500 leading-6">
+              <time dateTime={Date(date)}>{date}</time>
+            </dd>
+          </dl>
+          <H2 classes="inline-block hover:underline">{title}</H2>
+        </Link>
+      </article>
+    </li>
+  )
+}
+
 const Post = ({ post }) => {
   const { title, date, slug, excerpt } = post
 
@@ -44,4 +68,4 @@ const Post = ({ post }) => {
   )
 }
 
-export { Post }
+export { Post, ShortPost }
