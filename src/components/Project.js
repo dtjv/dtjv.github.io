@@ -18,7 +18,7 @@ const Project = ({ project }) => {
                 href={liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="font-bold no-underline "
+                className="font-bold hover:underline"
                 aria-label={`Go to ${liveUrl}`}
               >
                 <H2>{name}</H2>
