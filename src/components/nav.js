@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import MeImg from '../images/me.jpg'
 
-const Nav = () => {
+import MeImg from '../images/me.jpg'
+import { MenuIcon } from './icons/Menu'
+
+const Nav = ({ onClick }) => {
   return (
     <div className="flex items-center justify-between py-8 text-gray-800">
       <Link to="/" aria-label="link to home page">
@@ -15,7 +17,11 @@ const Nav = () => {
           <span className="text-xl font-extrabold">David Valles</span>
         </div>
       </Link>
-      <div className="space-x-4">
+      <MenuIcon
+        className="w-6 h-6 sm:hidden"
+        onClick={() => onClick((prevState) => !prevState)}
+      />
+      <div className="hidden sm:block space-x-4">
         <Link
           to="/articles"
           className="font-bold text-gray-500 text-normal hover:underline"
@@ -27,12 +33,6 @@ const Nav = () => {
           className="font-bold text-gray-500 text-normal hover:underline"
         >
           Projects
-        </Link>
-        <Link
-          to="/about"
-          className="font-bold text-gray-500 text-normal hover:underline"
-        >
-          About
         </Link>
       </div>
     </div>
