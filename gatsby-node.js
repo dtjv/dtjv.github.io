@@ -41,33 +41,21 @@ exports.createPages = async ({ actions, graphql }) => {
     throw result.errors
   }
 
-  const posts = result.data.allMarkdownRemark.edges.filter(
-    ({ node }) => node.frontmatter.template === 'post'
+  const docs = result.data.allMarkdownRemark.edges.filter(
+    ({ node }) =>
+      node.frontmatter.template === 'post' ||
+      node.frontmatter.template === 'page'
   )
 
-  posts.forEach((post) => {
+  docs.forEach((doc) => {
     createPage({
-      path: post.node.fields.slug,
-      component: path.resolve('src/templates/post.js'),
+      path: doc.node.fields.slug,
+      component: path.resolve(
+        `src/templates/${doc.node.frontmatter.template}.js`
+      ),
       context: {
-        id: post.node.id,
+        id: doc.node.id,
       },
     })
   })
-
-  /*
-  const pages = result.data.allMarkdownRemark.edges.filter(
-    ({ node }) => node.frontmatter.template === 'page'
-  )
-
-  pages.forEach((page) => {
-    createPage({
-      path: page.node.fields.slug,
-      component: path.resolve('src/templates/page.js'),
-      context: {
-        slug: page.node.fields.slug,
-      },
-    })
-  })
-  */
 }
