@@ -74,8 +74,7 @@ communication between components.
 
 Below shows the application construction.
 
-```typescript
-// index.ts
+```typescript:title=index.ts
 const view = new View(window.document, '#app') // View
 const todos = new Todos() // Model
 const store = new Store('todos1', localStorage) // Store
@@ -104,8 +103,7 @@ Again, the Controller orchestrates the app's activities. For example, the code
 snippet below is a Controller event handler that executes when a user clicks on
 the `Add Task` button and triggers the View to emit an event to create a todo.
 
-```typescript
-// app.ts (aka the Controller)
+```typescript:title=app.ts
 export class App {
   //...
 
@@ -127,7 +125,7 @@ export class App {
 To keep the View decoupled from the Controller, all registered handlers for View
 events must have the same generalized function signature. (See below).
 
-```typescript
+```typescript:title=view.ts
 export type Handler = (props: Partial<Todo>, event?: Event) => void
 ```
 
@@ -138,7 +136,7 @@ design isolates the implementational details of a specific storage system. The
 code snippet below shows the Store class implemented for
 [`Window.localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 
-```typescript
+```typescript:title=store.ts
 export class Store {
   constructor(private readonly key: string, private readonly db: Storage) {}
 
@@ -180,7 +178,7 @@ changes next.
 First, I introduce an Emitter class that gives a subclass the ability to call
 functions listening to any event that subclass emits.
 
-```typescript
+```typescript:title=emitter.ts
 export abstract class Emitter {
   private readonly listeners: Map<string, Listener[]> = new Map()
 
@@ -211,7 +209,7 @@ The snippet below illustrates the Model event system. Here, the Todo exposes a
 `toggle()` method to change the internal state of a Todo. Once changed, the Todo
 will execute all functions listening on the `CHANGE` event.
 
-```typescript
+```typescript:title=emitter.ts
 export class Todo extends Emitter {
   private _done: boolean
 
@@ -236,8 +234,7 @@ run.
 In this version, the Controller is simple and limited to application setup, data
 persistence and messaging the view. Below is the entire Controller class.
 
-```typescript
-// app.ts (aka the Controller)
+```typescript:title=app.ts
 export class App {
   constructor(
     private readonly _todos: Todos,
