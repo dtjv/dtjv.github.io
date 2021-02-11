@@ -23,7 +23,7 @@ const query = graphql`
           excerpt(format: HTML)
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD")
           }
         }
       }
@@ -96,13 +96,14 @@ const IndexPage = () => {
           <Link to="#projects">projects</Link> I've built.
         </p>
       </Container>
-      <Section
-        title="Latest Articles"
-        link={{ to: '/articles', text: 'View all' }}
-      >
-        <Posts posts={articles} />
+      <Section title="Articles" link={{ to: '/articles', text: 'View all' }}>
+        <Posts posts={articles} short />
       </Section>
-      <Section id="projects" title="Projects">
+      <Section
+        id="projects"
+        title="Projects"
+        link={{ to: '/projects', text: 'View all' }}
+      >
         <Projects projects={code} />
       </Section>
     </Layout>
