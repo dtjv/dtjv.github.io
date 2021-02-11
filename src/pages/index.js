@@ -40,6 +40,7 @@ const query = graphql`
             id
             repoUrl
             liveUrl
+            tech
             screenshot
           }
         }
@@ -78,6 +79,7 @@ const IndexPage = () => {
     name: node.frontmatter.name,
     repoUrl: node.frontmatter.repoUrl,
     liveUrl: node.frontmatter.liveUrl,
+    tech: node.frontmatter.tech,
     excerpt: node.excerpt,
     image: images.edges.find(
       (image) => image.node.base === node.frontmatter.screenshot

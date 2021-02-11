@@ -2,14 +2,16 @@ import React from 'react'
 import Img from 'gatsby-image'
 
 import { H2 } from './Headings'
+import { icons } from './icons'
+import { RedirectIcon } from './icons/Redirect'
 
 const Project = ({ project }) => {
-  const { name, id, repoUrl, liveUrl, excerpt, image } = project
+  const { name, id, repoUrl, liveUrl, tech, excerpt, image } = project
 
   return (
     <li key={id} className="flex py-12 space-x-6">
-      <div className={`${image && 'sm:w-1/2'} w-full space-y-5`}>
-        <div className="space-y-6">
+      <div className={`${image && 'sm:w-1/2'} w-full`}>
+        <div>
           <div className="flex items-center">
             {liveUrl ? (
               <a
@@ -31,30 +33,29 @@ const Project = ({ project }) => {
                 rel="noreferrer"
                 aria-label={`Follow external link to ${liveUrl}`}
               >
-                <svg
-                  className="w-5 h-5 ml-1 text-gray-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  ></path>
-                </svg>
+                <RedirectIcon className="w-5 h-5 ml-1 text-gray-500" />
               </a>
             )}
           </div>
+
+          {tech && tech.length > 0 && (
+            <div className="mt-6">
+              <ul className="flex items-center space-x-2">
+                {tech.map((techName, idx) => {
+                  const Icon = icons[techName]
+                  return <Icon key={idx} className="w-6 h-6" />
+                })}
+              </ul>
+            </div>
+          )}
+
           <div
-            className="text-gray-500 prose max-w-none"
+            className="mt-6 text-gray-500 prose max-w-none"
             dangerouslySetInnerHTML={{ __html: excerpt }}
           />
         </div>
         {repoUrl && (
-          <div>
+          <div className="mt-8">
             <a
               href={repoUrl}
               className="text-base font-bold text-blue-600 no-underline hover:text-blue-400"
