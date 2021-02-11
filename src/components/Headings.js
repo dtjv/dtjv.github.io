@@ -14,7 +14,7 @@ export const H2 = ({ classes, children }) => (
   <h2
     className={`${
       classes ?? ''
-    } text-2xl font-bold tracking-tight text-gray-800 leading-8`}
+    } text-2xl font-bold tracking-tight text-gray-600 leading-8`}
   >
     {children}
   </h2>
