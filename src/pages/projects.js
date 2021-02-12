@@ -8,13 +8,12 @@ import { Section } from '../components/Section'
 
 const query = graphql`
   query {
-    projects: allMarkdownRemark(
+    projects: allMdx(
       sort: { fields: [frontmatter___id], order: ASC }
       filter: { frontmatter: { template: { eq: "project" } } }
     ) {
       edges {
         node {
-          excerpt(format: HTML)
           frontmatter {
             name
             id
@@ -22,6 +21,9 @@ const query = graphql`
             liveUrl
             tech
             screenshot
+          }
+          fields {
+            excerpt
           }
         }
       }
@@ -54,7 +56,7 @@ const ProjectsPage = () => {
     repoUrl: node.frontmatter.repoUrl,
     liveUrl: node.frontmatter.liveUrl,
     tech: node.frontmatter.tech,
-    excerpt: node.excerpt,
+    excerpt: node.fields.excerpt,
     image: images.edges.find(
       (image) => image.node.base === node.frontmatter.screenshot
     ),

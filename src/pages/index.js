@@ -10,7 +10,7 @@ import { Container } from '../components/Container'
 
 const query = graphql`
   query {
-    posts: allMarkdownRemark(
+    posts: allMdx(
       limit: 3
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
@@ -20,21 +20,23 @@ const query = graphql`
           fields {
             slug
           }
-          excerpt(format: HTML)
           frontmatter {
             title
             date(formatString: "MMM DD")
+            description
           }
         }
       }
     }
-    projects: allMarkdownRemark(
+    projects: allMdx(
       sort: { fields: [frontmatter___id], order: ASC }
       filter: { frontmatter: { template: { eq: "project" } } }
     ) {
       edges {
         node {
-          excerpt(format: HTML)
+          fields {
+            excerpt
+          }
           frontmatter {
             name
             id
@@ -71,7 +73,7 @@ const IndexPage = () => {
   const articles = posts.edges.map(({ node }) => ({
     title: node.frontmatter.title,
     date: node.frontmatter.date,
-    excerpt: node.excerpt,
+    description: node.frontmatter.description,
     slug: node.fields.slug,
   }))
   const code = projects.edges.map(({ node }) => ({
@@ -80,7 +82,7 @@ const IndexPage = () => {
     repoUrl: node.frontmatter.repoUrl,
     liveUrl: node.frontmatter.liveUrl,
     tech: node.frontmatter.tech,
-    excerpt: node.excerpt,
+    excerpt: node.fields.excerpt,
     image: images.edges.find(
       (image) => image.node.base === node.frontmatter.screenshot
     ),
@@ -92,8 +94,9 @@ const IndexPage = () => {
       <Container>
         <p className="text-xl text-gray-500 sm:text-2xl prose max-w-none">
           Hello! I'm David, a software developer based in Oregon. On this
-          website I share my thoughts about programming and a few side{' '}
-          <Link to="#projects">projects</Link> I've built.
+          website I share my <Link to="/articles">thoughts</Link> about
+          programming and a few side <Link to="/projects">projects</Link> I've
+          built.
         </p>
       </Container>
       <Section title="Articles" link={{ to: '/articles', text: 'View all' }}>

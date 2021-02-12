@@ -1,16 +1,31 @@
 const path = require('path')
+const remark = require('remark')
+const remarkHTML = require('remark-html')
 const { createFilePath } = require('gatsby-source-filesystem')
+
+const INTRO_SEPARATOR = '<!-- intro -->'
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const slug = `/${path.basename(createFilePath({ node, getNode }))}/`
 
     createNodeField({
       name: `slug`,
       node,
       value: slug,
+    })
+
+    const [, raw] = node.rawBody.split(INTRO_SEPARATOR)
+    const excerpt = raw
+      ? remark().use(remarkHTML).processSync(raw.trim()).toString()
+      : ''
+
+    createNodeField({
+      name: `excerpt`,
+      node,
+      value: excerpt,
     })
   }
 }
@@ -20,7 +35,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(limit: 1000) {
+        allMdx(limit: 1000) {
           edges {
             node {
               id
@@ -41,7 +56,7 @@ exports.createPages = async ({ actions, graphql }) => {
     throw result.errors
   }
 
-  const docs = result.data.allMarkdownRemark.edges.filter(
+  const docs = result.data.allMdx.edges.filter(
     ({ node }) =>
       node.frontmatter.template === 'post' ||
       node.frontmatter.template === 'page'

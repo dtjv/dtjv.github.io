@@ -9,6 +9,7 @@ module.exports = {
   },
   flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
+    `gatsby-remark-images`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -44,13 +45,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        gfm: true,
-        commonmark: true,
-        footnotes: true,
-        excerpt_separator: `<!-- more -->`,
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        //gfm: true,
+        //commonmark: true,
+        //footnotes: true,
+        //excerpt_separator: `<!-- more -->`,
+        gatsbyRemarkPlugins: [
           `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-responsive-iframe`,

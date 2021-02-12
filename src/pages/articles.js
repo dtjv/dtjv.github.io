@@ -8,7 +8,7 @@ import { Section } from '../components/Section'
 
 const query = graphql`
   query {
-    allMarkdownRemark(
+    articles: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
     ) {
@@ -16,8 +16,8 @@ const query = graphql`
         node {
           fields {
             slug
+            excerpt
           }
-          excerpt(format: HTML)
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
@@ -34,12 +34,12 @@ const query = graphql`
 `
 
 const ArticlesPage = () => {
-  const { site, allMarkdownRemark } = useStaticQuery(query)
-  const posts = allMarkdownRemark.edges.map(({ node }) => ({
+  const { site, articles } = useStaticQuery(query)
+  const posts = articles.edges.map(({ node }) => ({
     title: node.frontmatter.title,
     date: node.frontmatter.date,
-    excerpt: node.excerpt,
     slug: node.fields.slug,
+    excerpt: node.fields.excerpt,
   }))
 
   return (
