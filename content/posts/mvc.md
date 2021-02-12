@@ -1,10 +1,13 @@
 ---
 title: My Todo MVC
 date: 2021-02-02
-description: My notes on building an app following the MVC pattern.
+description:
+  How I built two implementations of the same app, following the MVC pattern.
 draft: false
 template: post
 ---
+
+<!-- intro -->
 
 Today, modern web applications use some flavor of the
 [MVC pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
@@ -15,7 +18,7 @@ understood this foundational pattern? To answer this question, I decided to
 build an app that adhered to the basic premise of MVC. This article discusses
 key points of my implementation.
 
-<!-- more -->
+<!-- intro -->
 
 - View the [demo](https://dtjv.io/mvc.ts).
 - View the [source code](https://github.com/dtjv/mvc.ts).

@@ -13,10 +13,12 @@ screenshot: memowise-screenshot.png
 template: project
 ---
 
+<!-- intro -->
+
 Back in 2016, a group of us built a React/Redux based flashcard app. With newer
 tech available, I decided to do a rewrite.
 [Memowise](https://memowise.vercel.app) is my own version - built using Next.js
 and Tailwind CSS. As of this initial release, I've got 💯 scores for all
 categories in Google's Lighthouse! 👊
 
-<!-- more -->
+<!-- intro -->

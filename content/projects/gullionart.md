@@ -12,8 +12,10 @@ screenshot: gullionart.com-screenshot.png
 template: project
 ---
 
+<!-- intro -->
+
 A friend needed an updated website for his artwork. Since the site would need an
 image gallery, I chose to build the site using
 [Gatsby](https://www.gatsbyjs.com/) for the lazy image loading feature.
 
-<!-- more -->
+<!-- intro -->

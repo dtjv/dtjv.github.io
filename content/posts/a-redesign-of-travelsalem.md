@@ -6,6 +6,8 @@ draft: false
 template: post
 ---
 
+<!-- intro -->
+
 A recent job posting led me to [travelsalem.com](https://travelsalem.com). The
 website design is arguably dated and navigation proved to be cumbersome using
 the complex menu system. Then I ran into
@@ -16,7 +18,7 @@ challenge, I built a one-page demo to address the issues I experienced and
 perhaps sparks ideas about how best to improve the website's utility. This
 article explains my design decisions.
 
-<!-- more -->
+<!-- intro -->
 
 - View the [demo](https://travelsalem.vercel.app).
 - View the [source code](https://github.com/dtjv/travelsalem.com).

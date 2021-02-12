@@ -10,8 +10,10 @@ screenshot: colleenvalles-screenshot.png
 template: project
 ---
 
+<!-- intro -->
+
 A design concept for my sister's website. I used this project to practice my CSS
 skills using a modular approach to design. So, no Sass or Bootstrap here, but
 [PostCSS](https://postcss.org/) for sure!
 
-<!-- more -->
+<!-- intro -->

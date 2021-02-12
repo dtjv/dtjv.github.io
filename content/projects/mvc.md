@@ -11,6 +11,8 @@ screenshot: mvc-screenshot.png
 template: project
 ---
 
+<!-- intro -->
+
 The Model-View-Controller (MVC) architecture lies at the foundation of modern
 web applications. At its core, the MVC pattern is an exercise in
 _separation-of-concerns_; however, implementations of that core concept vary
@@ -22,4 +24,4 @@ implementations of a Todo app, using vanilla TypeScript.
 You can read about this project in my article,
 _[My Todo MVC](https://dtjv.io/mvc/)_.
 
-<!-- more -->
+<!-- intro -->

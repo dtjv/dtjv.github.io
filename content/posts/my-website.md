@@ -6,6 +6,8 @@ draft: false
 template: post
 ---
 
+<!-- intro -->
+
 For years I've had a reserved spot on the internet - my own domain. I built my
 first blog using [Jekyll](https://jekyllrb.com/) and
 [Sass](https://sass-lang.com/). Then I redesigned the site, again and again. And
@@ -13,7 +15,7 @@ yet I never published one article. This is my new website - built using
 [Gatsby](https://gatsbyjs.org/) and [Tailwind CSS](https://tailwindcss.com/),
 and it's the first site I'll actually use. Here's why.
 
-<!-- more -->
+<!-- intro -->
 
 ## Contribution
 

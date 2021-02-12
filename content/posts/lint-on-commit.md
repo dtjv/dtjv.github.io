@@ -2,9 +2,12 @@
 title: Lint on Commit
 date: 2021-02-09
 description:
+  My project setup to lint and type check my TypeScript code on commits.
 draft: false
 template: post
 ---
+
+<!-- intro -->
 
 On a recent project, I decided to give
 [`lint-staged`](https://github.com/okonet/lint-staged) a try. For those who
@@ -14,7 +17,7 @@ implementations, [here](https://github.com/paulintrognon/next-typescript) and
 [here](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest),
 I made my changes and stumbled down yet another hole of tooling pain.
 
-<!-- more -->
+<!-- intro -->
 
 To begin, I installed `lint-staged` and setup my `package.json` .
 

@@ -12,10 +12,12 @@ tech:
 template: project
 ---
 
+<!-- intro -->
+
 In 2018, I built the website for BMI Fitness - my former employer. In late 2019
 I rebuilt the site with a focus to simplify site navigation, improve loading
 time and integrate a CMS. Built using [Jekyll](https://jekyllrb.com/), styled in
 Sass and [Materialize](https://materializecss.com/), and using
 [Forestry.io](https://forestry.io/) for backend CMS.
 
-<!-- more -->
+<!-- intro -->

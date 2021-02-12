@@ -12,6 +12,8 @@ screenshot: travelsalem-screenshot.png
 template: project
 ---
 
+<!-- intro -->
+
 I found [travelsalem.com](https://travelsalem.com) through a job posting that
 wanted to improve the site's SEO and usage. I found the site error prone and
 cumbersome to use and thought it could use a new design.
@@ -23,4 +25,4 @@ data presentation, and loads fast. I built this project using
 You can read about my design choices in my article,
 _[A Redesign of travelsalem.com](https://dtjv.io/a-redesign-of-travelsalem/)_.
 
-<!-- more -->
+<!-- intro -->
