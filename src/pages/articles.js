@@ -33,7 +33,7 @@ const query = graphql`
   }
 `
 
-const ArticlesPage = () => {
+const ArticlesPage = ({ location }) => {
   const { site, articles } = useStaticQuery(query)
   const posts = articles.edges.map(({ node }) => ({
     title: node.frontmatter.title,
@@ -43,7 +43,7 @@ const ArticlesPage = () => {
   }))
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title={`Articles | ${site.siteMetadata.title}`} />
       <Section title="Articles">
         <Posts posts={posts} />

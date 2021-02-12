@@ -48,7 +48,7 @@ const query = graphql`
   }
 `
 
-const ProjectsPage = () => {
+const ProjectsPage = ({ location }) => {
   const { site, projects, images } = useStaticQuery(query)
   const code = projects.edges.map(({ node }) => ({
     id: node.frontmatter.id,
@@ -63,7 +63,7 @@ const ProjectsPage = () => {
   }))
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title={`Projects | ${site.siteMetadata.title}`} />
       <Section title="Projects">
         <Projects projects={code} />
