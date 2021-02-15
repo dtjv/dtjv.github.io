@@ -17,7 +17,7 @@ const ShortPost = ({ post }) => {
         </dl>
         <Link
           to={slug}
-          className="hover:underline"
+          className="inline-block hover:underline"
           aria-label={`Read "${title}"`}
         >
           <H2>{title}</H2>
