@@ -21,7 +21,6 @@ greatly.
 This project is a working demonstration of the MVC pattern - built in two
 implementations of a Todo app, using vanilla TypeScript.
 
-You can read about this project in my article,
-_[My Todo MVC](https://dtjv.io/mvc/)_.
+You can read about this project in my article, _[My Todo MVC](/mvc/)_.
 
 <!-- intro -->
