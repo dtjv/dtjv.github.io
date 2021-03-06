@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import { H2 } from './Headings'
 import { icons } from './icons'
@@ -7,6 +7,7 @@ import { RedirectIcon } from './icons/Redirect'
 
 const Project = ({ project }) => {
   const { name, id, repoUrl, liveUrl, tech, excerpt, image } = project
+  const img = getImage(image.node)
 
   return (
     <li key={id} className="flex py-12 space-x-6">
@@ -68,10 +69,7 @@ const Project = ({ project }) => {
       </div>
       {!image ? null : (
         <div className="hidden sm:block sm:w-1/2">
-          <Img
-            fluid={image.node.childImageSharp.fluid}
-            alt={`screen shot of ${name}`}
-          />
+          <GatsbyImage image={img} alt={`screen shot of ${name}`} />
         </div>
       )}
     </li>

@@ -9,6 +9,7 @@ module.exports = {
   },
   flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-remark-images`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -48,10 +49,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
-        //gfm: true,
-        //commonmark: true,
-        //footnotes: true,
-        //excerpt_separator: `<!-- more -->`,
         gatsbyRemarkPlugins: [
           `gatsby-remark-code-titles`,
           `gatsby-remark-prismjs`,

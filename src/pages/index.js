@@ -53,9 +53,7 @@ const query = graphql`
         node {
           base
           childImageSharp {
-            fluid(quality: 75) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData
           }
         }
       }
