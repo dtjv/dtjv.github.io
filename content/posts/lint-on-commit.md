@@ -50,7 +50,7 @@ The issue resides in how `lint-staged` calls `tsc`. It passes git staged files
 to `tsc` via the command line, which means `tsc` ignores `tsconfig.json`.
 ([reference](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#using-tsconfigjson-or-jsconfigjson)).
 
-### Fix #1
+## Fix #1
 
 My first fix moved the call to `type-check` to a different git hook and removed
 it from the `lint-staged` call list.
@@ -100,7 +100,7 @@ In this setup, `lint-staged` runs `type-check` without command-line arguments
 and `tsc` will run using `tsconfig.json`. This solution is cool, but perhaps
 unnecessarily complex.
 
-### Husky v5
+## Husky v5
 
 While my setup above was technically complete, I saw
 [typicode](https://github.com/typicode) released husky v5 and decided to try it.
