@@ -9,6 +9,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        email: '#181717',
         forestry: '#343A40',
         gatsby: '#663399',
         github: '#181717',
@@ -23,6 +24,7 @@ module.exports = {
         sass: '#CC6699',
         tailwind: '#38B2AC',
         ts: '#3178C6',
+        twitter: '#181717',
         vercel: '#000000',
       },
     },
