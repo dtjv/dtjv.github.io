@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import { Layout } from '../components/Layout'
-import { SEO } from '../components/SEO'
+import { Seo } from '../components/Seo'
 import { Container } from '../components/Container'
 import { H1 } from '../components/Headings'
 
@@ -22,7 +22,7 @@ const PageNotFound = () => {
 
   return (
     <Layout>
-      <SEO title={`${pageTitle} | ${site.siteMetadata.title}`} />
+      <Seo title={`${pageTitle} | ${site.siteMetadata.title}`} />
       <Container>
         <H1>{pageTitle}</H1>
         <p className="mt-4 text-xl text-gray-500 sm:text-2xl prose max-w-none">

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { Layout } from '../components/Layout'
-import { SEO } from '../components/SEO'
+import { Seo } from '../components/Seo'
 import { Container } from '../components/Container'
 import { H1 } from '../components/Headings'
 
@@ -14,7 +14,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={`${title} | ${site.siteMetadata.title}`}
         description={description}
         url={`${site.siteMetadata.siteUrl}${post.fields.slug}`}

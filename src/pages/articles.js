@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import { Layout } from '../components/Layout'
-import { SEO } from '../components/SEO'
+import { Seo } from '../components/Seo'
 import { Posts } from '../components/Posts'
 import { Section } from '../components/Section'
 
@@ -44,7 +44,7 @@ const ArticlesPage = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title={`Articles | ${site.siteMetadata.title}`} />
+      <Seo title={`Articles | ${site.siteMetadata.title}`} />
       <Section title="Articles">
         <Posts posts={posts} />
       </Section>

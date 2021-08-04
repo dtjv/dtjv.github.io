@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 
 import { Layout } from '../components/Layout'
-import { SEO } from '../components/SEO'
+import { Seo } from '../components/Seo'
 import { Posts } from '../components/Posts'
 import { Projects } from '../components/Projects'
 import { Section } from '../components/Section'
@@ -88,7 +88,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title={site.siteMetadata.title} />
+      <Seo title={site.siteMetadata.title} />
       <Container>
         <p className="text-xl text-gray-500 sm:text-2xl prose max-w-none">
           Hello! I'm David, a software developer based in Oregon. On this
