@@ -91,10 +91,20 @@ const IndexPage = () => {
       <Seo title={site.siteMetadata.title} />
       <Container>
         <p className="text-xl text-gray-500 sm:text-2xl prose max-w-none">
-          Hello! I'm David, a software developer based in Oregon. On this
-          website I share my <Link to="/articles">thoughts</Link> about
-          programming and a few side <Link to="/projects">projects</Link> I've
-          built.
+          Hello! I’m David, a software developer based in Oregon. I build tools
+          and applications using React, TypeScript and many other interesting
+          libraries found in the JavaScript, Web, and Node.js ecosystem.
+        </p>
+        <p className="text-xl text-gray-500 sm:text-2xl prose max-w-none">
+          On this website I share my thoughts on programming - from coding
+          experiences, to projects I’ve built and even a bit of computer science
+          basics. I hope you find my content useful.
+        </p>
+        <p className="text-xl text-gray-500 sm:text-2xl prose max-w-none">
+          <span class="font-semibold">Update:</span> I am looking for work! Feel
+          free to contact me by{' '}
+          <a href="mailto:davidtjvalles@gmail.com">email</a> or{' '}
+          <a href="https://twitter/davidtjvalles">@davidtjvalles</a>.
         </p>
       </Container>
       <Section title="Articles" link={{ to: '/articles', text: 'View all' }}>
