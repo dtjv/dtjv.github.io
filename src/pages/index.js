@@ -4,7 +4,6 @@ import { graphql, useStaticQuery, Link } from 'gatsby'
 import { Layout } from '../components/Layout'
 import { Seo } from '../components/Seo'
 import { Posts } from '../components/Posts'
-import { Projects } from '../components/Projects'
 import { Section } from '../components/Section'
 import { Container } from '../components/Container'
 
