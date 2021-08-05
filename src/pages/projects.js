@@ -20,6 +20,7 @@ const query = graphql`
             repoUrl
             liveUrl
             tech
+            feature
             screenshot
           }
           fields {
@@ -54,6 +55,7 @@ const ProjectsPage = ({ location }) => {
     repoUrl: node.frontmatter.repoUrl,
     liveUrl: node.frontmatter.liveUrl,
     tech: node.frontmatter.tech,
+    feature: node.frontmatter.feature,
     excerpt: node.fields.excerpt,
     image: images.edges.find(
       (image) => image.node.base === node.frontmatter.screenshot
@@ -63,7 +65,10 @@ const ProjectsPage = ({ location }) => {
   return (
     <Layout location={location}>
       <Seo title={`Projects | ${site.siteMetadata.title}`} />
-      <Section title="Projects">
+      <Section title="Featured projects">
+        <Projects projects={code} feature />
+      </Section>
+      <Section title="A few other projects...">
         <Projects projects={code} />
       </Section>
     </Layout>
