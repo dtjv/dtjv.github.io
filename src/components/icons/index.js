@@ -7,6 +7,7 @@ import { MongoDBIcon } from './MongoDB'
 import { NetlifyIcon } from './Netlify'
 import { NextjsIcon } from './NextJS'
 import { PostCSSIcon } from './PostCSS'
+import { PugIcon } from './Pug'
 import { ReactIcon } from './ReactIcon'
 import { ReactRouterIcon } from './ReactRouterIcon'
 import { SassIcon } from './Sass'
@@ -24,6 +25,7 @@ export const icons = {
   netlify: NetlifyIcon,
   nextjs: NextjsIcon,
   postcss: PostCSSIcon,
+  pug: PugIcon,
   react: ReactIcon,
   reactrouter: ReactRouterIcon,
   sass: SassIcon,

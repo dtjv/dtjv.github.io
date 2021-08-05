@@ -19,6 +19,7 @@ module.exports = {
         netlify: '#00C7B7',
         nextjs: '#000000',
         postcss: '#DD3A0A',
+        pug: '#A86454',
         react: '#61DAFB',
         reactrouter: '#CA4245',
         sass: '#CC6699',
