@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { H1 } from './Headings'
 import { Project } from './Project'
 
 const Projects = ({ projects = [], feature }) => {
