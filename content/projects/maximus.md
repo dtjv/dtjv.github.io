@@ -7,7 +7,9 @@ liveUrl: https://maximus-dtjv.netlify.app/
 tech:
   - react
   - reactrouter
+  - netlify
 screenshot: maximus-screenshot.png
+feature: true
 template: project
 ---
 

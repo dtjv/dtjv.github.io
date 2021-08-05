@@ -10,6 +10,7 @@ tech:
   - tailwind
   - vercel
 screenshot: memowise-screenshot.png
+feature: true
 template: project
 ---
 

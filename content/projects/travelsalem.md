@@ -9,6 +9,7 @@ tech:
   - tailwind
   - vercel
 screenshot: travelsalem-screenshot.png
+feature: true
 template: project
 ---
 
