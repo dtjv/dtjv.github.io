@@ -21,7 +21,7 @@ const Projects = ({ projects = [], feature }) => {
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12">
           {nonFeaturedProjects.map((project) => (
-            <li key={project.id} className="p-4 border rounded-sm">
+            <li key={project.id} className="p-4 border rounded-lg shadow-md">
               <Project project={{ ...project, image: undefined }} />
             </li>
           ))}
