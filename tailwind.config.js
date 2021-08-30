@@ -18,6 +18,7 @@ module.exports = {
         mongodb: '#47A248',
         netlify: '#00C7B7',
         nextjs: '#000000',
+        npm: '#CB3837',
         postcss: '#DD3A0A',
         pug: '#A86454',
         react: '#61DAFB',
