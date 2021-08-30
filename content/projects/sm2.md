@@ -15,7 +15,7 @@ template: project
 
 An implementation of the
 [SM-2](https://www.supermemo.com/en/archives1990-2015/english/ol/sm2) algorithm
-written in Typescript. Published to
-[npm](https://www.npmjs.com/package/@dtjv/sm-2).
+written in Typescript. Published to the
+[npm](https://www.npmjs.com/package/@dtjv/sm-2) registry.
 
 <!-- intro -->
