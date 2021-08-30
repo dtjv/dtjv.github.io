@@ -11,7 +11,11 @@ const Project = ({ project }) => {
 
   return (
     <>
-      <div className={`${image && 'sm:w-1/2'} w-full`}>
+      <div
+        className={`${
+          image ? 'sm:w-1/2' : ''
+        } flex flex-col justify-between h-full w-full`}
+      >
         <div>
           <div className="flex items-center">
             {liveUrl ? (
