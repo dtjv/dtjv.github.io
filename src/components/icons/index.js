@@ -1,3 +1,4 @@
+import { ChakraUIIcon } from './ChakraUI'
 import { ForestryIcon } from './Forestry'
 import { GatsbyIcon } from './Gatsby'
 import { GitHubIcon } from './GitHub'
@@ -16,6 +17,7 @@ import { TypeScriptIcon } from './TypeScript'
 import { VercelIcon } from './Vercel'
 
 export const icons = {
+  chakraui: ChakraUIIcon,
   forestry: ForestryIcon,
   gatsby: GatsbyIcon,
   github: GitHubIcon,

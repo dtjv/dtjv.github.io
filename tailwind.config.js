@@ -9,6 +9,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        chakraui: '#319795',
         email: '#181717',
         forestry: '#343A40',
         gatsby: '#663399',
