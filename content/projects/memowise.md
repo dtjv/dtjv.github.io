@@ -1,7 +1,7 @@
 ---
 name: Memowise
 description: A modern flashcard app
-id: 1
+id: 2
 repoUrl: https://github.com/dtjv/memowise
 liveUrl: https://memowise.vercel.app
 tech:

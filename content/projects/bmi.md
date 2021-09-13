@@ -1,6 +1,6 @@
 ---
 name: BMI Fitness
-id: 4
+id: 5
 description: Website for BMI Fitness using Jekyll, Materialize and Forestry.io
 repoUrl: https://github.com/dtjv/bmi
 liveUrl: https://dtjv.io/bmi
