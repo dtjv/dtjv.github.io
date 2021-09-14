@@ -1,14 +1,14 @@
 ---
 name: 'gullionart.com'
 description: An artist's website running Gatsby, React and Tailwind CSS.
-id: 4
+id: 5
 repoUrl: https://github.com/dtjv/gullionart.com
 liveUrl: https://gullionart.com
 tech:
   - gatsby
   - tailwind
   - netlify
-screenshot:
+screenshots:
 feature: false
 template: project
 ---

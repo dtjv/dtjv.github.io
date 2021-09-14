@@ -1,13 +1,13 @@
 ---
 name: mvc.ts
 description: A simple Todo MVC app in vanilla TypeScript
-id: 1
+id: 3
 repoUrl: https://github.com/dtjv/mvc.ts
 liveUrl: https://dtjv.io/mvc.ts
 tech:
   - ts
   - tailwind
-screenshot:
+screenshots:
 feature: false
 template: project
 ---

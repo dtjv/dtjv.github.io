@@ -1,12 +1,12 @@
 ---
 name: wod-cli
 description: A Node CLI to aggregate Markdown files into one HTML file.
-id: 2
+id: 1
 repoUrl: https://github.com/dtjv/wod-cli
 liveUrl:
 tech:
   - js
-screenshot:
+screenshots:
 feature: false
 template: project
 ---

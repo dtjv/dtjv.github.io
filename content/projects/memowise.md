@@ -9,7 +9,8 @@ tech:
   - mongodb
   - tailwind
   - vercel
-screenshot: memowise-screenshot.png
+screenshots:
+  - memowise-screenshot.png
 feature: true
 template: project
 ---

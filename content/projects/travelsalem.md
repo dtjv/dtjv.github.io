@@ -8,7 +8,8 @@ tech:
   - nextjs
   - tailwind
   - vercel
-screenshot: travelsalem-screenshot.png
+screenshots:
+  - travelsalem-screenshot.png
 feature: true
 template: project
 ---

@@ -8,7 +8,8 @@ tech:
   - react
   - reactrouter
   - netlify
-screenshot: maximus-screenshot.png
+screenshots:
+  - maximus-screenshot.png
 feature: true
 template: project
 ---

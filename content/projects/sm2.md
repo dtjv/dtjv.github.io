@@ -6,7 +6,7 @@ repoUrl: https://github.com/dtjv/sm-2
 liveUrl:
 tech:
   - ts
-screenshot:
+screenshots:
 feature: false
 template: project
 ---
