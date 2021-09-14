@@ -6,14 +6,14 @@ import { icons } from './icons'
 import { RedirectIcon } from './icons/Redirect'
 
 const Project = ({ project }) => {
-  const { name, repoUrl, liveUrl, tech, excerpt, image } = project
-  const img = getImage(image?.node)
+  const { name, repoUrl, liveUrl, tech, excerpt, images } = project
+  const screenshots = images.map((image) => getImage(image?.node))
 
   return (
     <>
       <div
         className={`${
-          image ? 'sm:w-1/2' : ''
+          images.length > 0 ? 'sm:w-1/2' : ''
         } flex flex-col justify-between h-full w-full`}
       >
         <div>
@@ -71,11 +71,13 @@ const Project = ({ project }) => {
           </div>
         )}
       </div>
-      {!image ? null : (
-        <div className="hidden sm:block sm:w-1/2">
-          <GatsbyImage image={img} alt={`screen shot of ${name}`} />
+      {screenshots.length > 0 ? (
+        <div className="hidden sm:flex sm:flex-col sm:w-1/2 space-y-4">
+          {screenshots.map((screenshot) => (
+            <GatsbyImage image={screenshot} alt={`screen shot of ${name}`} />
+          ))}
         </div>
-      )}
+      ) : null}
     </>
   )
 }

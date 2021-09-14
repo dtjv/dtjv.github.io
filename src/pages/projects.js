@@ -21,7 +21,7 @@ const query = graphql`
             liveUrl
             tech
             feature
-            screenshot
+            screenshots
           }
           fields {
             excerpt
@@ -57,9 +57,10 @@ const ProjectsPage = ({ location }) => {
     tech: node.frontmatter.tech,
     feature: node.frontmatter.feature,
     excerpt: node.fields.excerpt,
-    image: images.edges.find(
-      (image) => image.node.base === node.frontmatter.screenshot
-    ),
+    images:
+      node.frontmatter.screenshots?.map((screenshot) =>
+        images.edges.find((image) => image.node.base === screenshot)
+      ) ?? [],
   }))
 
   return (
