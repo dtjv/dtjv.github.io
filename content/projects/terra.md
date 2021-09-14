@@ -9,28 +9,30 @@ tech:
   - chakraui
   - nextjs
   - mongodb
-screenshot: terra-screenshot.png
+screenshots:
+  - terra-screenshot-1.png
+  - terra-screenshot-2.png
 feature: true
 template: project
 ---
 
 <!-- intro -->
 
-A local garden center's paper-based process to schedule deliveries is fraught
-with mistakes - leading to poor customer service, lost sales and high service
-employee turnover.
+A local garden center's paper-based delivery schedule process is fraught with
+mistakes - leading to poor service and frustration.
 
 [Terra](https://terra-demo.vercel.app/admin/delivery) is my web-based solution
-to schedule and manage customer deliveries. The delivery dashboard provides a
-custom form wizard to auto compute delivery duration and open time slots -
-reducing data collection errors, eliminating double bookings and maximizing time
-to deliver.
+concept. The dashboard shows a familiar calendar-by-day view of deliveries,
+provides drag-n-drop functionality for quick schedule changes and uses a
+multi-step form to reduce errors, minimize delivery times and improve service..
 
-I built this project in [Typescript](https://www.typescriptlang.org/), using
-[Next.js](https://nextjs.org/), [Chakra UI](https://chakra-ui.com/) and
-[MongoDB Atlas](https://www.mongodb.com/cloud/atlas). The Drag-n-drop feature
-uses [React-Dnd](https://react-dnd.github.io/react-dnd/about).
+🚧 _This project is a work-in-progress_. 🚧
 
-This project is currently a _work-in-progress_.
+Currently written in [TypeScript](https://www.typescriptlang.org/), using
+[Next.js](https://nextjs.org/) and [Chakra UI](https://chakra-ui.com/).
+Drag-n-Drop is courtesy of
+[React-DnD](https://react-dnd.github.io/react-dnd/about), forms logic by
+[React Hook Form](https://react-hook-form.com/) and API calls via
+[React-Query](https://react-query.tanstack.com/).
 
 <!-- intro -->
