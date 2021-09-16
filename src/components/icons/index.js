@@ -1,9 +1,11 @@
 import { ChakraUIIcon } from './ChakraUI'
+import { FirebaseIcon } from './Firebase'
 import { ForestryIcon } from './Forestry'
 import { GatsbyIcon } from './Gatsby'
 import { GitHubIcon } from './GitHub'
 import { JavaScriptIcon } from './JavaScript'
 import { JekyllIcon } from './Jekyll'
+import { JQueryIcon } from './JQuery'
 import { MongoDBIcon } from './MongoDB'
 import { NetlifyIcon } from './Netlify'
 import { NextjsIcon } from './NextJS'
@@ -18,11 +20,13 @@ import { VercelIcon } from './Vercel'
 
 export const icons = {
   chakraui: ChakraUIIcon,
+  firebase: FirebaseIcon,
   forestry: ForestryIcon,
   gatsby: GatsbyIcon,
   github: GitHubIcon,
   js: JavaScriptIcon,
   jekyll: JekyllIcon,
+  jquery: JQueryIcon,
   mongodb: MongoDBIcon,
   netlify: NetlifyIcon,
   nextjs: NextjsIcon,

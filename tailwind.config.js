@@ -11,11 +11,13 @@ module.exports = {
       colors: {
         chakraui: '#319795',
         email: '#181717',
+        firebase: '#FFCA28',
         forestry: '#343A40',
         gatsby: '#663399',
         github: '#181717',
         js: '#F7DF1E',
         jekyll: '#CC0000',
+        jquery: '#0769AD',
         mongodb: '#47A248',
         netlify: '#00C7B7',
         nextjs: '#000000',
