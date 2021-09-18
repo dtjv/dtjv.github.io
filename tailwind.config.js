@@ -15,6 +15,7 @@ module.exports = {
         forestry: '#343A40',
         gatsby: '#663399',
         github: '#181717',
+        gsheets: '#34A853',
         js: '#F7DF1E',
         jekyll: '#CC0000',
         jquery: '#0769AD',

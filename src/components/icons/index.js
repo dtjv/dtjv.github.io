@@ -3,6 +3,7 @@ import { FirebaseIcon } from './Firebase'
 import { ForestryIcon } from './Forestry'
 import { GatsbyIcon } from './Gatsby'
 import { GitHubIcon } from './GitHub'
+import { GSheetsIcon } from './GSheets'
 import { JavaScriptIcon } from './JavaScript'
 import { JekyllIcon } from './Jekyll'
 import { JQueryIcon } from './JQuery'
@@ -24,6 +25,7 @@ export const icons = {
   forestry: ForestryIcon,
   gatsby: GatsbyIcon,
   github: GitHubIcon,
+  gsheets: GSheetsIcon,
   js: JavaScriptIcon,
   jekyll: JekyllIcon,
   jquery: JQueryIcon,
