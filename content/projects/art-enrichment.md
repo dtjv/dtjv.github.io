@@ -14,7 +14,7 @@ template: project
 
 <!-- intro -->
 
-Google Sheet menu functions to report conflicts in sheet data. Written in
-JavaScript as a Google App Script.
+A custom Google Sheet menu function to identify and report schedule conflicts
+among listed art classes. Written in JavaScript as a Google App Script.
 
 <!-- intro -->

@@ -13,7 +13,8 @@ template: project
 
 <!-- intro -->
 
-A command-line utility to convert markdown files into HTML. Published to the
-[npm](https://www.npmjs.com/package/@dtjv/wod-cli) registry.
+A command-line utility to create a listing of client workouts for the day - by
+aggregating workout files _(written in markdown)_ into a single HTML file.
+Published to the [npm](https://www.npmjs.com/package/@dtjv/wod-cli) registry.
 
 <!-- intro -->
