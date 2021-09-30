@@ -17,8 +17,8 @@ template: project
 <!-- intro -->
 
 I found [travelsalem.com](https://travelsalem.com) through a job posting that
-wanted to improve the site's SEO and usage. I found the site error prone and
-cumbersome to use and thought it could use a new design.
+wanted to improve the site's SEO and usage. At that time, I found the site error
+prone and cumbersome to use and thought it could use a new design.
 
 This project is my redesign concept. It simplifies the navigation, prioritizes
 data presentation, and loads fast. I built this project using

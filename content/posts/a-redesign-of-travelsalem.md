@@ -23,6 +23,12 @@ article explains my design decisions.
 - View the [demo](https://travelsalem.vercel.app).
 - View the [source code](https://github.com/dtjv/travelsalem.com).
 
+**Update 9/31/2021**
+
+Travel Salem has indeed updated their website since I wrote this article. It is
+much improved. Unfortunately, I didn't screen shot the old design to provide
+better context for this article. Lesson learned.
+
 ## Goals
 
 I ran the website through Google Lighthouse to get a baseline of how the site
