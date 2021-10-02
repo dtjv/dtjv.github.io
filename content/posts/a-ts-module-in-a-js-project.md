@@ -1,5 +1,5 @@
 ---
-title: TypeScript Modules in JavaScript Projects
+title: A TypeScript module in a JavaScript Project
 date: 2021-10-01
 description: How my published TypeScript module failed in a JavaScript project.
 draft: false
@@ -28,15 +28,15 @@ them to the proper path of usage. And in my case, the project that used this
 module had no type-checking tools running. I never received a heads-up that
 arguments I passed in where not type verified, and thus potentially invalid.
 
-Still, all my tests passed and code coverage was great - what is missing?
+Still, all my tests passed and code coverage was great - what's missing?
 
 ## What does 100% coverage mean?
 
-At a superficial level, 100% coverage means every line executed. If all tests
-pass, then there exists a happy path for the data provided in test cases. After
-a bit of Google researching, the verdict says coverage statistics and passing
-tests say nothing about code correctness for data **not** provided, nor do they
-say anything about the correctness of every program state.
+At a superficial level, 100% coverage means every line executed at least once
+during testing. If all tests pass, then there exists a happy path to success for
+the data provided in the test cases. But coverage statistics and passing tests
+say nothing about code correctness for data **not** provided, nor do they say
+anything about the correctness of every program state.
 
 Without the "safety net" of a type-checker, and no confidence in test
 completeness, it's obvious my TypeScript module is a vanilla JavaScript program
@@ -46,18 +46,18 @@ without comprehensive parameter validation.
 
 Once I implemented the validation logic, I disabled the automatic type-checking
 when tests run. This change allowed test cases for invalid data inputs to run
-free from the inhibition of type-checking rules.
+free from the restrictions of type-checking rules.
 
 As expected, I continue to receive type-errors for the invalid data test cases
 in my code editor and via a type-check script - and I ignore them.
 
 ### A Short Example
 
-For future reference _(mainly for me)_, I list configuration snippets below.
-Here's the layout of a sample project.
+For future reference, here's an example of the setup I'm using.
 
 ```bash
-app
+# sample project layout
+app/
 ├── package.json
 ├── src/
 │   └── index.ts
@@ -67,10 +67,11 @@ app
 └── tsconfig.xo.json
 ```
 
-The project uses test framework, [Tap](https://node-tap.org) which relies on
+My TypeScript module project uses the test framework,
+[node-tap](https://node-tap.org) which relies on
 [ts-node](https://typestrong.org/ts-node/) to run test files written in
-TypeScript. Below, I add `ts-node` configuration to `tsconfig.json` that
-disables type-checking.
+TypeScript. Below, I add ts-node configuration to `tsconfig.json` that disables
+type-checking.
 
 > Code blocks snipped for brevity.
 
@@ -105,8 +106,9 @@ For clarity, you can see the `tsconfig.xo.json` adds the `tests/` folder.
 ## Summary
 
 I find TypeScript a great tool to improve code quality, but it guarantees
-nothing. In the end, the code we run is JavaScript and any guarantees of
-correctness rely on the robustness of the code and the breadth of our tests -
-not the type annotations.
+nothing. In the end, confidence in correctness relies on the robustness of the
+code and the breadth of our tests - not just the type annotations.
+
+And, I need to validate my parameters better. 🤪
 
 Thanks for reading.
