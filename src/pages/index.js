@@ -72,7 +72,7 @@ const IndexPage = () => {
           </div>
         </div>
       </Container>
-      <Section title="Articles" link={{ to: '/articles', text: 'View all' }}>
+      <Section title="Articles">
         <Posts posts={articles} />
       </Section>
     </Layout>
