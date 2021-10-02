@@ -61,15 +61,15 @@ const IndexPage = () => {
             even a bit of computer science basics. I hope you find my content
             useful.
           </p>
-          <p className="text-xl text-gray-500 sm:text-2xl">
-            <p class="text-gray-900 font-bold">[August, 2021] Update...</p>
-            <p>
+          <div className="text-xl text-gray-500 sm:text-2xl">
+            <div className="text-gray-900 font-bold">Update...</div>
+            <div>
               I am looking for work! Preferrably Node.js based - Fullstack,
               Frontend or Backend - I like it all. You may reach me by{' '}
               <a href="mailto:davidtjvalles@gmail.com">email</a> or{' '}
               <a href="https://twitter/davidtjvalles">@davidtjvalles</a>.
-            </p>
-          </p>
+            </div>
+          </div>
         </div>
       </Container>
       <Section title="Articles" link={{ to: '/articles', text: 'View all' }}>
