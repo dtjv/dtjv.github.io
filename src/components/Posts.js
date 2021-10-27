@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Post, ShortPost } from './Post'
 
-const Posts = ({ posts = [], short }) => {
+export const Posts = ({ posts = [], short }) => {
   if (!posts.length) return null
 
   return (
@@ -17,5 +17,3 @@ const Posts = ({ posts = [], short }) => {
     </ul>
   )
 }
-
-export { Posts }

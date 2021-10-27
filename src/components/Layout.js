@@ -4,7 +4,7 @@ import { Nav } from './Nav'
 import { Footer } from './Footer'
 import { Menu } from './Menu'
 
-const Layout = ({ children, location }) => {
+export const Layout = ({ children, location }) => {
   const [showMenu, setShowMenu] = React.useState(false)
 
   return (
@@ -26,5 +26,3 @@ const Layout = ({ children, location }) => {
     </div>
   )
 }
-
-export { Layout }

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Project } from './Project'
 
-const Projects = ({ projects = [], feature }) => {
+export const Projects = ({ projects = [], feature }) => {
   if (!projects.length) return null
 
   const featuredProjects = projects.filter((project) => project.feature)
@@ -30,5 +30,3 @@ const Projects = ({ projects = [], feature }) => {
     </>
   )
 }
-
-export { Projects }

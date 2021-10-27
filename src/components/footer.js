@@ -4,7 +4,7 @@ import { Container } from './Container'
 import { EmailIcon } from './icons/Email'
 import { TwitterIcon } from './icons/Twitter'
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <Container>
       <div className="flex items-center justify-center">
@@ -18,4 +18,3 @@ const Footer = () => {
     </Container>
   )
 }
-export { Footer }

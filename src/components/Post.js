@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import { H2 } from './Headings'
 
-const ShortPost = ({ post }) => {
+export const ShortPost = ({ post }) => {
   const { title, date, description, slug } = post
 
   return (
@@ -28,7 +28,7 @@ const ShortPost = ({ post }) => {
   )
 }
 
-const Post = ({ post }) => {
+export const Post = ({ post }) => {
   const { title, date, slug, excerpt } = post
 
   return (
@@ -64,5 +64,3 @@ const Post = ({ post }) => {
     </li>
   )
 }
-
-export { Post, ShortPost }

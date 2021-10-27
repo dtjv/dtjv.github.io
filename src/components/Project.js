@@ -5,7 +5,7 @@ import { H2 } from './Headings'
 import { icons } from './icons'
 import { RedirectIcon } from './icons/Redirect'
 
-const Project = ({ project }) => {
+export const Project = ({ project }) => {
   const { name, repoUrl, liveUrl, tech, excerpt, images } = project
   const screenshots = images.map((image) => getImage(image?.node))
 
@@ -81,5 +81,3 @@ const Project = ({ project }) => {
     </>
   )
 }
-
-export { Project }
