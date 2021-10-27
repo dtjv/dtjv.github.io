@@ -26,6 +26,7 @@ module.exports = {
         pug: '#A86454',
         react: '#61DAFB',
         reactrouter: '#CA4245',
+        resume: '#181717',
         sass: '#CC6699',
         tailwind: '#38B2AC',
         ts: '#3178C6',

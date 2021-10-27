@@ -1,4 +1,5 @@
 import { ChakraUIIcon } from './ChakraUI'
+import { ResumeIcon } from './Resume'
 import { FirebaseIcon } from './Firebase'
 import { ForestryIcon } from './Forestry'
 import { GatsbyIcon } from './Gatsby'
@@ -21,6 +22,7 @@ import { VercelIcon } from './Vercel'
 
 export const icons = {
   chakraui: ChakraUIIcon,
+  resume: ResumeIcon,
   firebase: FirebaseIcon,
   forestry: ForestryIcon,
   gatsby: GatsbyIcon,
