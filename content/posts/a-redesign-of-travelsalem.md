@@ -21,12 +21,12 @@ article explains my design decisions.
 <!-- intro -->
 
 - View the [demo](https://travelsalem.vercel.app).
-- View the [source code](https://github.com/dtjv/travelsalem.com).
+- View the [source code](https://github.com/dtjv/travel-salem).
 
 **Update 9/31/2021**
 
-Travel Salem has indeed updated their website since I wrote this article. It is
-much improved. Unfortunately, I didn't screen shot the old design to provide
+Travel Salem has recently updated their website since I wrote this article. It
+is much improved. Unfortunately, I didn't screen shot the old design to provide
 better context for this article. Lesson learned.
 
 ## Goals

@@ -3,7 +3,7 @@ name: Terra
 description: A garden center delivery app
 id: 1
 repoUrl: https://github.com/dtjv/terra
-liveUrl: https://terra-demo.vercel.app/admin/delivery
+liveUrl: https://terra-demo.vercel.app
 tech:
   - ts
   - chakraui
@@ -21,10 +21,10 @@ template: project
 A local garden center's paper-based delivery schedule process is fraught with
 mistakes - leading to poor service and frustration.
 
-[Terra](https://terra-demo.vercel.app/admin/delivery) is my web-based solution
-concept. The dashboard shows a familiar calendar-by-day view of deliveries,
-provides drag-n-drop functionality for quick schedule changes and uses a
-multi-step form to reduce errors, minimize delivery times and improve service..
+[Terra](https://terra-demo.vercel.app) is my web-based solution concept. The
+dashboard shows a familiar calendar-by-day view of deliveries, provides
+drag-n-drop functionality for quick schedule changes and uses a multi-step form
+to reduce errors, minimize delivery times and improve service..
 
 🚧 _This project is a work-in-progress_. 🚧
 

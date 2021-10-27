@@ -2,7 +2,7 @@
 name: Travel Salem
 description: A design concept for travelsalem website
 id: 4
-repoUrl: https://github.com/dtjv/travelsalem.com
+repoUrl: https://github.com/dtjv/travel-salem
 liveUrl: https://travelsalem.vercel.app/
 tech:
   - nextjs
