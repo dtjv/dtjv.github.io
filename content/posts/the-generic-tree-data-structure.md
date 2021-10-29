@@ -1,5 +1,5 @@
 ---
-title: A review of the Generic Tree data structure
+title: The Generic Tree Data Structure
 date: 2021-06-01
 description:
 draft: false
@@ -14,7 +14,8 @@ through my design and implementation of a generic tree data structure.
 
 <!-- intro -->
 
-- View the [source code](https://github.com/dtjv/ts-ds/blob/main/src/tree.ts).
+- View the
+  [source code](https://github.com/dtjv/blog-demos/blob/main/the-generic-tree-data-structure).
 
 ## Prerequisites
 
@@ -217,7 +218,7 @@ d2.push(d1[0].insert('E'))
 d2.push(d1[2].insert('F'))
 d2.push(d1[2].insert('G'))
 
-console.log(util.inspect(t, false, null, true))
+console.log(util.inspect(tree, false, null, true))
 ```
 
 To add child nodes to child nodes, I store references to child nodes (i.e.
@@ -259,7 +260,7 @@ Tree {
 The remove method seeks to remove all nodes with a data value that matches the
 `data` parameter by structure and value - not by reference. To handle the deep
 value matching for data objects, I import the `isEqual` function from
-[`lodash.isequal`](https://lodash.com/docs/4.17.15#isEqual).
+[`lodash`](https://lodash.com).
 
 For a non-empty tree, the `replace` method sets nodes to `undefined` when their
 data matches the `data` parameter. This includes the root node. A node removed
@@ -465,8 +466,8 @@ $ yarn dev src/tree.ts
 [ 'E', 'B', 'C', 'F', 'G', 'D', 'A' ]
 ```
 
-With the `toArray` method complete, my unit tests can use the `Tree` class'
-public interface to verify a tree's contents. This avoids tests relying on
+With the `toArray` method complete, unit tests can use the `Tree` class' public
+interface to verify a tree's contents. This avoids tests relying on
 implementational details for validation checks.
 
 ## Wrap-up
@@ -485,8 +486,8 @@ server via [coc-tsserver](https://github.com/neoclide/coc-tsserver). My
 `tsconfig.json` file enables strict type checking. I also installed
 [ESlint](https://eslint.org/) to add linting rules.
 
-You can see my project setup and associated unit tests in this
-[repo](https://github.com/dtjv/ts-ds). Note, I removed the _driver_ code from
-`tree.ts` and placed it into the unit test file.
+You can see my project details in this
+[repo](https://github.com/dtjv/blog-demos/blob/main/the-generic-tree-data-structure).
+Note, I removed the _driver_ code from `tree.ts` and placed it into `main.ts`.
 
 Thanks for reading.

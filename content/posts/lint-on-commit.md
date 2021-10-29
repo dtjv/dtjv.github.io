@@ -13,9 +13,10 @@ On a recent project, I decided to give
 [`lint-staged`](https://github.com/okonet/lint-staged) a try. For those who
 don't know, it's a tool that runs linters against staged git files, thus
 preventing poor code from slipping into the project code base. As I followed two
-implementations, [here](https://github.com/paulintrognon/next-typescript) and
+example projects using `lint-staged`,
+[here](https://github.com/paulintrognon/next-typescript) and
 [here](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest),
-I made my changes and stumbled down yet another hole of tooling pain.
+I began to stumble down yet another rabbit hole of tooling pain.
 
 <!-- intro -->
 
@@ -52,8 +53,8 @@ to `tsc` via the command line, which means `tsc` ignores `tsconfig.json`.
 
 ## Fix #1
 
-My first fix moved the call to `type-check` to a different git hook and removed
-it from the `lint-staged` call list.
+My first fix moved the call to `type-check` to its own git hook and removed it
+from the `lint-staged` call list.
 
 ```json:title=package.json
 {
@@ -80,7 +81,7 @@ checking to ensure no errors get committed..
 
 ## Fix #2
 
-An alternative approach follow this
+An alternative approach follows this
 [example](https://github.com/okonet/lint-staged#example-run-tsc-on-changes-to-typescript-files-but-do-not-pass-any-filename-arguments).
 I removed the `lint-staged` block from `package.json` and created a
 `lint-staged-config.js` file as follows:
@@ -127,10 +128,10 @@ Next, I ran the following command.
 $ npx husky add .husky/pre-commit "yarn lint-staged"
 ```
 
-Lastly, I modified `.husky/pre-commit` - created in the last step - to run the
+Lastly, I modified `.husky/pre-commit` - created in the above step - to run the
 `type-check` script. Here's my final `pre-commit` script.
 
-```bash:title=pre-commit
+```bash:title=.husky/pre-commit
 #!/bin/sh
 
 [ -n "$CI" ] && exit 0
@@ -143,8 +144,8 @@ yarn lint-staged
 
 ## Wrap-up
 
-With this setup, I can run all my scripts manually from the command-line. The
-linting and formatting scripts run on staged files - keeping their execution
+With this last setup, I can run all my scripts manually from the command-line.
+The linting and formatting scripts run on staged files - keeping their execution
 times low. Lastly, type checking is part of the pre-commit hook - preventing
 errors from sneaking into the code base.
 

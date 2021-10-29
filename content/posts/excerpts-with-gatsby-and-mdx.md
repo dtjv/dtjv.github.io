@@ -114,7 +114,8 @@ module.exports = {
 ```
 
 To solve my dilemma, I began with a change to the excerpt separator used in
-Markdown files. Below you can see the separator is before and after the excerpt.
+Markdown files. Below you can see the new separator is positioned before and
+after the excerpt text.
 
 ```markdown:title=content/top-5-cat-vids.md
 ---
@@ -199,5 +200,5 @@ const BlogPage = () => {
 
 ## Wrap-up
 
-This implementation works like a charm - given the one rule that Markdown
+This implementation works like a charm.👍 There is one rule to follow - Markdown
 authors cannot include a React component in the excerpt. I can live with that.

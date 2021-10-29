@@ -1,5 +1,5 @@
 ---
-title: SQL practice with MySQL and Docker
+title: Practice SQL with MySQL and Docker
 date: 2021-04-19
 description: How I setup MySQL using Docker to manually issue SQL commands.
 draft: false

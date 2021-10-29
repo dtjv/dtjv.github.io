@@ -1,7 +1,7 @@
 ---
-title: A Redesign of travelsalem.com
+title: A Design Concept for a Travel Website
 date: 2021-01-25
-description: My notes on building a new interface for travelsalem.com.
+description: My notes on building a new interface for a travel website.
 draft: false
 template: post
 ---
@@ -27,15 +27,15 @@ article explains my design decisions.
 
 Travel Salem has recently updated their website since I wrote this article. It
 is much improved. Unfortunately, I didn't screen shot the old design to provide
-better context for this article. Lesson learned.
+better context for this article.
 
 ## Goals
 
-I ran the website through Google Lighthouse to get a baseline of how the site
-measured up. The scores were pretty low and in particular, the performance was
-around 8%. Is Google Lighthouse the definitive test? Perhaps not, but
-[travelsalem.com](https://travelsalem.com) is a content heavy website, not a
-realtime, dynamic web app. I believe it should perform much better.
+To begin, I ran the website through Google Lighthouse to get a baseline of how
+the site measured up. The scores were pretty low and in particular, the
+performance was around 8%. Is Google Lighthouse the definitive test? Perhaps
+not, but [travelsalem.com](https://travelsalem.com) is a content heavy website,
+not a realtime, dynamic web app. I believe it should perform much better.
 
 From the project outset, my goal was to achieve perfect Google Lighthouse scores
 with a simple, modern user interface. I chose to build the demo using
@@ -45,11 +45,11 @@ website.
 
 ## Menus
 
-The current site's navigation is two drop-down menus and a traditional flat
-menubar. One of the drop-down menus is often repeated in expanded form at the
-top of visited pages - giving the user up to four navigation options. The other
-drop-down menu is three levels deep and at times renders off page with no way to
-access the hidden menu items.
+The current site's navigation consists of two drop-down menus and a traditional
+flat menubar. One of the drop-down menus is often repeated in expanded form at
+the top of visited pages - giving the user up to four navigation options. The
+other drop-down menu is three levels deep and at times renders off page with no
+way to access the hidden menu items.
 
 From a usability perspective, navigating multi-level drop-downs risks irritating
 users when their cursor slips off the menu system, sending them back to square
@@ -72,8 +72,8 @@ plumber or florist.
 
 I added a proper footer that provides a simple and clear directory to site
 content and Travel Salem's company information. The directory proved simple
-enough to include it as the single menu for mobile devices - and it vertically
-scrolls.
+enough to include it as the only menu choice for mobile devices - and it
+vertically scrolls.
 
 ## Final Thought
 
@@ -88,4 +88,4 @@ of images, SVGs and plain text.
 
 And what of the Google Lighthouse scores? All green. Not too bad. 😎
 
-![pic](..//images/2021-01-25-lighthouse.png)
+![lighthouse scores of new design](..//images/2021-01-25-lighthouse.png)

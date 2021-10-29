@@ -1,5 +1,5 @@
 ---
-title: Data validation with Superstruct
+title: Data Validation with Superstruct
 date: 2021-08-05
 description:
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: Lessons from building Memowise
+title: Lessons from Building Memowise
 date: 2021-03-04
 description: A few notes on how I might improve my project development.
 draft: false
