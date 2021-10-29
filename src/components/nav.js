@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import MeImg from '../images/me.jpg'
 import { MenuIcon } from './icons/Menu'
 import { GitHubIcon } from './icons/GitHub'
-import { ResumeIcon } from './icons/Resume'
 
 export const Nav = ({ onClick }) => {
   return (
@@ -30,9 +29,12 @@ export const Nav = ({ onClick }) => {
         >
           Projects
         </Link>
-        <a href="/david-valles-resume.pdf">
-          <ResumeIcon className="w-6 h-6 ml-3 text-color-800 hover:text-blue-400" />
-        </a>
+        <Link
+          to="/resume"
+          className="font-bold text-gray-500 text-normal hover:underline"
+        >
+          Resume
+        </Link>
         <a href="https://github.com/dtjv">
           <GitHubIcon className="w-6 h-6 ml-3 text-color-800 hover:text-blue-400" />
         </a>

@@ -1,0 +1,107 @@
+---
+title: David Valles Resume
+template: page
+---
+
+import { ResumeIcon } from '../components/icons/Resume.js'
+
+# David Valles <a href="/david-valles-resume.pdf"><ResumeIcon className="w-6 h-6" /></a>
+
+Software engineer, experienced creating React-based web applications, writing
+articles about coding adventures and collaborating with clientele. Passionate
+about intuitive UI/UX, full-stack web technologies and helping people and
+organizations reach their goals.
+
+[Email](mailto:davidtjvalles@gmail.com) | [Website](https://dtjv.io) |
+[LinkedIn](https://linkedin.com/in/davevalles) |
+[GitHub](https://github.com/dtjv)
+
+## EXPERIENCE
+
+### Software Engineer | Freelance (2021)
+
+_Terra Gardens_ | [docs](https://github.com/dtjv/terra) |
+[demo](https://terra-demo.vercel.app)
+
+- Developed a full-stack, scheduling app for a garden center’s delivery service.
+  Provides an intuitive stepped-form for accurate data entry, maximizes delivery
+  times via Google Maps API and includes a drag-n-drop feature to maintain
+  schedule integrity.
+- Built with TypeScript, React, Next.js, Chakra-UI, and MongoDB.
+
+### Frontend Engineer | Freelance (2020)
+
+_Richard Gullion_ | [docs](https://github.com/dtjv/gullionart.com) |
+[website](https://gullionart.com/)
+
+- Created a website to showcase Rich’s artwork.
+- Built with Gatsby, React, GraphQL, and Tailwind CSS.
+
+### Frontend Engineer | Freelance (2017-2020)
+
+_BMI Fitness, LLC_ | [docs](https://github.com/dtjv/bmi) |
+[website](https://dtjv.io/bmi)
+
+- Developed a fitness studio website to present services, staff bios, and
+  published content and to capture customer leads.
+- Built with Jekyll, Materialize and Sass. Integrated Formspree.io for form
+  routing and Forestry.io for content management.
+
+### Software Engineer | Freelance (2015-2017)
+
+_Club One Fitness, Inc._
+
+- Created a Node.js CLI to bundle client workout files (written in Markdown)
+  into one printable web page. ([docs](https://github.com/dtjv/wod-cli))
+- Developed a jQuery and Firebase web app for trainers to collect and manage
+  client movement screening data. ([docs](https://github.com/dtjv/fms-wsk) |
+  [demo](https://fms-wsk.web.app/))
+
+### Sofware Engineer | Freelance (2015)
+
+_St. Christopher's - Art Enrichment Program_ |
+[docs](https://github.com/dtjv/art-enrichment)
+
+- Created a Google Sheet menu function to detect and report schedule conflicts
+  among proposed art classes.
+- Built with JavaScript, Webpack and Google App Script API
+
+### Personal Trainer (2005-2020)
+
+_Club One Fitness / Forma Gym / Realm Fitness_
+
+- Developed and coached safe, appropriate and effective strength training,
+  weight loss and sports conditioning programs for clientele.
+
+## PROJECTS
+
+### Memowise
+
+[docs](https://github.com/dtjv/memowise) | [demo](https://memowise.vercel.app/)
+
+- Created a full-stack, responsive education web app offering algorithm-based
+  study, dynamic quizzes, and a personalized dashboard
+- Built with React, Next.js, MongoDB, Tailwind CSS
+
+### Maximus
+
+[docs](https://github.com/dtjv/maximus) |
+[demo](https://maximus-dtjv.netlify.app/)
+
+- Created a web app to create workouts and visualize them in an interactive bar
+  chart. Built with React and Chart.js
+
+### Travel Salem
+
+[docs](https://github.com/dtjv/travel-salem) |
+[demo](https://travelsalem.vercel.app/)
+
+- Designed a travel site demo, with a focus on intuitive site navigation,
+  surfacing buried content and optimizing load speed.
+- Built using Next.js and Tailwind CSS.
+
+## EDUCATION
+
+### Cal Poly, San Luis Obispo
+
+_Bachelor of Science, Computer Science_
