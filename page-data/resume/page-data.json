@@ -1,5 +1,5 @@
 {
-    "componentChunkName": "component---src-pages-resume-md",
+    "componentChunkName": "component---src-pages-resume-mdx",
     "path": "/resume/",
     "result": {"pageContext":{"frontmatter":{"title":"David Valles Resume","template":"page"}}},
-    "staticQueryHashes": []}
+    "staticQueryHashes": ["3764592887"]}
