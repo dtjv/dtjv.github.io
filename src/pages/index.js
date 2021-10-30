@@ -51,8 +51,8 @@ const IndexPage = () => {
       <Container>
         <div className="prose max-w-none">
           <p className="text-xl text-gray-500 sm:text-2xl">
-            Hello! I’m David. I build full-stack web applications using React,
-            TypeScript, MongoDB, and many other interesting libraries in the
+            Hello! I’m David. I build full-stack web applications using
+            TypeScript, React, and many other interesting libraries in the
             JavaScript and Node.js ecosystem.
           </p>
           <p className="text-xl text-gray-500 sm:text-2xl">
