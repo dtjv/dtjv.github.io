@@ -3,7 +3,19 @@ title: David Valles Resume
 template: page
 ---
 
+import { Layout } from '../components/Layout.js'
+import { Seo } from '../components/Seo.js'
+import { Container } from '../components/Container.js'
 import { ResumeIcon } from '../components/icons/Resume.js'
+
+export default ({ children }) => (
+  <Layout>
+    <Seo title="David Valles | Resume" />
+    <Container>
+      <div className="prose max-w-none">{children}</div>
+    </Container>
+  </Layout>
+)
 
 # David Valles <a href="/david-valles-resume.pdf"><ResumeIcon className="w-6 h-6" /></a>
 
