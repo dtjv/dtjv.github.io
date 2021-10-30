@@ -57,9 +57,7 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   const docs = result.data.allMdx.edges.filter(
-    ({ node }) =>
-      node.frontmatter.template === 'post' ||
-      node.frontmatter.template === 'page'
+    ({ node }) => node.frontmatter.template === 'post'
   )
 
   docs.forEach((doc) => {
