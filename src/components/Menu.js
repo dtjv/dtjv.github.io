@@ -35,12 +35,12 @@ export const Menu = ({ location, showMenu, onClick }) => {
           <MenuLink to="/resume" text="Resume" />
         </Container>
       </div>
-      <div
+      <button
         className="cursor-pointer absolute bottom-0 right-0 p-4 m-6 text-white bg-black rounded-full"
         onClick={() => onClick((prevState) => !prevState)}
       >
         <CloseIcon className="w-6 h-6" />
-      </div>
+      </button>
     </div>
   )
 }
