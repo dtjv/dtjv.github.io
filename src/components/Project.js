@@ -38,7 +38,10 @@ export const Project = ({ project }) => {
                 rel="noreferrer"
                 aria-label={`Follow external link to ${liveUrl}`}
               >
-                <RedirectIcon className="w-5 h-5 ml-1 text-gray-500" />
+                <RedirectIcon
+                  className="w-5 h-5 ml-1 text-gray-500"
+                  title={liveUrl}
+                />
               </a>
             )}
           </div>

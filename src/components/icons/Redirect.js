@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const RedirectIcon = ({ className, ...props }) => (
+export const RedirectIcon = ({ className, title, ...props }) => (
   <svg
     {...props}
     className={`${className}`}
@@ -9,6 +9,7 @@ export const RedirectIcon = ({ className, ...props }) => (
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <title>{title}</title>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
