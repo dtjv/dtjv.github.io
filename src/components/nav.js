@@ -19,7 +19,7 @@ export const Nav = ({ onClick }) => {
         </div>
       </Link>
       <MenuIcon
-        className="w-6 h-6 sm:hidden"
+        className="cursor-pointer w-6 h-6 sm:hidden"
         onClick={() => onClick((prevState) => !prevState)}
       />
       <div className="hidden sm:flex space-x-4">
