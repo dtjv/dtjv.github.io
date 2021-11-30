@@ -63,8 +63,7 @@ const IndexPage = () => {
           <div className="text-xl text-gray-500 sm:text-2xl">
             <div>
               Thanks for visiting! You can reach me at{' '}
-              <a href="mailto:davidtjvalles@gmail.com">email</a> or{' '}
-              <a href="https://twitter/davidtjvalles">@davidtjvalles</a>.
+              <a href="mailto:davidtjvalles@gmail.com">email</a>.
             </div>
           </div>
         </div>
